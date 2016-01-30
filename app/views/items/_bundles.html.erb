@@ -1,0 +1,14 @@
+<% if items.empty? %>
+<p class="empty_results">
+  Empty
+</p>
+<% else %>
+<table width="25%">
+  <% items.sort{|a,b| a.item.name <=> b.item.name}.each do |ib| -%>
+  <tr>
+    <td><%=link_to_item ib.item, nil, true %></td>
+    <th><%=ib.quantity%></th>
+  </tr>
+  <% end -%>
+</table>
+<% end %>

@@ -1,0 +1,10 @@
+<% title "#{@starship_configuration.name}" %>
+<% 
+if belongs_to_current_player?(@starship_configuration)
+	tabbed_menu({:configuration => 'Configuration', :sections => 'Sections', :statistics => 'Statistics', :edit => 'Edit'},[link_to('Other Configurations',starship_configurations_path)]) 
+else
+	tabbed_menu({:configuration => 'Configuration', :sections => 'Sections', :statistics => 'Statistics'},[link_to('Other Configurations',starship_configurations_path)]) 
+end
+%>
+<%=render :partial => 'tabs' %>
+

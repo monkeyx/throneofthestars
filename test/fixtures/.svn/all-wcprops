@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/throneofthestars/!svn/ver/120/trunk/test/fixtures
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/throneofthestars/!svn/ver/2/trunk/test/fixtures/.gitkeep
+END
+space_battles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/51/trunk/test/fixtures/space_battles.yml
+END
+ground_battles.yml
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/throneofthestars/!svn/ver/120/trunk/test/fixtures/ground_battles.yml
+END

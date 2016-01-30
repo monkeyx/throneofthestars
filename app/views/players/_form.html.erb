@@ -1,0 +1,45 @@
+<% css_class = fields_required ? 'required' : '' %>
+<%= form_for @player do |f| %>
+  <%= form_error_messages(@player) %>
+  <p><strong>Note:</strong> Items marked <span class="required">*</span> are required fields</p>
+  <% unless current_player %>
+  <p><strong>Already signed up?</strong> <%=link_to 'Log back in', login_path %>.
+  <% end %>
+  <fieldset id="personal">
+    <legend><span>Your Details</span></legend>
+    <ol>
+      <li>
+        <%= f.label :name, :class => css_class %>
+        <%= f.text_field :name %>  
+      </li>
+      <li>
+        <%= f.label :username, :class => css_class %>
+        <%= f.text_field :username %>
+      </li>
+      <li>
+        <%= f.label :email, :class => css_class %>
+        <%= f.text_field :email %>
+      </li>
+      <li>
+        <%= f.label :password, (f.object.new_record? ? nil : "Change password"), :class => css_class %>
+        <%= f.password_field :password %>
+      </li>
+      <li>
+        <%= f.label :password_confirmation, :class => css_class %>
+        <%= f.password_field :password_confirmation %>
+      </li>
+      <% if @player.signup_complete? %>
+        <%=render :partial => 'email_options', :locals => {:f => f} %>
+      <% end %>
+      <% if @player.new_record? %>
+          <li>
+            <label for="player_terms" class="required"><%=link_to 'Accept Terms and Conditions', '/terms.html', :rel => 'lightbox'%></label>
+            <%= f.check_box :terms %>
+          </li>
+      <% end %>
+    </ol>
+  </fieldset>
+  <fieldset id="submitform">
+    <%= f.submit submit_text %>
+  </fieldset>
+<% end %>

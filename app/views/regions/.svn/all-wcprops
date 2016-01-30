@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/throneofthestars/!svn/ver/220/trunk/app/views/regions
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/throneofthestars/!svn/ver/220/trunk/app/views/regions/_tabs.html.erb
+END
+show.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/220/trunk/app/views/regions/show.js.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/220/trunk/app/views/regions/show.html.erb
+END

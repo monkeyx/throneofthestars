@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/throneofthestars/!svn/ver/288/trunk/app/models/characters
+END
+family.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/323/trunk/app/models/characters/family.rb
+END
+development.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/throneofthestars/!svn/ver/205/trunk/app/models/characters/development.rb
+END
+combat.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/280/trunk/app/models/characters/combat.rb
+END
+health.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/339/trunk/app/models/characters/health.rb
+END
+marriage.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/throneofthestars/!svn/ver/262/trunk/app/models/characters/marriage.rb
+END
+birth.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/throneofthestars/!svn/ver/3/trunk/app/models/characters/birth.rb
+END
+movement.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/throneofthestars/!svn/ver/311/trunk/app/models/characters/movement.rb
+END
+emissary.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/throneofthestars/!svn/ver/205/trunk/app/models/characters/emissary.rb
+END

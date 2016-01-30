@@ -1,0 +1,24 @@
+<% title "Databank : Starship Types" %>
+
+<%=tab(:index, true) do-%>
+  <table width="100%">
+    <tr>
+      <th>Name</th>
+      <th>Hull Type</th>
+      <th>Hull Size</th>
+      <th>Configuration</th>
+    </tr>
+    <% for starship_type in @starship_types %>
+      <tr>
+        <td><%=link_to_starship_type starship_type %><% if starship_type.restricted? %>*<%end%></td>
+        <td><%=link_to_item starship_type.hull_type %></td>
+        <td><%=h starship_type.hull_size %></td>
+        <td><%=h starship_type.configuration_to_s %></td>
+      </tr>
+    <% end %>
+  </table>
+
+  <p style="color: #fff">
+    * Requires World Project to build.
+  </p>
+<% end -%>

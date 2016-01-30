@@ -1,0 +1,7 @@
+<% title "Estate #{@estate.name}" %>
+<% 
+render :partial => 'toolbar'
+tabbed_menu({:overview => 'Overview', :news => "News", :population => 'Population', :buildings => 'Buildings', 
+    :inventory => 'Inventory', :production => 'Production', :authorisations => 'Authorisations', :tournaments => 'Tournaments', :weddings => 'Weddings', :residents => 'Residents', :prisoners => 'Prisoners', :edit => 'Change Name'},[link_to('World Market',"/Planet/#{@estate.region.world.name}?tab=world_market")]) %>
+
+<%=render :partial => 'tabs'%>

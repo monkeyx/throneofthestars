@@ -1,0 +1,18 @@
+<%=tab(:composition, true) do -%>
+<div id="composition" class="tab">
+	<p>A unit of the <%=link_to_army(@unit.army)%>.</p>
+	<% if @unit.knight %>
+	<p>
+	  <strong>Knight:</strong>
+	  <%=link_to_character @unit.knight %>
+	</p>
+	<% end %>
+	<%=render :partial => '/items/bundles', :locals => {:items => @unit.bundles} %>
+</div>
+<% end -%>
+
+<%=tab(:edit,false,false) do -%>
+<div id="edit" class="tab">
+	<%=render :partial => 'form'%>
+</tab>
+<% end -%>

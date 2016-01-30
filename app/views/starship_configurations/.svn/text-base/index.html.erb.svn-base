@@ -1,0 +1,22 @@
+<% title "Databank : Starship Configurations" %>
+
+<%=tab(:index, true) do-%>
+  <table width="100%" cellspacing="4" cellpadding="4">
+    <tr>
+      <th>Name</th>
+      <th>Starship Type</th>
+    </tr>
+    <% for starship_configuration in @starship_configurations %>
+      <tr>
+        <td><%=link_to_starship_configuration starship_configuration %></td>
+        <td><%=link_to_starship_type starship_configuration.starship_type %></td>
+      </tr>
+    <% end %>
+  </table>
+  <div class="pagination">
+    <%= will_paginate @noble_houses %>
+  </div>
+  <% if current_player %>
+  <p class="title"><%= link_to "New Starship Configuration", new_starship_configuration_path %></p>
+  <% end %>
+<% end -%>

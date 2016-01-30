@@ -1,0 +1,5 @@
+<%=tab(:compose, true, false) do -%>
+<div id="compose" class="tab">
+  <%=render :partial => 'form', :locals => {:message => @message, :form_label => 'Compose Message', :submit_text => 'Send Message'} %>
+</div>
+<% end -%>

@@ -1,0 +1,90 @@
+<% 
+title 'GM Administration' 
+render :partial => 'tab_menu'
+%>
+
+<div id="overview" class="tab">
+<table>
+	<tr>
+		<th colspan="2">Players</th>
+	</tr>
+	<tr>
+		<td>Total Players</td>
+		<td><%=Player.count%></td>
+	</tr>
+	<tr>
+		<td>Recently Active</td>
+		<td><%=Player.recently_active.count%></td>
+	</tr>
+	<tr>
+		<td>Currently Logged In</td>
+		<td><%=Player.logged_in.count%></td>
+	</tr>
+	<tr>
+		<td>Playing</td>
+		<td><%=Player.last_week.count%></td>
+	</tr>
+	<tr>
+		<td>AWOL</td>
+		<td><%=Player.awol.count%></td>
+	</tr>
+	<tr>
+		<td>Abandoned</td>
+		<td><%=Player.abandoned.count%></td>
+	</tr>
+	<tr>
+		<th colspan="2">Noble Houses</th>
+	</tr>
+	<tr>
+		<td>Ancient Houses</td>
+		<td><%=NobleHouse.ancient.count%></td>
+	</tr>
+	<tr>
+		<td>Player Houses</td>
+		<td><%=NobleHouse.active.count%></td>
+	</tr>
+	<tr>
+		<th colspan="2">World Markets</th>
+	</tr>
+	<tr>
+		<td>Market Listings</td>
+		<td><%=MarketItem.count%></td>
+	</tr>
+	<tr>
+		<td>Trade Goods Volume</td>
+		<td><%=MarketItem.category(Item::TRADE_GOOD).sum{|mi| mi.quantity}%></td>
+	</tr>
+	<tr>
+		<td>Food</td>
+		<td><%=average_market_price(Item.food)%></td>
+	</tr>
+	<tr>
+		<td>Drink</td>
+		<td><%=average_market_price(Item.drink)%></td>
+	</tr>
+	<tr>
+		<td>Clothing</td>
+		<td><%=average_market_price(Item.clothing)%></td>
+	</tr>
+	<tr>
+		<td>Meat</td>
+		<td><%=average_market_price(Item.trade_good(Item::FOOD_MEAT))%></td>
+	</tr>
+	<tr>
+		<td>Fish</td>
+		<td><%=average_market_price(Item.trade_good(Item::FOOD_FISH))%></td>
+	</tr>
+	<tr>
+		<td>Beer</td>
+		<td><%=average_market_price(Item.trade_good(Item::DRINK_BEER))%></td>
+	</tr>
+	<tr>
+		<td>Wine</td>
+		<td><%=average_market_price(Item.trade_good(Item::DRINK_WINE))%></td>
+	</tr>
+	<tr>
+		<td>Silk</td>
+		<td><%=average_market_price(Item.trade_good(Item::CLOTHING_SILK))%></td>
+	</tr>
+</table>
+</div>

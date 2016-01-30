@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/throneofthestars/!svn/ver/71/trunk/config/initializers
+END
+array_extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/throneofthestars/!svn/ver/2/trunk/config/initializers/array_extensions.rb
+END
+inflections.rb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/throneofthestars/!svn/ver/2/trunk/config/initializers/inflections.rb
+END
+session_store.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/throneofthestars/!svn/ver/71/trunk/config/initializers/session_store.rb
+END
+secret_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/throneofthestars/!svn/ver/2/trunk/config/initializers/secret_token.rb
+END
+string_extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/throneofthestars/!svn/ver/2/trunk/config/initializers/string_extensions.rb
+END
+backtrace_silencers.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/throneofthestars/!svn/ver/2/trunk/config/initializers/backtrace_silencers.rb
+END
+active_record_extensions.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/throneofthestars/!svn/ver/2/trunk/config/initializers/active_record_extensions.rb
+END
+mime_types.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/2/trunk/config/initializers/mime_types.rb
+END
+wrap_parameters.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/throneofthestars/!svn/ver/2/trunk/config/initializers/wrap_parameters.rb
+END

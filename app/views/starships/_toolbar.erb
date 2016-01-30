@@ -1,0 +1,62 @@
+<%
+unless toolbar_cached?
+  quick_orders = []
+  if @starship.captain && @starship.captain.can_be_given_orders? && !@starship.debris?
+  	if tab?(:overview) || no_tab?
+	  	if @starship.location_estate?
+	    	quick_orders << 'Take Off' 
+	    	quick_orders << 'Repair Hulls' if @starship.damaged?
+	    end
+	    if @starship.location_world?
+	    	quick_orders << 'Dock'
+	    	quick_orders << 'Move to World'
+	    	quick_orders << 'Scuttle'
+	    end
+  	end
+  	if tab?(:navigation)
+	  	if @starship.location_estate?
+	    	quick_orders << 'Take Off' 
+	    end
+	    if @starship.location_world?
+	    	quick_orders << 'Dock'
+	    	quick_orders << 'Move to World'
+	    end
+  	end
+  	if tab?(:sections)
+	  	if @starship.location_estate?
+	    	quick_orders << 'Install Section'
+	    	quick_orders << 'Uninstall Section'
+	    	quick_orders << 'Refit'
+	    end
+  	end
+  	if tab?(:scans)
+	    if @starship.location_world?
+	    	quick_orders << 'Scan Orbit'
+	    	quick_orders << 'Attack Ship'
+	    	quick_orders << 'Attack House Ship'
+	    	quick_orders << 'Capture Ship'
+	    end
+  	end
+  	if tab?(:cargo)
+	    if @starship.location_world?
+	    	quick_orders << 'Salvage' if @starship.cargo_space_total > 0
+	    end
+	    if @starship.cargo_space_total > 0 || @starship.troop_space_total > 0
+	    	quick_orders << 'Buy'
+	    	quick_orders << 'Load Cargo'  
+	    end
+	    if @starship.cargo_space_used > 0 || @starship.troop_space_used > 0
+	    	quick_orders << 'Unload Cargo' 
+	    	quick_orders << 'Sell'
+	    end
+	    quick_orders << 'Load Workers' if @starship.worker_space_total > 0
+	    quick_orders << 'Unload Workers' if @starship.worker_space_used > 0
+  	end
+  	if tab?(:embarked_armies)
+	    quick_orders << 'Embark Army' if @starship.cargo_space_total > 0 || @starship.troop_space_total > 0
+	    quick_orders << 'Disembark Army' if @starship.embarked_armies.size > 0
+  	end
+  end
+  order_toolbar(@starship.captain, quick_orders) unless quick_orders.empty?
+end
+%>

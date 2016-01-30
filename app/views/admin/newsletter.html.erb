@@ -1,0 +1,34 @@
+<% 
+title 'Newsletter' 
+render :partial => 'tab_menu'
+%>
+
+<div id="newsletter" class="tab">
+	<%=form_tag '/admin/newsletter' do -%>
+	<fieldset id="content">
+		<legend>Newsletter</legend>
+		<ol>
+			<li>
+				<label>Content:</label>
+				<%=text_area_tag :content, params[:content], {:rows => 30, :cols => 120} %>
+			</li>
+		</ol>
+	</fieldset>
+	<fieldset id="options">
+		<legend>Options</legend>
+		<ol>
+			<li>
+				<label>Test Only:</label>
+				<%=radio_button_tag :mod, 'test'%>
+			</li>
+			<li>
+				<label>Send to Players:</label>
+				<%=radio_button_tag :mod, 'send'%>
+			</li>
+		</ol>
+	</fieldset>
+	<fieldset id="submitform">
+    	<%= submit_tag 'Publish' %>
+  	</fieldset>
+	<% end -%>
+</div>

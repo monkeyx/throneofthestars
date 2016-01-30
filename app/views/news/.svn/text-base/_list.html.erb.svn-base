@@ -1,0 +1,21 @@
+<% if news.empty? %>
+  <p class="empty_results">No news yet</p>
+<% else
+  dateline = nil
+%>
+  <ul style="display:none;">
+  <% news.each do |item| %>
+  <%
+  if item.news_date != dateline
+    dateline = item.news_date
+  %>
+  </ul>
+  <span class="news_date">Chronum <%=h dateline.to_pretty%>:</span>
+  <ul class="news_list">
+  <%
+  end
+  %>
+    <li><%=news_content(item,(defined?(highlight_public_news) && highlight_public_news))%></li>
+  <% end %>
+  </ul>
+<% end %>

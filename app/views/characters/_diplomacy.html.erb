@@ -1,0 +1,23 @@
+  <p>
+    <%=character_liege(@character)%>
+  </a>
+  <p>
+    <%=character_proposals(@character)%>
+  </p>
+  <p>
+    <%=character_wedding_invites(@character)%>
+  </p>
+  <%=character_accusations(@character)%>
+  <p>
+    <%=character_apprenticeship_offers(@character)%>
+  </p>
+  <p>
+    <%=character_apprenticeships_sought(@character)%>
+  </p>
+  <p>
+    <%=character_apprentices(@character)%>
+  </p>
+  <p>
+    <%=character_apprenticeship(@character)%>
+  </p>
+  <%=render :partial => '/diplomatic_relations/list', :locals => {:noble_house => @character.noble_house}%>

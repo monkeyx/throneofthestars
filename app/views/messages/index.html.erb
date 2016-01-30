@@ -1,0 +1,6 @@
+<% title "Messages" %>
+<% tabbed_menu({:inbox => 'Inbox', :archived => 'Archive', :sent => 'Sent'}, [link_to('Compose',new_message_path, :remote => true)]) %>
+
+<%=render :partial => 'tabs' %>
+
+

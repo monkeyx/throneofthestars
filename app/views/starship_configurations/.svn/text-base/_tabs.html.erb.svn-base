@@ -1,0 +1,35 @@
+
+<%=tab(:configuration, true, false) do -%>
+<div id="configuration" class="tab">
+	<%=wiki_help_div('Starship_Configuration', 'Starship Configuration')%>
+<p>
+  <strong>Starship Type:</strong>
+  <%=link_to_starship_type @starship_configuration.starship_type %>
+</p>
+<%=render :partial => 'configuration', :locals => {:starship_configuration => @starship_configuration} %>
+</div>
+<% end -%>
+
+<%=tab(:sections, false, false) do -%>
+<div id="sections" class="tab">
+	<%=render :partial => 'sections', :locals => {:starship_configuration => @starship_configuration} %>
+	<% if belongs_to_current_player?(@starship_configuration) %>
+	<%=render :partial => 'configuration', :locals => {:starship_configuration => @starship_configuration} %>
+	<%=render :partial => '/starship_configuration_items/form', :locals => {:submit_text => 'Add Section', :starship_configuration_item => @starship_configuration.starship_configuration_items.new}%>
+	<% end %>
+</div>
+<% end -%>
+
+<%=tab(:statistics, false, false) do -%>
+<div id="statistics" class="tab">
+<%=render :partial => '/starships/metrics', :locals => {:starship_metrics => @starship_configuration.metrics} %>
+</div>
+<% end -%>
+
+<% if belongs_to_current_player?(@starship_configuration) %>
+<%=tab(:edit, false, false) do -%>
+	<div id="edit" class="tab">
+	  <%= render :partial => 'form', :locals => {:submit_text => "Update"} %>
+	</div>
+<% end -%>
+<% end %>

@@ -1,0 +1,74 @@
+<% default = nil unless defined?(default) %>
+<%=tab(:overview, default == :overview) do %>
+<div id="overview" class="tab">
+	<%=wiki_help_div('Feudal_Society', 'Feudal Society')%>
+	<% if @emperor %>
+	  <p class="one_result">His Imperial Majesty, <%=link_to_character @emperor, :name_and_family%>, is sovereign of the Twelve Worlds.</p>
+	<% else %>
+	  <p class="empty_results">There is currently no divinely ordained Emperor</p>
+	<% end %>
+</div>
+<% end -%>
+
+<%=tab(:duchies) do -%>
+<div id="duchies" class="tab">
+  <% if @dukes.size > 0 %>
+  <%=render :partial => '/characters/list', :locals => {:characters => @dukes} %>
+  <p>There are <%=@dukes.size %> out of <%=@worlds.size %> possible Dukes for the worlds.</p>
+  <% else %>
+  <p class="empty_results">There are currently no Dukes of the Empire</p>
+  <% end %>
+</div>
+<% end -%>
+
+<%=tab(:laws) do -%>
+<div id="laws" class="tab">
+	<% if @laws.empty? %>
+	  <p class="empty_results">The Empire is a lawless place</p>
+	<% else %>
+	  <%=render :partial => '/laws/list', :locals => {:laws => @laws} %>
+	<% end %>
+</div>
+<% end -%>
+
+<%=tab(:news) do %>
+<div id="empire" class="tab">
+  <%=render :partial => '/news/list', :locals => {:news => @news} %>
+</div>
+<% end -%>
+
+<%=tab(:events) do -%>
+<div id="events" class="tab">
+<%=render :partial => '/events/list', :locals => {:events => Tournament.pending_or_now.sort{|a,b| a.event_date <=> b.event_date}} %>
+</div>
+<% end -%>
+
+<%=tab(:announcements, default == :announcements) do %>
+<div id="announcements" class="tab">
+  <%=render :partial => '/news/list', :locals => {:news => News.announcements} %>
+</div>
+<% end -%>
+
+<%=tab(:births) do %>
+<div id="births" class="tab">
+  <%=render :partial => '/news/list', :locals => {:news => News.births} %>
+</div>
+<% end -%>
+
+<%=tab(:matured) do %>
+<div id="matured" class="tab">
+  <%=render :partial => '/news/list', :locals => {:news => News.matured} %>
+</div>
+<% end -%>
+
+<%=tab(:marriages) do %>
+<div id="marriages" class="tab">
+  <%=render :partial => '/news/list', :locals => {:news => News.marriages} %>
+</div>
+<% end -%>
+
+<%=tab(:deaths) do %>
+<div id="deaths" class="tab">
+  <%=render :partial => '/news/list', :locals => {:news => News.deaths} %>
+</div>
+<% end -%>

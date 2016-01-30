@@ -1,0 +1,32 @@
+<% title "Databank : Building Types" %>
+
+<%=tab(:index, true) do-%>
+  <table width="100%">
+    <tr>
+      <th>Type</th>
+      <th>Workers*</th>
+      <th>Function</th>
+      <th>Raw Materials*</th>
+    </tr>
+    <% for building_type in @building_types %>
+      <tr>
+        <td><%=link_to_building_type building_type %></td>
+        <td><%=h building_type.workers_needed %> x <%=h building_type.worker_type %></td>
+        <td><%=h building_type.building_function %></td>
+        <td>
+          <ul>
+            <% building_type.raw_materials.each do |ib| -%>
+            <li><%=link_to_item ib.item, ib.quantity%></li>
+            <% end -%>
+          </ul>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <p style="color: #fff">
+    * per level
+  </p>
+  <div class="pagination">
+    <%= will_paginate @building_types %>
+  </div>
+<% end %>

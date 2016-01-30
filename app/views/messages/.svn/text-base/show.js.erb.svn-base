@@ -1,0 +1,1 @@
+<%=js_tab(render :partial => 'message_tab')%>

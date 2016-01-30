@@ -1,0 +1,10 @@
+<div id="top_date">
+  Chronum <%=h Game.current_date.to_pretty %>
+  <% if Game.new_year? %>
+  <span class="seasonal">HAPPY NEW YEAR!</span>
+  <% end %>
+  <% if Game.current.updating? %>
+  <span class="updating">UPDATE IN PROGRESS</span>
+  <% end %>
+
+</div>

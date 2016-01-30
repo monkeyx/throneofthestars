@@ -1,0 +1,12 @@
+<table>
+	<tr>
+		<th>Law</th>
+		<th>Enacted</th>
+	</tr>
+	<% laws.each do |law| %>
+	<tr>
+		<td><%=law.category%></td>
+		<td>by <%=link_to_character(law.enacted_by)%> on <%=law.enacted_date.pp%></td>
+	</tr>
+	<% end %>
+</table>

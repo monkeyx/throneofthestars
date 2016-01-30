@@ -1,0 +1,34 @@
+<% 
+	message_from = current_noble_house.chancellor
+	message_from = current_noble_house.home_estate.steward unless message_from
+	message_from = current_noble_house.characters.first unless message_from
+	wife = current_baron.spouse
+	request_from = wife && wife.id != message_from.id ? "Your beloved #{wife.display_name} has" : "The good Barons of the realm have"
+%>
+<p>
+<%=current_baron.salutation%>, 
+</p>
+<p>
+	As the most worthy ruler of <%=link_to_house(current_noble_house)%> you may wish to review your <%=link_to("estate holdings", estates_path)%>, your <%=link_to("glorious armies", armies_path)%> or your <%=link_to("mighty starships", starships_path)%>.
+</p>
+<p>
+	The <%=link_to("members of your House", characters_path)%> await your instructions.
+</p>
+<p>
+	As your humble servant I have prepared a small document which I hope you <%=link_to("may take the time to read", "http://throneofthestars.wikia.com/wiki/Tutorial", :target => 'help')%>. 
+</p>
+<p>
+	Please forgive me for any impertinance in suggesting you have need of my advice! You are of course knowledgable beyond measure <%=link_to('in the ways of the world',$WIKI_HOME, :target => 'help')%>.
+</p>
+<p>
+	<%=request_from%> reminded me to mention the upcoming <%=link_to('society gathering',$FORUM_HOME, :target => 'forums')%> so all may be elevated by your presence. 
+</p>
+<p>
+	I will take no further time from your busy schedule.
+</p>
+<p>
+	Your humble servant,
+</p>
+<p>
+	<%=link_to_character(message_from)%>
+</p>

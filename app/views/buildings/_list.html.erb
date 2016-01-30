@@ -1,0 +1,34 @@
+<% if buildings.empty? %>
+<p class="empty_results">
+  No buildings at this estate
+</p>
+<% else %>
+<table cellspacing="4" cellpadding="2" border="0">
+  <tr>
+    <th>Building</th>
+    <th>Workers Needed</th>
+    <th>Current Efficiency</th>
+    <th>Next &empty;</th>
+  </tr>
+  <% buildings.each do |building| -%>
+  <tr>
+    <td>
+      <%=link_to_building_type building.building_type, true%> level <%=h building.level%>
+    </td>
+    <td>
+      <% building.workers_needed_by_type.each do |worker_type,quantity| -%>
+      <% if quantity > 0 %>
+        <%=h quantity %> x <%=h worker_type %> &nbsp;
+      <% end %>
+      <% end %>
+    </td>
+    <td>
+      <%=percentage (building.estate.efficiency_for(building.building_type) * 100) %>
+    </td>
+    <td>
+      <%=h building.expected_production %>
+    </td>
+  </tr>
+  <% end %>
+</table>
+<% end %>

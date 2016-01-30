@@ -1,0 +1,58 @@
+<div id="map" class="black_tab">
+	<% map = World.map 
+	%>
+	<table>
+		<% (1..(World::MAP_HEIGHT)).each do |row_index| 
+			y = (World::MAP_HEIGHT + 1) - row_index
+		-%>
+		<tr>
+			<% (1..(World::MAP_WIDTH)).each do |col_index| 
+				x = col_index
+				if x == World::MAP_ORIGIN && y != World::MAP_ORIGIN && y != 1 && y != World::MAP_HEIGHT
+					spacer = 'horizontal_white.png'
+				elsif y == World::MAP_ORIGIN && x != World::MAP_ORIGIN && x != 1 && x != World::MAP_WIDTH
+					spacer = 'vertical_white.png'
+				else
+					spacer = 'black_spacer.png'
+				end
+			-%>
+			<% if y == 1 && x == World::MAP_ORIGIN - 1 %>
+			<th>Gamma</th>
+			<% elsif y == World::MAP_HEIGHT && x == World::MAP_ORIGIN - 1 %>
+			<th>Delta</th>
+			<% elsif y == 1 && x == World::MAP_ORIGIN %>
+			<th>Beta</th>
+			<% elsif y == World::MAP_HEIGHT && x == World::MAP_ORIGIN %>
+			<th>Alpha</th>
+			<% else %>
+			<% end %>
+			<td id="map_<%=x%>_<%=y%>">
+				<% 
+				row = map[y]
+				if row && row[x]
+					s = ''
+					row[x].each do |world|
+						if world
+							if world.is_a?(String)
+								name =  world
+								title = "Sun"
+								s = image_tag("#{name}.png", :alt => name, :title => title) + s
+							else
+								name = world.name
+								title = "#{name} - #{world.position_description} - rotates a quadrant every #{pluralize(world.rotation,'chronum')}"
+								s = link_to(image_tag("#{name}.png", :alt => name), "/Planet/#{world.name}", :class => 'tooltip', :title => title) + s
+							end
+						%>
+						<% end 
+					end %>
+					<%=s%>
+				<% else 
+					%>
+					<%=image_tag(spacer, :alt => ' ')%>
+				<% end %>
+			</td>
+			<% end %>
+		</tr>
+		<% end %>
+	</table>
+</div>

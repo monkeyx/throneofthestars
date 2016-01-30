@@ -1,0 +1,29 @@
+<tr>
+  <th>Energy Saves:</td>
+  <th>
+<table width="500" border="1" cellpadding="2" cellspacing="4">
+  <tr>
+    <th>
+      Low (1 per 100 hulls)
+    </th>
+    <th>
+      Medium (1 per 50 hulls)
+    </th>
+    <th>
+      High (1 per 20 hulls)
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <%=(shield.ship_shield_low ? shield.ship_shield_low.to_pretty : 'N/A')%>
+    </td>
+    <td>
+      <%=(shield.ship_shield_medium ? shield.ship_shield_medium.to_pretty : 'N/A')%>
+    </td>
+    <td>
+      <%=(shield.ship_shield_high ? shield.ship_shield_high.to_pretty : 'N/A')%>
+    </td>
+  </tr>
+</table>
+  </th>
+</tr>

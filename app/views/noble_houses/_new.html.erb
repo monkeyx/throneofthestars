@@ -1,0 +1,100 @@
+
+<fieldset id="patriarch">
+  <legend><span>House Patriarch</span></legend>
+  <ol>
+    <li>
+      <%= f.label :patriarch_name, :class => 'required' %>
+      <%= f.text_field :patriarch %>
+      <br/><strong>Note:</strong> Your house name will automatically be used as the surname of your patriarch.
+    </li>
+    <li>
+      <%= f.label 'Military Skill - Expert', :class => 'required' %>
+      <%= f.select :patriarch_skill1, options_for_skills(@noble_house.patriarch_skill1, Skill::MILITARY_SKILLS), {:include_blank => true} %>
+      <%= wiki_help('Skills#Skills') %>
+    </li>
+    <li>
+      <%= f.label 'Civil Skill - Expert', :class => 'required' %>
+      <%= f.select :patriarch_skill2, options_for_skills(@noble_house.patriarch_skill2, Skill::CIVIL_SKILLS), {:include_blank => true} %>
+      <%= wiki_help('Skills#Skills') %>
+    </li>
+    <li>
+      <%= f.label 'Civil Skill - Apprentice', :class => 'required' %>
+      <%= f.select :patriarch_skill3, options_for_skills(@noble_house.patriarch_skill3, Skill::CIVIL_SKILLS), {:include_blank => true} %>
+      <%= wiki_help('Skills#Skills') %>
+    </li>
+  </ol>
+</fieldset>
+<fieldset id="matriarch">
+  <legend><span>House Matriarch</span></legend>
+  <ol>
+    <li>
+      <%= f.label :matriarch_name, :class => 'required' %>
+      <%= f.text_field :matriarch %>
+      <br/><strong>Note:</strong> Your house name will automatically be used as the surname of your matriarch.
+      </li>
+    <li>
+      <%= f.label 'Ecclesiastical Skill - Expert', :class => 'required' %>
+      <%= f.select :matriarch_skill1, options_for_skills(@noble_house.matriarch_skill1, Skill::CHURCH_SKILLS), {:include_blank => true} %>
+      <%= wiki_help('Skills#Skills') %>
+    </li>
+    <li>
+      <%= f.label 'Civil Skill - Apprentice', :class => 'required' %>
+      <%= f.select :matriarch_skill2, options_for_skills(@noble_house.matriarch_skill2, Skill::CIVIL_SKILLS), {:include_blank => true} %>
+      <%= wiki_help('Skills#Skills') %>
+    </li>
+    <li>
+      <%= f.label 'Civil Skill - Apprentice', :class => 'required' %>
+      <%= f.select :matriarch_skill3, options_for_skills(@noble_house.matriarch_skill3, Skill::CIVIL_SKILLS), {:include_blank => true} %>
+      <%= wiki_help('Skills#Skills') %>
+    </li>
+  </ol>
+</fieldset>
+<fieldset id="children">
+  <legend><span>Adult Children</span></legend>
+  <ol>
+    <li>
+      <%= f.label :first_child_name, :class => 'required' %>
+      <%= f.text_field :first_child_name %> (male)
+    </li>
+    <li>
+      <%= f.label :skill, :class => 'required' %>
+      <%= f.select :first_child_skill, options_for_skills(@noble_house.first_child_skill), {:include_blank => true} %>
+      <%= wiki_help('Skills#Skills') %>
+    </li>
+    <li>
+      <%= f.label :second_child_name, :class => 'required' %>
+      <%= f.text_field :second_child_name %> (male)
+    </li>
+    <li>
+      <%= f.label :skill, :class => 'required' %>
+      <%= f.select :second_child_skill, options_for_skills(@noble_house.second_child_skill), {:include_blank => true} %>
+      <%= wiki_help('Skills#Skills') %>
+    </li>
+    <li>
+      <%= f.label :third_child_name, :class => 'required' %>
+      <%= f.text_field :third_child_name %> (female)
+    </li>
+    <li>
+      <%= f.label :skill, :class => 'required' %>
+      <%= f.select :third_child_skill, options_for_skills(@noble_house.third_child_skill), {:include_blank => true} %>
+      <%= wiki_help('Skills#Skills') %>
+    </li>
+    <li>
+      <strong>Note:</strong> Your house name will automatically be used as the surname of your characters.
+    </li>
+  </ol>
+</fieldset>
+<fieldset id="estate">
+  <legend><span>Home Estate</span></legend>
+  <ol>
+    <li>
+      <%= f.label :estate_name, :class => 'required' %>
+      <%= f.text_field :estate_name %>
+      <br/><strong>Note:</strong> You don't need to include "Estate" as part of the name.
+    </li>
+    <li>
+      <%= f.label :region, :class => 'required' %>
+      <%= f.select :region, options_for_regions(@noble_house.region,nil,true) %>
+    </li>
+  </ol>
+</fieldset>

@@ -1,0 +1,33 @@
+<fieldset>
+	<legend>Some Hints on Starting Skills</legend>
+	<ol>
+		<li>
+			Its recommended you choose skills for each character that will help them in a specific role.
+			<br/>You are free to disregard these recommendations if you have a plan of your own.
+		</li>
+		<li>
+			Your <strong>Patriarch</strong> as the Baron of your house is your most important character. You can set him up to fulfill a number of roles at different times.
+			<br/><strong>Tournaments / Trial By Combat</strong>: Melee (swords), Etiquette (lances)
+			<br/><strong>Estate Management</strong>: Engineering (cheaper construction), Management (more efficient buildings), Barter (cheaper land purchases), Organisation (less workers needed)
+			<br/><strong>Leading Armies</strong>: Leadership (improved morale), Tactics (better tactical phase), Fortification (better defenses), Explosive (better at destroying bunkers), Logistics (quicker army movement)
+		</li>
+		<li>
+			Your <strong>Matriarch</strong> is your second most important character and can be set up to do multiple roles well. Note: The best skill between Lord and Steward is used.
+			<br/><strong>Steward of Estate</strong>: Engineering (cheaper construction), Management (more efficient buildings), Organisation (less workers needed), Automation (more ore production), Biogenics (more trade good production).
+			<br/><strong>Diplomat / Spy</strong>: Research (for spying), Diplomacy (for petitions), Apothecary (for assassinations).
+			<br/><strong>Other useful skills</strong>: Medicine (heal sick or injured), Etiquette (host events)
+		</li>
+		<li>
+			Other characters should be skilled to do a needed job.
+			<br/><strong>Tribune</strong>: Recruitment.
+			<br/><strong>Chancellor</strong>: Administration.
+			<br/><strong>Warship Captain</strong>: Piloting (better dodge), Shooting (better accuracy), Electronics (better shields), Damage Control (less chance of losing internals due to hull damage).
+			<br/><strong>Freighter Captain</strong>: Navigation (faster movement).
+			<br/><strong>Legate</strong>: Leadership (better morale), Tactics (better tactical phase), Explosives (better against bunkers), Logistics (faster army movement)
+			<br/><strong>Emissaries</strong>: Diplomacy (better petitions), Research (better spying), Explosives (better sabotage), Apothecary (better assassinations).
+		</li>
+		<li>
+			You're not restricted to these choices and every skill has its uses.
+		</li>
+	</ol>
+</fieldset>

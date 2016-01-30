@@ -1,0 +1,11 @@
+<%=render :partial => 'header' %>
+<p>Welcome to the <strong>Throne of the Stars</strong> web game.</p>
+
+<p>Your login is: <%=@username%></p>
+
+<p><%=("House #{@noble_house.name}")%> is now ready for you to command.</p>
+
+<p><%=link_to("Click here", @login_url)%> to start playing right away.</p>
+
+<p>Enjoy!</p>
+<%=render :partial => 'footer' %>

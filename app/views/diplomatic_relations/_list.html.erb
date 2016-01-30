@@ -1,0 +1,12 @@
+<% unless noble_house.diplomatic_relations.empty? %>
+	<% noble_house.diplomatic_relations.each do |relation| -%>
+	<% unless relation.peace? %>
+		<p><%=raw relation %> <%=link_to(image_tag('right_arrow_black.png', :alt => '', :title => "House #{relation.target.name}"),noble_house_path(relation.target))%></p>
+	<% end %>
+	<% end -%>
+<% end %>
+<% unless noble_house.diplomatic_offers.empty? %>
+	<% noble_house.diplomatic_offers.each do |relation| -%>
+	<p><%=raw relation %> <%=link_to(image_tag('right_arrow_black.png', :alt => '', :title => "House #{relation.noble_house.name}"),noble_house_path(relation.noble_house))%></p>
+	<% end -%>
+<% end %>

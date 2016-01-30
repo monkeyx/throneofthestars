@@ -1,0 +1,15 @@
+<% title "#{@character.display_name}" %>
+<% tabbed_menu({:order => 'Issue Order'}, [link_to_character(@character), link_to("Members of House #{current_noble_house.name}", characters_path)]) %>
+
+<% tab(:order, true, false) do 
+	description = Order::DESCRIPTIONS[@order.code][0]
+	help = Order::DESCRIPTIONS[@order.code][1] || 'Character_Orders'
+	ap_cost = @order.variable_points_cost? ? "Variable" : @order.action_point_cost
+-%>
+<div id="order-form" class="tab">
+	<%=wiki_help_div(help)%>
+	<p><%=raw description%></p>
+	<p><strong>Action Points Cost:</strong> <%=ap_cost%></p>
+	<%=render :partial => 'form', :locals => {:submit_text => 'Issue Order'} %>
+</div>
+<% end -%>

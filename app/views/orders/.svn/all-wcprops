@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/268/trunk/app/views/orders
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/240/trunk/app/views/orders/new.html.erb
+END
+_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/268/trunk/app/views/orders/_list.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/245/trunk/app/views/orders/_form.html.erb
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/throneofthestars/!svn/ver/238/trunk/app/views/players
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/41/trunk/app/views/players/edit.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/238/trunk/app/views/players/new.html.erb
+END
+_how_played.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/throneofthestars/!svn/ver/238/trunk/app/views/players/_how_played.html.erb
+END
+_email_options.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/throneofthestars/!svn/ver/24/trunk/app/views/players/_email_options.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/82/trunk/app/views/players/_form.html.erb
+END

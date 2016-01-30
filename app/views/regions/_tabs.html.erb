@@ -1,0 +1,47 @@
+<%=tab(:overview, true) do -%>
+<div id="overview" class="tab">
+	<%=wiki_help_div('Regions')%>
+	<p>
+	  <%=@region.name%> is on the world of <%=link_to_world @region.world %> in its <%=h @region.hemisphere.downcase %> hemisphere. It is currently <%=h @region.current_season %> here<% if @region.current_season != @region.next_rotation_season %> and will be <%=h @region.next_rotation_season %> next chronum<% end %>.
+	</p>
+	<% if @region.earl %>
+	<p>
+	  <%=link_to_character  @region.earl %> is the current ruler.
+	</p>
+	<% end %>
+	<% if @region.bishop %>
+	<p>
+	  <%=link_to_character  @region.bishop %> is the current bishop.
+	</p>
+	<% end %>
+	<p>
+	  It has <%=h @region.unclaimed_lands %> out of <%=h @region.total_lands %> lands unclaimed. One land would cost <%=money @region.land_cost%> to claim by an estate in this region.
+	</p>
+	<p>
+	  Its current infrastructure level is <%=h @region.infrastructure %>.
+	</p>
+	<% if @region.church_funds > 0 %>
+	<p>
+	  The diocese fund is currently <%=money @region.church_funds%> of which <%=@region.alms.to_i%>% will be given in alms<% if @region.education > 0%>, <%=@region.education.to_i%>% will be spent on education<% end %><% if @region.faith_projects > 0%> and the remaining <%=@region.faith_projects.to_i%>% will be directed towards faith projects<% end %>.
+	</p>
+	<% end %>
+	<% if @region.last_tribute %>
+	<p>
+	  The Earl last requested a tribute on <%=h @region.last_tribute.to_pretty %>.
+	</p>
+	<% end %>
+	<p>
+	  <%=region_resources_description(@region)%>
+	</p>
+	<p>
+	  <%=region_estate_description(@region)%>
+	</p>
+</div>
+<% end -%>
+
+<%=tab(:census) do -%>
+<div id="census" class="tab">
+	<%=wiki_help_div('Population')%>
+	<%=render :partial => '/populations/census', :locals => {:census => Population.region_census(@region)} %>
+</div>
+<% end %>

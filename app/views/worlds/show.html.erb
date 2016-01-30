@@ -1,0 +1,10 @@
+<% title "World : #{@world.name}" %>
+<% 
+if current_noble_house
+	tabbed_menu({:overview => 'Overview', :census => 'Census', :world_market => 'World Market', :listings => "House #{current_noble_house.name} Sales"},[link_to('Solar System', worlds_path)]) 
+else
+	tabbed_menu({:overview => 'Overview', :census => 'Census', :world_market => 'World Market'},[link_to('Solar System', worlds_path)]) 
+end
+%>
+
+<%=render :partial => 'tabs' %>

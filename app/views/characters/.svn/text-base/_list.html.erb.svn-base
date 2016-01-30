@@ -1,0 +1,53 @@
+<% if characters.empty? %>
+<p class="empty_results">No characters found</p>
+<% else %>
+<table cellspacing="4" cellpadding="2">
+  <tr>
+    <th>
+      Character
+    </th>
+    <th>
+      Gender
+    </th>
+    <th>
+      Age
+    </th>
+    <th>
+      Status
+    </th>
+    <th>
+      Traits <%=wiki_help('Traits')%> and Skills <%=wiki_help('Skills')%>
+    </th>
+    <th></th>
+  </tr>
+<% characters.each do |character| -%>
+  <tr>
+    <td>
+      <%=link_to_character character %>
+    </td>
+    <td>
+      <%=h character.gender %>
+    </td>
+    <td>
+      <%=h character.age%>
+    </td>
+    <td>
+      <%=h relationship_description(character) %>
+    </td>
+    <td>
+      <%=h (character.traits.to_a + character.skills.to_a).join(", ")%>
+    </td>
+    <td>
+      <% if character.prisoner && !character.prisoner.ransoms.empty? %>
+      Ransom offers:
+      <ul>
+        <% character.prisoner.ransoms.each do |ransom| %>
+        <li>&pound;<%=ransom.ransom%> from <%=link_to_character(ransom.character)%></li>
+        <% end %>
+      </ul>
+      <% end %>
+    </td>
+  </tr>
+<% end -%>
+</table>
+<% end %>

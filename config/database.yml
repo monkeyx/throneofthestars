@@ -1,0 +1,15 @@
+development:
+  adapter: mysql2
+  database: throneofthestars_development
+  encoding: utf8
+  username: msdev
+  password: password
+  host: 127.0.0.1
+
+production:
+  adapter: mysql2
+  database: throneofthestars_production
+  encoding: utf8
+  username: msdev
+  password: password
+  host: 127.0.0.1

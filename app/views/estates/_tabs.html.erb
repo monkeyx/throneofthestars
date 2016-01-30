@@ -1,0 +1,157 @@
+<%= tab(:overview, true) do -%>
+<div id="overview" class="tab">
+  <%=wiki_help_div('Estates')%>
+  <p>
+    <%="Estate #{@estate.name}"%> is located in the region of <%=link_to_region @estate.region %> on the world of <%=link_to_world @estate.region.world %>. It is currently <%=h @estate.region.current_season %> here<% if @estate.region.current_season != @estate.region.next_rotation_season %> and will be <%=h @estate.region.next_rotation_season %> next chronum<% end %>.
+  </p>
+  <p>
+    It was founded on the <%=h @estate.build_date.to_pretty %>.
+  <% if @estate.captured_date %>
+    It was captured on the <%=h @estate.captured_dateto_pretty %>.
+  <% end %>
+  <% if @estate.destroyed_date %>
+    It was destroyed on the <%=h @estate.destroyed_dateto_pretty %>.
+  <% end %>
+  </p>
+  <p>
+  <% if @estate.lord %>
+    It is currently ruled by <%=link_to_character @estate.lord %>.
+  <% else %>
+    <span class="warning">It has no Lord to manage it!</span>
+  <% end %>
+  </p>
+  <p>
+  <% if @estate.steward %>
+    Its current steward is <%=link_to_character @estate.steward, :name_and_family %>.
+  <% else %>
+    <span class="warning">It has no Steward and will not automatically produce resources or manufacture items!</span>
+  <% end %>
+  </p>
+  <p>
+  <% if @estate.tribune %>
+    Its current tribune is <%=link_to_character @estate.tribune, :name_and_family %>.
+  <% else %>
+    <span class="warning">It has no Tribune and will not automatically recruit workers or troops!</span>
+  <% end %>
+  </p>
+  <% if @estate.deacon %>
+  <p><%=link_to_character @estate.deacon, :name_and_family %> is the Deacon of the Chapel.</p>
+  <% end %>
+  <p>
+    It has <strong><%=h @estate.free_land %> out of <%=h @estate.lands %> lands free</strong> for development and collects <strong><%=money @estate.rents%> in rents</strong> per chronum. 
+  </p>
+  <p>
+    Its current tax level is <%=money @estate.taxes %> per free person which would bring in a maximum of <%=money @estate.max_taxes%> per annum based on the current population.
+  </p>
+</div>
+<% end -%>
+
+<%= tab(:population) do -%>
+  <div id="population" class="tab">
+    <%=wiki_help_div('Population')%>
+    <%=render :partial => 'population', :locals => {:estate => @estate} %>
+    <p>
+      <strong>Total Worker Wages:</strong>: <%=money @estate.sum_wages%> / &empty;
+    </p>
+  </div>
+<% end -%>
+
+<%= tab(:buildings) do -%>
+  <div id=""buildings" class="tab">
+    <%=wiki_help_div('Buildings')%>
+    <%=render :partial => '/buildings/list', :locals => {:buildings => @estate.buildings} %>
+    <p>
+      <strong>Automated Production Capacity:</strong>
+      <%=h @estate.total_production_capacity %> mass per &empty;.
+    </p>
+    <p>
+      <strong>Shuttle Capacity:</strong>
+      <%=h @estate.available_shuttle_capacity %> / <%=h @estate.total_shuttle_capacity%> mass remaining. Shuttle capacity is reset every &empty;.
+    </p>
+  </div>
+<% end -%>
+
+<%= tab(:inventory) do -%>
+  <div id="inventory" class="tab">
+    <%= render :partial => '/items/bundles', :locals => {:items => @estate.bundles} %>
+    <p>
+      <strong>Total Troop Wages:</strong>
+      <%=money @estate.troop_wages %>
+    </p>
+    <p>
+      <strong>Shuttle Capacity:</strong>
+      <%=h @estate.available_shuttle_capacity %> / <%=h @estate.total_shuttle_capacity%> mass remaining. Shuttle capacity is reset every &empty;.
+    </p>
+  </div>
+<% end -%>
+
+<%= tab(:production) do -%>
+  <div id="production" class="tab">
+    <%= render :partial => '/production_queues/list', :locals => {:items => @estate.production_queues } %>
+    <p>
+      <strong>Automated Production Capacity:</strong>
+      <%=h @estate.total_production_capacity %> mass per &empty;.
+    </p>
+    <p><strong>Produce order:</strong> This gets your Lord to produce something without using the workshop's capacity (just the action points of your Lord and the raw materials).</p>
+    <p><strong>Add to Queue order:</strong> Your Steward will add something to the queue of items to be produced by the workshops automatically each &empty;. You can alter a particular queued item (setting it to zero quantity will mean cancelling production of that line) or clear the entire queue. Queued items will be built in the order shown above as long as there are raw materials in place. If an item has more mass than the workshops can build in a single &empty;, production carries forward on that item until it is built.
+    </p>
+  </div>
+<% end -%>
+
+<%= tab(:authorisations) do -%>
+  <div id="authorisations" class="tab">
+    <%= render :partial => '/authorisations/list', :locals => {:authorisations => @estate.authorisations, :show_estate => false } %>
+    <p><strong>Tip:</strong> Authorisations allow other Noble Houses to pick up or deliver items to your estate.</p>
+  </div>
+<% end -%>
+
+<%= tab(:news) do -%>
+  <div id="news" class="tab">
+    <%=render :partial => '/news/list', :locals => {:news => @estate.news_log(current_noble_house)} %>
+  </div>
+<% end -%>
+
+<%= tab(:tournaments) do -%>
+  <div id="tournaments" class="tab">
+    <%= render :partial => '/tournaments/list', :locals => {:tournaments => @estate.tournaments.sort{|a,b| a.event_date <=> b.event_date } } %>
+    <p><strong>Tip:</strong> Tournaments are organised events of jousting and sword fights where the winner becomes a Knight. You earn glory by hosting them dependent on how big a prize you offer. At least two foreign characters must participate for a tournament to take place.</p>
+  </div>
+<% end -%>
+
+<%= tab(:weddings) do -%>
+  <div id="weddings" class="tab">
+    <%= render :partial => '/weddings/list', :locals => {:weddings => @estate.weddings } %>
+    <p><strong>Tip:</strong> Weddings are held for betrothed females of your own house. You can invite guests to attend but must provide at least basic grain and mead for them. A more lavish offering improves the honour you and your guests gain whilst failure to provide enough of the basics can result in the loss of honour.</p>
+  </div>
+<% end -%>
+
+<%= tab(:residents) do -%>
+  <div id="residents" class="tab">
+  <% if @estate.residents.empty? %>
+  <p class="empty_results">
+    There are currently no characters at this estate.
+  </p>
+  <% else %>
+  <%=render :partial => '/characters/list', :locals => {:characters => @estate.residents} %>
+  <% end %>
+  </div>
+<% end -%>
+
+<%= tab(:prisoners) do -%>
+  <div id="prisoners" class="tab">
+  <% if @estate.prisoners.empty? %>
+  <p class="empty_results">
+    There are currently no prisoners at this estate
+  </p>
+  <% else %>
+  <%=render :partial => '/characters/list', :locals => {:characters => @estate.prisoners.map{|p| p.character}} %>
+  <% end %>
+  <p><strong>Tip:</strong> Imprisoning characters on a whim will hurt your honour. Characters caught committing espionage are imprisoned lawfully and shown here. You can pardon a prisoner at your discretion and accept any ransoms you have received for them. Executing a prisoner is a dishonourable if sometimes useful act.</p>
+  </div>
+<% end -%>
+
+<%=tab(:edit, false, false) do -%>
+  <div id="edit" class="tab">
+    <%= render :partial => 'form' %>
+  </div>
+<% end %>

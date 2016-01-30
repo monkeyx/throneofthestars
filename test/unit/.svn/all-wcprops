@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/throneofthestars/!svn/ver/296/trunk/test/unit
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/2/trunk/test/unit/.gitkeep
+END
+space_battle_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/51/trunk/test/unit/space_battle_test.rb
+END
+ground_battle_test.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/120/trunk/test/unit/ground_battle_test.rb
+END

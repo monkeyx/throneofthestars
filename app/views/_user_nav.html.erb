@@ -1,0 +1,28 @@
+<div id="user_nav">
+  <% if current_player %>
+    <% if current_noble_house %>
+      <%=render :partial => '/house_stats' %>
+    <% 
+      message_count = current_baron.message_count 
+      message_title = "#{pluralize(message_count, "new message")}" if message_count > 0
+      new_news = current_player.new_news_flag?
+    %>
+    <% if message_count > 0 %>
+      <%=link_to message_title, messages_path, :class => 'new_messages' %> &nbsp;
+    <% end %>
+    <% if new_news %>
+      <%=link_to 'News Available', "/?tab=news", :class => 'new_news' %>&nbsp;
+    <% end %>
+    <form id="quick_nav" action='../'>
+      <%=quick_nav_select%>
+    </form>
+    <% else %>
+    <%=link_to 'Form a new Noble House', new_noble_house_path %>
+    <%=link_to "Settings", edit_player_path(:current)%> |
+    <%=link_to "Logout", logout_path %>
+    <% end %>
+  <% else %>
+    <%=link_to "Start playing", new_player_path %> |
+    <%=link_to "Resume playing", login_path %>
+  <% end %>
+</div>

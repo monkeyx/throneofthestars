@@ -1,0 +1,30 @@
+<% 
+title 'Reported Messages' 
+render :partial => 'tab_menu'
+%>
+
+<div id="reported" class="tab">
+<% unless @messages.empty? %>
+<table>
+	<tr>
+		<th>Sender</th>
+		<th>Receiver</th>
+		<th>Content</th>
+		<th>Player Action</th>
+	</tr>
+	<% @messages.each do |message| -%>
+	<% player = message.from.noble_house.player %>
+	<tr>
+		<td><%=link_to_character(message.from)%> (<%=player.name%>)</td>
+		<td><%=link_to_character(message.character)%></td>
+		<td><%=raw message.formatted_content %></td>
+		<td>
+			<%=render :partial => 'player_action_form', :locals => {:player => player}%>
+		</td>
+	</tr>
+	<% end -%>
+</table>
+<% else %>
+<p class="empty_results">No messages reported</p>
+<% end %>
+</div>

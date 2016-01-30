@@ -1,0 +1,33 @@
+<%= form_for message do |f| %>
+  <p><strong>Note:</strong> Items marked <span class="required">*</span> are required fields</p>
+  <%= form_error_messages(message) %>
+  <%=f.hidden_field :from_id %>
+  <fieldset id="compose">
+    <legend><span><%=form_label%></span></legend>
+    <ol>
+      <li>
+        <%= f.label 'To', :class => 'required' %>
+        <%= f.select :character_id, options_for_barons(message.character_id), {:prompt => 'Choose Recipient'} %>
+      </li>
+      <li>
+        <%= f.label :subject, :class => 'required' %>
+        <%= f.text_field :subject %>
+      </li>
+      <li>
+        <label for="message_sovereigns">Attach &pound;</label>
+        <%= f.text_field :sovereigns, :size => 6 %>
+      </li>
+      <div id="emoticons">
+        <% Message::EMOTICONS.keys.each do |emoticon| -%>
+        <a href="#" title="<%=emoticon%>"><img src="<%=Message::EMOTICONS[emoticon]%>"/></a>
+        <% end -%>
+      </div>
+      <li>
+        <%= f.text_area :content, :id => 'bbcode', :cols => 80, :rows => 20 %>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset id="submitform">
+    <%= f.submit submit_text %>
+  </fieldset>
+<% end %>

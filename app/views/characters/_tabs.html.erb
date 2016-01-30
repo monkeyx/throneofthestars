@@ -1,0 +1,93 @@
+<%=tab(:overview, true) do -%>
+<div id="overview" class="tab">
+  <%=wiki_help_div('Characters')%>
+
+  <p>
+    <strong><%=h @character.name_and_full_titles %></strong>
+  </p>
+
+  <p>
+    <%=character_description(@character)%>
+  </p>
+  <p>
+    <%=character_birth(@character)%>
+  </p>
+  <p>
+    <%=character_status(@character)%>
+  </p>
+  <p>
+    <%=character_adjectives(@character) %>
+  </p>
+  <p>
+    <%=character_location(@character) %>
+  </p>
+  <p>
+    <%=character_wealth(@character)%>
+  </p>
+  <p>
+    <%=character_reknown(@character) %>
+  </p>
+  <p>
+    <%=character_siblings(@character)%>
+  </p>
+  <p>
+    <%=character_children(@character)%>
+  </p>
+  <p>
+    <%=character_tournaments(@character)%>
+  </p>
+  <p>
+    <%=character_wedding(@character)%>
+  </o>
+</div>
+<% end -%>
+
+<% if belongs_to_current_player?(@character) && @character.adult? %>
+<%=tab(:orders, false, false) do -%>
+<div id="orders" class="tab">
+  <% if @character.adult? %>
+    <%=wiki_help_div('Character_Orders', 'Orders')%>
+    <div id="pending_orders">
+      <%=render :partial => '/orders/list', :locals => {:orders => @character.orders} %>
+    </div>
+    <div id="new_order" style="clear: both; padding-top: 5px; ">
+      <p><strong>Action Points:</strong> <%=@character.action_points %> out of 10</p>
+      <%=render :partial => 'choose_order', :locals => {:character => @character}%>
+    </div>
+    <br/>
+  <% else %>
+    <p>
+      Children will not obey orders.
+    </p>
+  <% end %>
+</div>
+<% end -%>
+<% end %>
+
+<% if @character.emissary? %>
+<%=tab(:espionage) do -%>
+<div id="espionage" class="tab">
+  <%=render :partial => 'espionage' %>
+</div>
+<% end -%>
+<% end %>
+
+<%=tab(:diplomacy) do -%>
+<div id="diplomacy" class="tab">
+  <%=render :partial => 'diplomacy' %>
+</div>
+<% end -%>
+
+<%=tab(:news) do -%>
+<div id="news" class="tab">
+  <%=render :partial => '/news/list', :locals => {:news => @character.news_log(current_noble_house)} %>
+</div>
+<% end -%>
+
+<% if belongs_to_current_player?(@character) %>
+  <%=tab(:edit, false, false) do -%>
+    <div id="edit" class="tab">
+      <%= render :partial => 'form' %>
+    </div>
+  <% end %>
+<% end %>

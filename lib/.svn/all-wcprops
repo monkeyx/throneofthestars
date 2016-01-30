@@ -1,0 +1,125 @@
+K 25
+svn:wc:ra_dav:version-url
+V 40
+/throneofthestars/!svn/ver/290/trunk/lib
+END
+wealthy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/throneofthestars/!svn/ver/8/trunk/lib/wealthy.rb
+END
+news_log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/throneofthestars/!svn/ver/46/trunk/lib/news_log.rb
+END
+starships.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/throneofthestars/!svn/ver/52/trunk/lib/starships.rb
+END
+timer.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/throneofthestars/!svn/ver/2/trunk/lib/timer.rb
+END
+chance.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/throneofthestars/!svn/ver/51/trunk/lib/chance.rb
+END
+order_dispatcher.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/throneofthestars/!svn/ver/50/trunk/lib/order_dispatcher.rb
+END
+log.rb
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/throneofthestars/!svn/ver/69/trunk/lib/log.rb
+END
+number_formatting.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/throneofthestars/!svn/ver/2/trunk/lib/number_formatting.rb
+END
+polynomial.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/47/trunk/lib/polynomial.rb
+END
+ancient_house.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/51/trunk/lib/ancient_house.rb
+END
+locatable.rb
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/throneofthestars/!svn/ver/51/trunk/lib/locatable.rb
+END
+raw_materials.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/throneofthestars/!svn/ver/2/trunk/lib/raw_materials.rb
+END
+game_updater.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/332/trunk/lib/game_updater.rb
+END
+item_container.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/7/trunk/lib/item_container.rb
+END
+names.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/throneofthestars/!svn/ver/2/trunk/lib/names.rb
+END
+dice.rb
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/throneofthestars/!svn/ver/47/trunk/lib/dice.rb
+END
+events.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/throneofthestars/!svn/ver/284/trunk/lib/events.rb
+END
+signup.rb
+K 25
+svn:wc:ra_dav:version-url
+V 50
+/throneofthestars/!svn/ver/135/trunk/lib/signup.rb
+END
+game_date.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/330/trunk/lib/game_date.rb
+END
+house_position.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/7/trunk/lib/house_position.rb
+END

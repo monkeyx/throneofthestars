@@ -1,0 +1,31 @@
+<% title "Starships of House #{current_noble_house.name}" %>
+
+<%=tab(:index, true, false) do-%>
+  <% if @starships.empty? %>
+  <div class="tab">
+  <p class="empty_results">Your House has no Starships</p>
+  </div>
+  <% else %>
+    <table>
+      <tr>
+        <th>Name</th>
+        <th>Starship Configuration</th>
+        <th>Location</th>
+        <th>Captain</th>
+        <th>Status</th>
+      </tr>
+      <% for starship in @starships %>
+        <tr>
+          <td><%=link_to_starship(starship) %></td>
+          <td><%=link_to_starship_configuration(starship.starship_configuration) %></td>
+          <td><%=link_to link_to_location(starship.location) %></td>
+          <td><%=link_to_character(starship.captain) %></td>
+          <td><%=starship.status_text%></td>
+        </tr>
+      <% end %>
+    </table>
+    <div class="pagination">
+      <%= will_paginate @noble_houses %>
+    </div>
+  <% end %>
+<% end -%>

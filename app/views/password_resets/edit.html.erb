@@ -1,0 +1,26 @@
+<% title 'Change your Password' %>
+
+<div id="password_reset" class="tab">
+<%= form_tag edit_password_path(@player.perishable_token) do %>
+  <%= form_error_messages(@player) %>
+  <%=hidden_field_tag :id, params[:id]%>
+  <%= fields_for @player do |f| -%>
+  <fieldset id="password">
+    <legend><span>Change Password</span></legend>
+    <ol>
+      <li>
+        <%= f.label :password, :class => 'required' %>
+        <%= f.password_field :password %>
+      </li>
+      <li>
+        <%= f.label :password_confirmation, :class => 'required' %>
+        <%= f.password_field :password_confirmation %>
+      </li>
+    </ol>
+  </fieldset>
+  <% end -%>
+  <fieldset id="submitform">
+    <%= submit_tag "Set Password" %>
+  </fieldset>
+<% end %>
+</div>

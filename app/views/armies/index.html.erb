@@ -1,0 +1,29 @@
+<% title "Armies of House #{current_noble_house.name}" %>
+
+<%=tab(:index, true) do-%>
+  <% if @armies.empty? %>
+  <div class="tab">
+  <p class="empty_results">Your House has no Armies</p>
+  </div>
+  <% else %>
+  <table cellpadding="2" cellspacing="4">
+    <tr>
+      <th>Army</th>
+      <th>Location</th>
+      <th>Legate</th>
+      <th>Morale</th>
+    </tr>
+    <% for army in @armies %>
+      <tr>
+        <td><%=link_to_army army %></td>
+        <td><%=link_to_location army.location %></td>
+        <td><%=link_to_character army.legate %></td>
+        <td><%=percentage army.morale %></td>
+      </tr>
+    <% end %>
+  </table>
+  <div class="pagination">
+    <%= will_paginate @armies %>
+  </div>
+  <% end %>
+<% end -%>

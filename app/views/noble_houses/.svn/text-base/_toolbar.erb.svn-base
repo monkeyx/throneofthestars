@@ -1,0 +1,36 @@
+<%
+if belongs_to_current_player?(@noble_house)
+  unless toolbar_cached? || !@noble_house.baron.can_be_given_orders?
+    quick_orders = []
+    quick_orders << 'Appoint Chancellor' unless @noble_house.chancellor
+    quick_orders << 'Claim Title'
+    if @noble_house.has_truce_offers?
+      quick_orders << 'Accept Truce'
+      quick_orders << 'Reject Truce'
+    end
+    if @noble_house.has_peace_offers?
+      quick_orders << 'Accept Peace'
+      quick_orders << 'Reject Peace'
+    end
+    if @noble_house.has_alliance_offers?
+      quick_orders << 'Accept Alliance'
+      quick_orders << 'Reject Alliance'
+    end
+    if @noble_house.has_oath_offers?
+      quick_orders << 'Accept Allegiance'
+      quick_orders << 'Reject Allegiance'
+    end
+    quick_orders << 'Break Oath' if @noble_house.has_oath?
+    quick_orders << 'Break Alliance' if @noble_house.has_allies?
+    quick_orders << 'Ransom Prisoner' if @noble_house.imprisoned_members.size > 0
+
+    quick_orders << 'Demand Justice'
+
+    order_toolbar(@noble_house.baron, quick_orders) unless quick_orders.empty?
+
+    if @noble_house.chancellor
+      order_toolbar(@noble_house.chancellor,['Set Tax Level'])
+    end
+  end
+end
+%>

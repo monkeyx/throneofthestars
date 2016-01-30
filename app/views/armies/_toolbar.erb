@@ -1,0 +1,20 @@
+<%
+  unless toolbar_cached?
+    quick_orders = []
+    if @army.legate
+      if tab?(:units)
+        quick_orders << 'Create Unit'
+        quick_orders << 'Load Unit'
+        quick_orders << 'Unload Unit'
+      end
+      if tab?(:overview) || no_tab?
+        quick_orders << 'Army Move to Region' if @army.movement_allowed?
+        quick_orders << 'Army Move to Estate' if @army.movement_allowed?
+        quick_orders << 'Army Move to Orbit' if @army.orbital_allowed?
+        quick_orders << 'Attack Armies'
+        quick_orders << 'Assault Estate'
+      end
+    end
+    order_toolbar(@army.legate, quick_orders) unless quick_orders.empty?
+  end
+%>

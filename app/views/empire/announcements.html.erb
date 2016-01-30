@@ -1,0 +1,4 @@
+<% title "Announcements" %>
+<% tabbed_menu({:announcements => 'Announcements', :births => 'Births', :matured => 'Coming of Age', :marriages => 'Marriages', :deaths => 'Deaths'},[link_to("The Empire", empire_path), link_to("The Church", church_path)]) %>
+
+<%=render :partial => 'tabs', :locals => {:default => :announcements} %>

@@ -1,0 +1,28 @@
+/* preview style examples */
+body {
+	background-color:#EFEFEF;
+    font-family: 'Arimo', sans-serif;
+    font-size: 14px;
+}
+
+blockquote {
+  font-family: 'Federant', cursive;
+  font-size: 12px;
+  font-style: italic;
+  padding: 8px;
+  background-color: #faebbc;
+  border-top: 1px solid #e1cc89;
+  border-bottom: 1px solid #e1cc89;
+  margin: 5px;
+  background-image: url(/assets/openquote1.gif);
+  background-position: top left;
+  background-repeat: no-repeat;
+  text-indent: 23px;
+}
+
+blockquote span {
+    display: block;
+    background-image: url(/assets/closequote1.gif);
+    background-repeat: no-repeat;
+    background-position: bottom right;
+}

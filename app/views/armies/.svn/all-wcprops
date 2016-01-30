@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/220/trunk/app/views/armies
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/57/trunk/app/views/armies/index.html.erb
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/322/trunk/app/views/armies/_tabs.html.erb
+END
+show.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/throneofthestars/!svn/ver/220/trunk/app/views/armies/show.js.erb
+END
+_toolbar.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/220/trunk/app/views/armies/_toolbar.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/220/trunk/app/views/armies/show.html.erb
+END
+_units.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/58/trunk/app/views/armies/_units.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/17/trunk/app/views/armies/_form.html.erb
+END

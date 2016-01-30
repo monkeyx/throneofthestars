@@ -1,0 +1,36 @@
+<p>
+  One Thousand Years Ago, the <%=link_to "Empire of Man", empire_path %> crumbled into civil war as the great <%=link_to "Noble Houses", noble_houses_path %> pitted their fearsome war machines against each other.
+</p>
+<p>
+  Nuclear devastation soon followed and the worlds regressed into barbarism with only the great archives of <%=link_to "the Church", church_path %> left intact in their impregnable fortresses.
+</p>
+<p>
+  Yet some survived the apocalypse that came, with a few ancient houses holding on to the old traditions. They have inspired the new would-be nobility to rise out of the savage landscape and forge their own powerbases.
+</p>
+<p>
+  Today, civilisation is being rebuilt and once more powerful men lay claim to the heritage of the old Empire.
+  The Church slowly opens its door to the people again and carefully shares some of its many secrets with the aspiring nobility.
+</p>
+<%
+estate_link = link_to "Estate", new_player_path
+  house_link = link_to "your Noble House", new_player_path
+  starships_link = link_to "two starships", new_player_path
+  character_link = link_to "characters", new_player_path
+%>
+<p>
+  You take the role of a Baron of a new House seeking power, fortune and glory amongst the <%=link_to "Twelve Worlds", worlds_path %>. Your House is the lucky recipient of assistance from the Church which spurs you on to restore the Holy Empire to its former glory.
+  They encourage you to act wisely and pay tithes so you will be known for your piety with the One True God. In return, much of the lost lore can be restored.
+</p>
+<p>
+  Your modest <%=estate_link%> has received a flood of workers and <%=house_link%> has been given the boost of <%=starships_link%> and a mandate to fulfil the destiny of Mankind and reunite the Empire.
+</p>
+<p>
+  Through careful use of <%=character_link%>, both major and minor, you can command vast estates, huge armies and mighty starships to do your bidding.
+</p>
+<p>
+  Take part in the devilish intrigue and diplomacy of the Noble Houses; feast at lavish weddings and take part in spirited tournaments,
+  fight for supremacy through military conquest or become wealthy as a crafty trader but do not neglect to manage your own household!
+</p>
+<p>
+  In <span class="title">Throne of the Stars</span>, the only way to lose is to end up with no heir to carry on your legacy. With carefully arranged marriages, your children will be the most valuable assets you have at your disposal.
+</p>

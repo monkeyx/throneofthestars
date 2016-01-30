@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/throneofthestars/!svn/ver/220/trunk/app/views/starship_configurations
+END
+_configuration.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/throneofthestars/!svn/ver/2/trunk/app/views/starship_configurations/_configuration.html.erb
+END
+_sections.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/throneofthestars/!svn/ver/11/trunk/app/views/starship_configurations/_sections.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/throneofthestars/!svn/ver/129/trunk/app/views/starship_configurations/index.html.erb
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/throneofthestars/!svn/ver/220/trunk/app/views/starship_configurations/_tabs.html.erb
+END
+show.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/throneofthestars/!svn/ver/220/trunk/app/views/starship_configurations/show.js.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/throneofthestars/!svn/ver/9/trunk/app/views/starship_configurations/new.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/throneofthestars/!svn/ver/220/trunk/app/views/starship_configurations/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/throneofthestars/!svn/ver/17/trunk/app/views/starship_configurations/_form.html.erb
+END

@@ -1,0 +1,235 @@
+DEBUG||?SOURCE? - Debug: ?TARGET?
+PROMOTION||?HOUSE? are pleased to announce ?SOURCE? has joined the ranks of High Society.
+ORDER_FAILED||?SOURCE? failed to carry out ?TARGET?.
+ACCUSATION||?SOURCE? has accused ?TARGET? of injustice!
+ACCUSED||?SOURCE? has been accused by ?TARGET? of injustice!
+REJECT_ACCUSATION||?TARGET? rejected an accusation of injustice made by ?SOURCE?!
+TRIAL_COMBAT||?TARGET? sought a trial by combat with ?SOURCE? to answer the accusation of injustice!
+TRIAL_SOVEREIGN||?TARGET? sought their sovereign's judgement on the matter of justice brought forward by ?SOURCE?.
+TRIAL_CHURCH||?TARGET? sought a Church trial on the matter of justice brought forward by ?SOURCE?.
+TRIAL_COURT||?TARGET? sought a trial of noble peers on the matter of justice brought forward by ?SOURCE?.
+ARMY_FORMED||By the command of ?TARGET?, ?SOURCE? has mustered and awaits command.
+UNIT_FORMED||?SOURCE? has formed a new unit called ?TARGET?.
+UNIT_LOAD||?SOURCE? has loaded ?TARGET?.
+UNIT_UNLOAD||?SOURCE? has unloaded ?TARGET?.
+LEAD_UNIT||?SOURCE? Army unit ?TARGET?.
+ATTACK_ARMY||?SOURCE? has attacked ?TARGET?!
+ASSAULT_ESTATE||?SOURCE? has assaulted ?TARGET?!
+BOARD_SHIP||?SOURCE? has boarded ?TARGET?!
+ARMY_KILLED||?SOURCE? has been destroyed.
+ARMY_MOVE||?SOURCE? has moved to ?TARGET?.
+ARMY_EMBARK||?SOURCE? has embarked on ?TARGET?.
+ARMY_DISEMBARK||?SOURCE? has disembarked from ?TARGET?.
+INHERIT||?TARGET? has been inherited by ?SOURCE?.
+BORN||?SOURCE? has been born to ?TARGET?.
+BORN_BOY||?TARGET? are pleased to announce the birth of their baby boy, ?SOURCE?.
+BORN_GIRL||?TARGET? are pleased to announce the birth of their baby girl, ?SOURCE?.
+NOVICE_BOY||?HOUSE? are pleased to introduce ?SOURCE? upon his coming of age.
+NOVICE_GIRL||?HOUSE? are pleased to present ?SOURCE? upon her coming of age.
+NOVICE||?HOUSE? are pleased to announce ?SOURCE? has become of age.
+ADULT||?SOURCE? is now an adult.
+DIED||?HOUSE? regret the passing of ?SOURCE? ?TARGET?.
+LEFT_HOUSE||?SOURCE? has left ?TARGET?.
+JOIN_HOUSE||?SOURCE? has joined ?TARGET?.
+EXILED||?SOURCE? has been exiled by ?TARGET?!
+HERETIC||?SOURCE? has been declared a heretic by ?TARGET?!
+ADD_TITLE||?SOURCE? became ?TARGET?.
+LOSE_TITLE||?SOURCE? is no longer ?TARGET?.
+ADD_TITLE_MARRIAGE||?SOURCE? became ?TARGET? through marriage.
+ADD_TRAIT||?SOURCE? became ?TARGET?.
+LOSE_TRAIT||?SOURCE? is no longer ?TARGET?.
+TRAIN_SKILL||?SOURCE? began training of ?TARGET?.
+ADD_SKILL||?SOURCE? is now ranked ?TARGET?.
+TEACH_SKILL||?SOURCE? taught lessons in ?TARGET?.
+CHARACTER_HOME||?SOURCE? moved to the ?TARGET?.
+CHARACTER_MOVE_ESTATE||?SOURCE? moved to the ?TARGET?.
+CHARACTER_BOARD_STARSHIP||?SOURCE? boarded Ship ?TARGET?.
+CHARACTER_UNBOARD_STARSHIP||?SOURCE? disembarked from a starship at ?TARGET?.
+JOIN_ARMY||?SOURCE? joined ?TARGET? Army.
+JOIN_UNIT||?SOURCE? joined ?TARGET?.
+LEAVE_ARMY||?SOURCE? left ?TARGET? Army.
+HOLD_TOURNAMENT||Estate ?SOURCE? is holding a tournament ?TARGET?.
+JOIN_TOURNAMENT||?SOURCE? joined the tournament at ?TARGET?.
+TOURNAMENT_ROUND_WON||?SOURCE? won a tournament round fighting with ?TARGET?.
+TOURNAMENT_ROUND_LOST||?SOURCE? lost a tournament round fighting with ?TARGET?.
+TOURNAMENT_WON||?SOURCE? won the tournament at ?TARGET?.
+TOURNAMENT_RUNNER_UP||?SOURCE? was a runner up at the ?TARGET? tournament.
+JOIN_CLERGY||?SOURCE? gave up his material possessions and joined the clergy.
+PROPOSAL||?SOURCE? proposed to ?TARGET?.
+PROPOSED||?TARGET? has proposed to ?SOURCE?.
+BETROTHED||?SOURCE? and ?TARGET? became betrothed.
+BETROTHED_MALE||?SOURCE? and ?TARGET? became betrothed.
+BETROTHED_FEMALE||?SOURCE? and ?TARGET? became betrothed.
+BROKE_BETROTHAL||?SOURCE? no longer wishes to marry ?TARGET?. ?HOUSE? suffered a loss of honour and piety as a result.
+BETROTHAL_BROKEN||?SOURCE? was sad to learn that ?TARGET? no longer wishes to marry them.
+MARRIED||?SOURCE? and ?TARGET? were married!
+MARRIED_HUSBAND||?SOURCE? and ?TARGET? were married!
+MARRIED_WIFE||?SOURCE? was married to ?TARGET? and moved to his estate.
+WIN_PERSONAL_COMBAT||?SOURCE? beat ?TARGET? in personal combat!
+PETITION_MAJOR_SUCCESS||?SOURCE? was highly influential with ?TARGET? causing much questioning about ?TARGET?'s loyalty.
+PETITION_SUCCESS||?SOURCE? was able to persuade ?TARGET? to reconsider their loyalty.
+PETITION_FAILED||?SOURCE? was unpersuasive with ?TARGET?.
+PETITION_DISASTER||?TARGET? became annoyed at the feeble persuasian efforts of ?SOURCE?.
+SPY_SUCCESS||?SOURCE? successfully completed their spy mission.
+SPY_FAIL||?SOURCE? failed to complete their spy mission.
+SPY_DISCOVERED||?SOURCE? was discovered whilst attempting to spy at ?TARGET?.
+ASSASSIN_SUCCESS||?SOURCE? successfully completed their covert operation.
+ASSASSIN_FAIL||?SOURCE? failed in their assassination attempt.
+ASSASSIN_DISCOVERED||?SOURCE? was discovered whilst attempting to assassinate ?TARGET?.
+SABOTEUR_SUCCESS||?SOURCE? succeeded in their sabotage attempt.
+SABOTEUR_FAILED||?SOURCE? failed to complete their sabotage mission.
+SABOTEUR_DISCOVERED||?SOURCE? was discovered sabotaging ?TARGET?.
+ASSASSINATED||?SOURCE? was assassinated!
+SABOTAGE||A saboteur at ?SOURCE? has managed to destroy ?TARGET?.
+IMPRISONED||?SOURCE? was arrested and imprisoned at ?TARGET?!
+RELEASED||?SOURCE? was released by the Lord of ?TARGET?.
+EXECUTED||?SOURCE? has been executed by the Lord of ?TARGET?!
+ESCAPE_FAIL||?SOURCE? was grievously injured trying to escape ?TARGET?.
+ESCAPE_SUCCESS||?SOURCE? managed to escape from ?TARGET?!
+RANSOM_OFFER||?SOURCE? has offered a ransom ?TARGET?.
+RANSOM_OFFER_RECEIVED||?SOURCE? has received a ransom offer ?TARGET?.
+RANSOM_ACCEPTED||The ransom offer ?TARGET? has been accepted.
+RANSOM_ACCEPT||?SOURCE? has accepted the ransom offer ?TARGET?.
+RANSOM_REJECTED||The ransom offer ?TARGET? has been declined.
+CASSUS_BELLI(Injustice)||?SOURCE? gained a causs belli on ?TARGET? because they refused to deal with a matter of justice!
+CASSUS_BELLI(Lost Trial)||?SOURCE? gained a causs belli on ?TARGET? because a trial went against them!
+CASSUS_BELLI(Attacked House)||?SOURCE? gained a causs belli on ?TARGET? because they were attacked!
+CASSUS_BELLI(Attacked Vassal)||?SOURCE? gained a causs belli on ?TARGET? because they attacked one of their vassals!
+CASSUS_BELLI(Attacked Ally)||?SOURCE? gained a causs belli on ?TARGET? because they attacked one of their allies!
+CASSUS_BELLI(Committed Piracy)||?SOURCE? gained a causs belli on ?TARGET? because they committed an act of piracy!
+CASSUS_BELLI(Disobeyed Imperial Order)||?SOURCE? gained a causs belli on ?TARGET? because they refused an Imperial order!
+CASSUS_BELLI(Disobeyed Church Order)||?SOURCE? gained a causs belli on ?TARGET? because they refused a Church order!
+CASSUS_BELLI(Assasination)||?SOURCE? gained a causs belli on ?TARGET? because they assassinated a member of their house!
+CASSUS_BELLI(Espionage)||?SOURCE? gained a causs belli on ?TARGET? because they committed an act of espionage at one of their estates!
+CASSUS_BELLI(Broke Truce)||?SOURCE? gained a causs belli on ?TARGET? because they broke a truce!
+CASSUS_BELLI(Imprisonment)||?SOURCE? gained a causs belli on ?TARGET? because they wrongfully imprisoned a member of their house!
+CASSUS_BELLI(Truce Expired)||?SOURCE? and ?TARGET? resumed the war after their truce expired.
+DECLARE_WAR||?SOURCE? declared war on ?TARGET?!
+DECLARED_WAR||?TARGET? declared war on ?SOURCE?.
+TRUCE_OFFER||?SOURCE? offered a truce to ?TARGET?.
+TRUCE_OFFERED||?TARGET? offered a truce to ?SOURCE?.
+TRUCE_ACCEPTED||?SOURCE? accepted a truce from ?TARGET?.
+TRUCE_OFFER_ACCEPTED||?TARGET? accepted an offer of truce from ?SOURCE?.
+TRUCE_REJECTED||?SOURCE? rejected a truce offer from ?TARGET?.
+TRUCE_OFFER_REJECTED||?TARGET? rejected an offer of truce from ?SOURCE?.
+PEACE_OFFER||?SOURCE? offered peace to ?TARGET?.
+PEACE_OFFERED||?TARGET? offered peace to ?SOURCE?.
+PEACE_ACCEPTED||?SOURCE? and ?TARGET? are now at peace!
+PEACE_OFFER_ACCEPTED||?TARGET? accepted an offer of peace from ?SOURCE?.
+PEACE_REJECTED||?SOURCE? rejected a peace offer from ?TARGET?.
+PEACE_OFFER_REJECTED||?TARGET? rejected an offer of peace from ?SOURCE?.
+ALLIANCE_OFFER||?SOURCE? offered ?TARGET? an alliance.
+ALLIANCE_OFFERED||?TARGET? offered an alliance to ?SOURCE?.
+ALLIANCE_ACCEPTED||?SOURCE? and ?TARGET? are now allies!
+ALLIANCE_OFFER_ACCEPTED||?TARGET? accepted an offer of an alliance from ?SOURCE?.
+ALLIANCE_BREAK||?SOURCE? broke their alliance with ?TARGET?.
+ALLIANCE_BROKEN||?TARGET? broke their alliance with ?SOURCE?.
+ALLIANCE_REJECTED||?SOURCE? rejected an alliance offer from ?TARGET?.
+ALLIANCE_OFFER_REJECTED||?TARGET? rejected an offer of an alliance from ?SOURCE?.
+ALLEGIANCE_OFFER||?SOURCE? offered their allegiance to ?TARGET?.
+ALLEGIANCE_OFFERED||?TARGET? offered their allegiance to ?SOURCE?.
+ALLEGIANCE_ACCEPTED||?SOURCE? accepted ?TARGET? as their vassal!
+ALLEGIANCE_OFFER_ACCEPTED||?TARGET? accepted an oath of allegiance from ?SOURCE?.
+ALLEGIANCE_BROKE||?TARGET? released ?SOURCE? as a vassal. They are now a free house.
+VASSAL_ALLEGIANCE_BROKE||?SOURCE? released ?TARGET? from being their vassal.
+ALLEGIANCE_CANCELLED||?TARGET? broke their oath of allegiance to ?SOURCE?.
+LIEGE_ALLEGIANCE_CANCELLED||?SOURCE? broke their oath of allegiance to ?TARGET?.
+ALLEGIANCE_REJECTED||?SOURCE? rejected an oath of allegiance from ?TARGET?.
+ALLEGIANCE_OFFER_REJECTED||?TARGET? rejected an oath of allegiance from ?SOURCE?.
+ESTATE_BUILT||?SOURCE? built.
+CLAIMED_LANDS||?SOURCE? claimed ?TARGET? lands.
+TRADE_LANDS||?SOURCE? traded lands with ?TARGET?.
+BUILDING_CONSTRUCTED||?SOURCE? constructed ?TARGET?.
+BUILDING_UPGRADED||?SOURCE? upgraded ?TARGET?.
+BUILDING_DEMOLISHED||?SOURCE? demolished ?TARGET?.
+SHIP_BUILD||?SOURCE? began construction of ?TARGET?.
+SHIP_COMPLETED||?SOURCE? built at ?TARGET?.
+SHIP_TAKE_OFF||?SOURCE? entered ?TARGET?.
+SHIP_DOCKED||?SOURCE? docked at ?TARGET?.
+SHIP_MOVED||?SOURCE? moved to ?TARGET?.
+SHIP_REFIT||?SOURCE? performed a refit at ?TARGET?.
+SHIP_INSTALLED||?SOURCE? installed ?TARGET?.
+SHIP_UNINSTALLED||?SOURCE? uninstalled ?TARGET?.
+SHIP_LOAD_CARGO||?SOURCE? picked up ?TARGET?.
+SHIP_UNLOAD_CARGO||?SOURCE? delivered ?TARGET?.
+SHIP_LOAD_WORKERS||?SOURCE? picked up ?TARGET?.
+SHIP_UNLOAD_WORKERS||?SOURCE? delivered ?TARGET?.
+SHIP_SALVAGE||?SOURCE? salvaged debris of ?TARGET?.
+SCANNED||?SOURCE? scanned ?TARGET?.
+ESTATE_SHIP_LOAD_CARGO||?TARGET?.
+ESTATE_SHIP_UNLOAD_CARGO||?TARGET?.
+ESTATE_SHIP_LOAD_WORKERS||?TARGET?.
+ESTATE_SHIP_UNLOAD_WORKERS||?TARGET?.
+REPAIR||Repairs of ?TARGET? hull points were undertaken on ?SOURCE?.
+HOUSE_FORMED||?SOURCE? was formed.
+MARKET_BUY||?SOURCE? bought ?TARGET?.
+MARKET_RECALL||?HOUSE? recalled ?TARGET? it had previously listed to ?SOURCE?.
+MARKET_SELL||?SOURCE? listed ?TARGET? for sale.
+CANCEL_SALE||?SOURCE? cancelled listing of ?TARGET?.
+HEAL_INJURY||?SOURCE? healed ?TARGET? of an injury.
+HEAL_ILLNESS||?SOURCE? healed ?TARGET? of an illness.
+HEAL_WOUND||?SOURCE? healed ?TARGET? of a wound.
+HEAL_FATAL||?TARGET? died due to medical malpractice by ?SOURCE?.
+PRODUCTION||?SOURCE? produced ?TARGET?.
+MINING||?SOURCE? produced ?TARGET?.
+HARVESTING||?SOURCE? gathered ?TARGET?.
+RECRUIT_TROOP||?SOURCE? recruited ?TARGET?.
+RECRUIT_WORKER||?SOURCE? hired ?TARGET?.
+BIRTHDAY||?SOURCE? celebrated a birthday?TARGET?.
+CASH_TRANSFER||?SOURCE? received ?TARGET?.
+COLLECT_RENT||?SOURCE? collected ?TARGET? in rents.
+SET_WAGES||?SOURCE? set wages to be paid to ?TARGET?.
+PAY_WORKERS||?SOURCE? paid wages of ?TARGET?.
+PAY_TROOPS||?SOURCE? paid wages of ?TARGET?.
+TROOPS_LEAVE||?SOURCE? lost ?TARGET? due to insufficient funds to pay their wages.
+USE_ITEMS||?SOURCE? used ?TARGET?.
+TAX_LEVEL||?SOURCE? set tax level to ?TARGET?.
+TAXES_PAID||?SOURCE? received taxes of ?TARGET?.
+ENSLAVED||?SOURCE? enslaved ?TARGET?.
+EMANCIPATION||?SOURCE? emancipated ?TARGET? slaves to work as freemen as there were none at the estate.
+ISSUE_AUTHORISATION||?SOURCE? issued authorisation ?TARGET?.
+RECEIVED_AUTHORISATION||?SOURCE? received authorisation ?TARGET?.
+REVOKE_AUTHORISATION||?SOURCE? revoked authorisation ?TARGET?.
+AUTHORISATION_REVOKED||?SOURCE? lost authorisation ?TARGET?.
+PAY_TITHES||?SOURCE? paid tithes of ?TARGET?.
+CHURCH_BUDGET||?SOURCE? set church budget ?TARGET?.
+CEASED||?SOURCE? ceased to exist.
+HOST_WEDDING||The wedding of ?TARGET? will be held at Estate ?SOURCE?.
+BRIDE_WEDDING||?SOURCE? will have her wedding at ?TARGET?.
+GROOM_WEDDING||?SOURCE? will marry at ?TARGET?.
+WEDDING_INVITE||?SOURCE? has been invited to the wedding of ?TARGET?.
+WEDDING_HELD||?SOURCE? held the wedding of ?TARGET?.
+WEDDING_CANCELLED||?SOURCE? cancelled the wedding of ?TARGET?.
+SHUTTLE_ITEMS_TO||?SOURCE? delivered ?TARGET?.
+SHUTTLE_ITEMS_DELIVERED||?TARGET? delivered to ?SOURCE?.
+SHUTTLE_ITEMS_FROM||?SOURCE? picked up by ?TARGET?.
+SHUTTLE_ITEMS_TAKEN||?TARGET? from ?SOURCE?.
+OFFER_APPRENTICE||?SOURCE? has offered an apprentice to ?TARGET?.
+APPRENTICE_OFFERED||?SOURCE? has been asked to mentor ?TARGET? as an apprentice.
+APPRENTICE_ACCEPTED||?SOURCE? has accepted ?TARGET? as their apprentice.
+APPRENTICESHIP_START||?SOURCE? has started their apprenticeship.
+APPRENTICESHIP_START_GIRL||?SOURCE? has started her apprenticeship.
+APPRENTICESHIP_START_BOY||?SOURCE? has started his apprenticeship.
+APPRENTICESHIP_COMPLETED||?SOURCE? has completed their apprenticeship.
+APPRENTICESHIP_COMPLETED_BOY||?SOURCE? has completed his apprenticeship.
+APPRENTICESHIP_COMPLETED_GIRL||?SOURCE? has completed her apprenticeship.
+APPRENTICE_GRADUATED||?TARGET? has completed their apprenticeship with ?SOURCE?.
+APPRENTICE_GRADUATED_BOY||?TARGET? has completed his apprenticeship with ?SOURCE?.
+APPRENTICE_GRADUATED_GIRL||?TARGET? has completed her apprenticeship with ?SOURCE?.
+APPRENTICESHIP_ENDED||?SOURCE? has ended their apprenticeship.
+APPRENTICESHIP_ENDED_BOY||?SOURCE? has ended his apprenticeship.
+APPRENTICESHIP_ENDED_GIRL||?SOURCE? has ended her apprenticeship.
+APPRENTICE_LEFT||?TARGET? is no longer an apprentice of ?SOURCE?.
+SHIP_EXPLODE||?SOURCE? has exploded in ?TARGET?.
+SHIP_BREAKDOWN||?SOURCE? has suffered an integrity breakdown in ?TARGET?.
+SPACE_BATTLE_DRAW||The space battle of ?TARGET? ended inconclusively.
+SPACE_BATTLE_WON||?SOURCE? forces won the space battle of ?TARGET?.
+SPACE_BATTLE_LOST||?SOURCE? forces lost the space battle of ?TARGET?.
+GROUND_BATTLE_DRAW||The battle of ?TARGET? ended inconclusively.
+GROUND_BATTLE_WON||?SOURCE? forces won the battle of ?TARGET?.
+GROUND_BATTLE_LOST||?SOURCE? forces lost the battle of ?TARGET?.
+CAPTURED||?SOURCE? captured by ?TARGET? forces.
+DESERTION||?SOURCE? had ?TARGET? desert due to poor morale.
+CHURCH_GIFT||The Church gave ?HOUSE? a gift ?TARGET?.
+MERCHANT_GIFT||The Imperial Merchants Guild gave ?HOUSE? a ?TARGET?.
+TEMPLAR_GIFT||The Knights Templar gave ?HOUSE? a ?TARGET?.

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/throneofthestars/!svn/ver/220/trunk/app/views/home
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/220/trunk/app/views/home/index.html.erb
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/220/trunk/app/views/home/_tabs.html.erb
+END
+_welcome.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/86/trunk/app/views/home/_welcome.html.erb
+END
+index.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/220/trunk/app/views/home/index.js.erb
+END
+_introduction.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/throneofthestars/!svn/ver/152/trunk/app/views/home/_introduction.html.erb
+END

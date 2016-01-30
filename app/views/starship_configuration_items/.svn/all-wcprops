@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/throneofthestars/!svn/ver/17/trunk/app/views/starship_configuration_items
+END
+edit.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/throneofthestars/!svn/ver/17/trunk/app/views/starship_configuration_items/edit.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/throneofthestars/!svn/ver/17/trunk/app/views/starship_configuration_items/_form.html.erb
+END

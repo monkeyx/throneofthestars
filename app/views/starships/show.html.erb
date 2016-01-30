@@ -1,0 +1,17 @@
+<% 
+if @starship.debris?
+	title "Debris : #{@starship.name}" 
+else
+	title "Starship : #{@starship.name}" 
+end
+
+render :partial => 'toolbar'
+
+if @starship.debris?
+	tabbed_menu({:overview => 'Overview', :news => "SS #{@starship.name} News", :cargo => 'Debris', :edit => 'Change Name'}) 
+else
+	tabbed_menu({:overview => 'Overview', :news => "SS #{@starship.name} News", :navigation => 'Navigation', :scans => 'Scans', :status => 'Status', :crew => 'Crew', :sections => 'Sections', :cargo => 'Cargo', :embarked_armies => 'Embarked Armies', :edit => 'Change Name'}) 
+end
+%>
+
+<%=render :partial => 'tabs' %>

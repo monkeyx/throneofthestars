@@ -1,0 +1,333 @@
+<% title "Databank : #{@item.name}" %>
+<%
+tabbed_menu({:data => @item.name},[link_to('Other Items', items_path)])
+%>
+<%=tab(:data, true) do -%>
+<div id="item" class="tab">
+  <table>
+  <!-- General -->
+  <tr>
+    <th>Mass:</th>
+    <td><%=h @item.mass %></td>
+  </tr>
+  <tr>
+    <th>Category:</th>
+    <td><%=h @item.category %></td>
+  </tr>
+  <% unless @item.description.blank? %>
+  <tr>
+    <th>Description:</th>
+    <td><%=h @item.description %></td>
+  </tr>
+  <% end  %>
+  <!-- Resources -->
+  <% if @item.ore? || @item.trade_good? %>
+  <tr>
+    <th>Rich Yield:</th>
+    <td><%=h @item.rich_yield %></td>
+  </tr>
+  <tr>
+    <th>Normal Yield:</th>
+    <td><%=h @item.normal_yield %></td>
+  </tr>
+  <tr>
+    <th>Poor Yield:</th>
+    <td><%=h @item.poor_yield %></td>
+  </tr>
+  <% end  %>
+  <!-- Workers -->
+  <% unless @item.worker_type.blank? %>
+  <tr>
+    <th>Worker Type:</th>
+    <td><%=h @item.worker_type %></td>
+  </tr>
+  <% end  %>
+  <!-- Uniques -->
+  <% if @item.source_world %>
+  <tr>
+    <th>Origin:</th>
+    <td><%=link_to_world @item.source_world %></td>
+  </tr>
+  <% end %>
+  <!-- Ground Weatrons -->
+  <% if @item.hit_points > 0 %>
+  <tr>
+    <th>Hit points:</th>
+    <td><%=h @item.hit_points %></td>
+  </tr>
+  <% end %>
+  <% if @item.air_supremacy %>
+  <tr>
+    <th>Air Supremacy (Destroy Enemy Aircraft):</th>
+    <td><%=h @item.air_supremacy.to_pretty %></td>
+  </tr>
+  <% end %>
+  <% if @item.tactical_to_hit %>
+  <tr>
+    <th>Tactical To Hit:</th>
+    <td><%=h @item.tactical_to_hit.to_pretty %></td>
+  </tr>
+  <% end %>
+  <% if @item.tactical_damage %>
+  <tr>
+    <th>Tactical Damage:</th>
+    <td><%=h @item.tactical_damage %></td>
+  </tr>
+  <% end %>
+  <% if @item.strategic_to_hit %>
+  <tr>
+    <th>Strategic To Hit:</th>
+    <td><%=h @item.strategic_to_hit.to_pretty %></td>
+  </tr>
+  <% end %>
+  <% if @item.strategic_damage %>
+  <tr>
+    <th>Strategic Damage:</th>
+    <td><%=h @item.strategic_damage %></td>
+  </tr>
+  <% end %>
+  <% if @item.ground_armour_save %>
+  <tr>
+    <th>Ground Armour Save:</th>
+    <td><%=h @item.ground_armour_save.to_pretty %></td>
+  </tr>
+  <% end %>
+  <% unless @item.movement.blank? %>
+  <tr>
+    <th>Movement:</th>
+    <td><%=h @item.movement %></td>
+  </tr>
+  <% end %>
+  <% if @item.transport_capacity > 0 %>
+  <tr>
+    <th>Transport Capacity:</th>
+    <td><%=h @item.transport_capacity %></td>
+  </tr>
+  <% end %>
+  <% if @item.immobile? %>
+  <tr>
+    <th colspan="2">Immobile</th>
+  </tr>
+  <% end %>
+  <% if @item.one_use? %>
+  <tr>
+    <th colspan="2">One Use Only</th>
+  </tr>
+  <% end %>
+  <!-- Hulls -->
+  <% if @item.hull? %>
+  <tr>
+    <th>Hull points:</th>
+    <td><%=h @item.hull_points %></td>
+  </tr>
+  <tr>
+  <th colspan="2"><%=render :partial=> 'hull_slots', :locals => {:hull => @item} %></th>
+  </tr>
+  <% end  %>
+  <!-- Armour -->
+  <% if @item.armour? %>
+  <%=render :partial=> 'armour_effectiveness', :locals => {:armour => @item} %>
+  <% end %>
+  <!-- Shields -->
+  <% if @item.shield? %>
+  <%=render :partial=> 'shield_effectiveness', :locals => {:shield => @item} %>
+  <% end %>
+  <!-- Sensors / Jammers -->
+  <% if @item.sensor_power %>
+  <tr>
+    <th>Sensor power:</th>
+    <td><%=h @item.sensor_power.to_pretty %></td>
+  </tr>
+  <% end %>
+  <% if @item.jammer_power_full %>
+  <tr>
+    <th>Jamming (Full):</th>
+    <td><%=h @item.jammer_power_full.to_pretty %></td>
+  </tr>
+  <% end %>
+  <% if @item.jammer_power_partial %>
+  <tr>
+    <th>Jamming (Partial):</th>
+    <td><%=h @item.jammer_power_partial.to_pretty %></td>
+  </tr>
+  <% end %>
+  <!-- Computers -->
+  <% if @item.accuracy_modifier != 0 %>
+  <tr>
+    <th>Accuracy Modifier:</th>
+    <td><%=h @item.accuracy_modifier %></td>
+  </tr>
+  <% end %>
+  <!-- Engines -->
+  <% if @item.impulse_speed != 0 %>
+  <tr>
+    <th>Allow Impulse Movement </th><td>(<%=h @item.impulse_speed %> cost modifier)</td>
+  </tr>
+  <% end %>
+  <% if @item.impulse_modifier != 0 %>
+  <tr>
+    <th>Impulse Movement Cost Modifier:</th>
+    <td><%=h @item.impulse_modifier %></td>
+  </tr>
+  <% end %>
+  <% if @item.thrust_speed != 0 %>
+  <tr>
+    <th colspan="2">Dock at / take off from any estate if 1 per <%=h @item.thrust_speed.to_i %> hulls</th>
+  </tr>
+  <% end %>
+  <% if @item.dodge_speed != 0 %>
+  <tr>
+    <th colspan="2">Dodge save given if 1 per <%=h @item.dodge_speed.to_i %> hulls</th>
+  </tr>
+  <% end %>
+  <% if @item.orbital_trade?%>
+  <tr>
+    <th colspan="2">Allows trade from orbit.</th>
+  </tr>
+  <% end  %>
+  <!-- Command -->
+  <% if @item.bridge?%>
+  <tr>
+    <th colspan="2">Allows captain and crew to board ship.</th>
+  </tr>
+  <% end %>
+  <% if @item.escape_pod?%>
+  <tr>
+    <th colspan="2">Saves crew and cargo even if the ship explodes.</th>
+  </tr>
+  <% end  %>
+  <!-- Utility -->
+  <% if @item.cloak?%>
+  <tr>
+    <th colspan="2">Allows cloaked ship movement.</th>
+  </tr>
+  <% end  %>
+  <% if @item.nano_repair?%>
+  <tr>
+    <th colspan="2">Allows repair in orbit at 25% raw materials cost of normal repair.</th>
+  </tr>
+  <% end  %>
+  <!-- Mission -->
+  <% if @item.cargo_capacity != 0 %>
+  <tr>
+    <th>Cargo Capacity:</th>
+    <td><%=h @item.cargo_capacity %></td>
+  </tr>
+  <% end %>
+  <% if @item.ore_capacity != 0 %>
+  <tr>
+    <th>Ore Capacity:</th>
+    <td><%=h @item.ore_capacity %></td>
+  </tr>
+  <% end %>
+  <% if @item.ammo_capacity != 0 %>
+  <tr>
+    <th>Ammo Capacity:</th>
+    <td><%=h @item.ammo_capacity %></td>
+  </tr>
+  <% end %>
+  <% if @item.worker_capacity != 0 %>
+  <tr>
+    <th>Worker Capacity:</th>
+    <td><%=h @item.worker_capacity %></td>
+  </tr>
+  <% end %>
+  <% if @item.troop_capacity != 0 %>
+  <tr>
+    <th>Troop Capacity:</th>
+    <td><%=h @item.troop_capacity %></td>
+  </tr>
+  <% end %>
+  <!-- Weapons -->
+  <% unless @item.weapon_speed.blank? %>
+  <tr>
+    <th>Weapon Speed:</th>
+    <td><%=h @item.weapon_speed %></td>
+  </tr>
+  <% end %>
+  <% if @item.accuracy %>
+  <tr>
+    <th>Weapon Accuracy:</th>
+    <td><%=h @item.accuracy.to_pretty %></td>
+  </tr>
+  <% end %>
+  <% if @item.damage %>
+  <tr>
+    <th>Damage:</th>
+    <td><%=h @item.damage %></td>
+  </tr>
+  <% end %>
+  <% if @item.launcher? %>
+  <tr>
+    <th>Ammo:</th>
+    <td><ul>
+      <% @item.valid_ammo.each do |item| -%>
+      <li>
+        <%=link_to_item item %>
+      </li>
+      <% end -%>
+    </ul></td>
+  </tr>
+  <% end %>
+  <% if @item.shield_piercing > 0 %>
+  <tr>
+    <th>Shield Piercing:</th>
+    <td>+<%=h @item.shield_piercing %></td>
+  </tr>
+  <% elsif @item.shield_piercing < 0 %>
+  <tr>
+    <th>Weak against shields:</th>
+    <td><%=h @item.shield_piercing %></td>
+  </tr>
+  <% end %>
+  <% if @item.kinetic? %>
+  <tr>
+    <th>Orbital Bombardment - Building Destroyed (Base Chance):</th>
+    <td><%=h @item.building_bombardment.to_pretty %></td>
+  </tr>
+  <tr>
+    <th>Orbital Bombardment - trercentage Items Destroyed (Base):</th>
+    <td><%=h @item.item_bombardment %>%</td>
+  </tr>
+  <% end %>
+  <% if @item.internal_damage != 0 %>
+  <tr>
+    <th colspan="2">+<%=h @item.internal_damage%> on internal damage rolls</th>
+  </tr>
+  <% end %>
+  <% if @item.lifeform_damage != 0 %>
+  <tr>
+    <th colspan="2">Causes check for injury / death on hit with +<%=h @item.lifeform_damage%> on character injury rolls</th>
+  </tr>
+  <% end %>
+  <% if @item.reduce_speed %>
+  <tr>
+    <th colspan="2">Reduces target ship's speed by one rank per hit</th>
+  </tr>
+  <% end %>
+  <% if @item.shot_down %>
+  <tr>
+    <th>Chance the drone will get shot down each time it is launched:</th>
+    <td><%=h @item.shot_down.to_pretty %></td>
+  </tr>
+  <% end %>
+  <!-- Production -->
+  <% unless @item.project_required.blank? %>
+  <tr>
+    <th>World project Required:</th>
+    <td><%=h @item.project_required %></td>
+  </tr>
+  <% end %>
+  <% if @item.has_raw_materials? %>
+  <tr>
+    <th>Raw Materials:</th>
+    <td><ul>
+      <% @item.raw_materials.each do |ib| -%>
+      <li><%=link_to_item ib.item, ib.quantity%></li>
+      <% end -%>
+    </ul></td>
+  </tr>
+  <% end %>
+  </table>
+</div>
+<% end -%>

@@ -1,0 +1,66 @@
+<table width="500" border="1" cellpadding="2" cellspacing="4">
+  <tr>
+    <th>
+      Section
+    </th>
+    <th>
+      Slot
+    </th>
+  </tr>
+  <tr>
+    <td>
+      Armour
+    </td>
+    <td>
+      <%=hull.armour_slots%> per hull
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Command
+    </td>
+    <td>
+      <%=hull.command_slots%>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Mission
+    </td>
+    <td>
+      <%=hull.mission_slots%> per hull
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Engine
+    </td>
+    <td>
+      <%=hull.engine_slots%> per hull
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Utility
+    </td>
+    <td>
+      <%=hull.utility_slots%> per hull
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Primary Weapons
+    </td>
+    <td>
+      <%=hull.primary_slots%> per hull
+    </td>
+  </tr>
+  <tr>
+    <td>
+      Spinal Mounts
+    </td>
+    <td>
+      <%=hull.spinal_slots%> per hull
+    </td>
+  </tr>
+</table>

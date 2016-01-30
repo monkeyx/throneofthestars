@@ -1,0 +1,11 @@
+<% title "Update Section on #{@starship_configuration.name}" %>
+<% tabbed_menu({},[link_to('Configuration', starship_configuration_path(@starship_configuration)), 
+	link_to('Sections', "#{starship_configuration_path(@starship_configuration)}?tab=sections"),
+	link_to('Statistics', "#{starship_configuration_path(@starship_configuration)}?tab=statistics"),
+	link_to('Edit', "#{starship_configuration_path(@starship_configuration)}?tab=edit"),
+	link_to('Other Configurations',starship_configurations_path)]) %>
+
+<div id="edit-item" class="tab">
+<%= render :partial => 'form', :locals => {:submit_text => "Update Section", :starship_configuration_item => @starship_configuration_item} %>
+</div>
+

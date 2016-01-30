@@ -1,0 +1,20 @@
+<%= form_for @noble_house, :html => { :multipart => true } do |f| %>
+  <p><strong>Note:</strong> Items marked <span class="required">*</span> are required fields</p>
+  <%= form_error_messages(@noble_house) %>
+  <fieldset id="house">
+  	<legend><span>Noble House</span></legend>
+  	<ol>
+  		<li>
+  			<%= f.label :house_name, :class => 'required' %>
+    		<%= f.text_field :name %>
+        <br/><strong>Note:</strong> You don't need to include "House" in the name.
+    	</li>
+  	</ol>
+  </fieldset>
+  <% if @noble_house.new_record? %>
+  <%=render :partial => 'new', :locals => {:f => f} %>
+  <% end %>
+  <fieldset id="submitform">
+    <%= f.submit submit_text %>
+  </fieldset>
+<% end %>

@@ -1,0 +1,50 @@
+<%=tab(:overview, true) do -%>
+<div id="overview" class="tab">
+  <p>
+    Army <%=h @army.name %> is currently <%=(@army.location_starship? ? 'embarked on' : 'located at')%> <%=link_to_location @army.location %>.
+  </p>
+  <p>
+    <%
+    if @army.movement_type
+    %>
+      It is capable of <%=@army.movement_type%> movement at a cost of <%=@army.adjusted_movement_cost%> action points.
+    <%
+    else
+    %>
+      It is incapable of movement.
+    <%
+    end
+    %>
+  </p>
+  <p>
+    <% if @army.legate %>
+      It is led by <%=link_to_character @army.legate %>.
+    <% else %>
+      <strong>Army is not currently led by anyone and may not receive orders!</strong> Use the "Lead Army" order to have a character become the Legate.
+    <% end %>
+      It is currently <%=morale_description @army %>.
+  </p>
+  <p>
+    A ship would need <%=@army.embarkation_cargo_space%> cargo space and enough room for <%=@army.total_troops%> troops to embark this army.
+  </p>
+</div>
+<% end -%>
+
+<%=tab(:units,false,false) do -%>
+<div id="units" class="tab">
+  <%=render :partial => 'units', :locals => {:units => @army.units} %>
+</div>
+<% end -%>
+
+<%=tab(:news) do -%>
+<div id="news" class="tab">
+  <%=render :partial => '/news/list', :locals => {:news => @army.news_log(current_noble_house)} %>
+</div>
+<% end -%>
+
+
+<%=tab(:edit, false, true) do -%>
+<div id="edit" class="tab">
+  <%= render :partial => 'form' %>
+</div>
+<% end -%>

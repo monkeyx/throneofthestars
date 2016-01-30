@@ -1,0 +1,127 @@
+<%=tab(:overview, true) do -%>
+<div id="overview" class="tab">
+	<%=wiki_help_div('Starships')%>
+	<% unless @starship.debris? %>
+		<p>
+		  A <%=link_to_starship_configuration(@starship.starship_configuration) %> currently at <%=link_to_location(@starship.location)%>
+		</p>
+		<p><%=starship_integrity(@starship)%></p>
+		<% if @starship.captain %>
+		<p>
+		  It is captained by <%=link_to_character @starship.captain %>
+		</p>
+		<% else %>
+		<p>
+		  <strong>No captain assigned - starship may not receive orders!</strong> Board the starship with a character for them to become the captain.
+		</p>
+		<% end %>
+	<% else %>
+		<p>This debris field is located at <%=link_to_location(@starship.location)%></p>
+	<% end %>
+</div>
+<% end -%>
+
+<%=tab(:navigation) do -%>
+<div id="navigation" class="tab">
+	<%=wiki_help_div('Starship_Movement')%>
+	<%=render :partial => 'navigation_report' %>
+</div>
+<% end -%>
+
+<%=tab(:scans) do -%>
+<div id="scans" class="tab">
+	<%=wiki_help_div('Sensors')%>
+	<%=render :partial => 'scans', :locals => {:scans => @starship.scanned} %>
+</div>
+<% end -%>
+
+<%=tab(:status) do -%>
+<div id="status" class="tab">
+	<%=render :partial => '/starships/metrics', :locals => {:starship_metrics => @starship.metrics} %>
+</div>
+<% end -%>
+
+<%=tab(:sections) do -%>
+<div id="sections" class="tab">
+	<table>
+	<% unless @starship.armour_sections.empty? %>
+	<tr><th colspan="2">Armour (<%=@starship.armour_sections_count%> / <%=@starship.starship_type.armour_slots%>)</th></tr>
+	<%=tabulate_ship_sections(@starship.armour_sections)%>
+	<% end %>
+
+	<% unless @starship.command_sections.empty? %>
+	<tr><th colspan="2">Command (<%=@starship.command_sections_count%> / <%=@starship.starship_type.command_slots%>)</th></tr>
+	<%=tabulate_ship_sections(@starship.command_sections)%>
+	<% end %>
+
+	<% unless @starship.mission_sections.empty? %>
+	<tr><th colspan="2">Mission (<%=@starship.mission_sections_count%> / <%=@starship.starship_type.mission_slots%>)</th></tr>
+	<%=tabulate_ship_sections(@starship.mission_sections)%>
+	<% end %>
+
+	<% unless @starship.engine_sections.empty? %>
+	<tr><th colspan="2">Engines (<%=@starship.engine_sections_count%> / <%=@starship.starship_type.engine_slots%>)</th></tr>
+	<%=tabulate_ship_sections(@starship.engine_sections)%>
+	<% end %>
+
+	<% unless @starship.utility_sections.empty? %>
+	<tr><th colspan="2">Utility (<%=@starship.utility_sections_count%> / <%=@starship.starship_type.utility_slots%>)</th></tr>
+	<%=tabulate_ship_sections(@starship.utility_sections)%>
+	<% end %>
+
+	<% unless @starship.primary_sections.empty? %>
+	<tr><th colspan="2">Primary Weapons (<%=@starship.primary_sections_count%> / <%=@starship.starship_type.primary_slots%>)</th></tr>
+	<%=tabulate_ship_sections(@starship.primary_sections)%>
+	<% end %>
+
+	<% unless @starship.spinal_sections.empty? %>
+	<tr><th colspan="2">Spinal Mounts (<%=@starship.spinal_sections_count%> / <%=@starship.starship_type.spinal_slots%>)</th></tr>
+	<%=tabulate_ship_sections(@starship.spinal_sections)%>
+	<% end %>
+
+	</table>
+</div>
+<% end -%>
+
+<%=tab(:cargo) do -%>
+<div id="cargo" class="tab">
+	<%= render :partial => '/items/bundles', :locals => {:items => @starship.bundles} %>
+	<p><%=starship_capacity(@starship)%></p>
+</div>
+<% end -%>
+
+<%=tab(:news) do -%>
+<div id="news" class="tab">
+	<%=render :partial => '/news/list', :locals => {:news => @starship.news_log(current_noble_house)} %>
+</div>
+<% end -%>
+
+<%=tab(:edit, false, false) do -%>
+  <div id="edit" class="tab">
+    <%= render :partial => 'form' %>
+  </div>
+<% end %>
+
+<%=tab(:crew) do -%>
+<div id="crew" class="tab">
+	<% unless @starship.crew.empty? %>
+	<%=render :partial => '/characters/list', :locals => {:characters => @starship.crew.map{|c| c.character }}%>
+	<% else %>
+		<p class="empty_results">No crew onboard</p>
+	<% end %>
+</div>
+<% end -%>
+
+<%=tab(:embarked_armies) do -%>
+<div id="embarked" class="tab">
+	<% unless @starship.embarked_armies.empty? %>
+	<ul>
+		<% @starship.embarked_armies.each do |army| -%>
+			<li><%=link_to_army(army)%></li>
+		<% end -%>
+	</ul>
+	<% else %>
+		<p class="empty_results">No armies onboard</p>
+	<% end %>
+</div>
+<% end -%>

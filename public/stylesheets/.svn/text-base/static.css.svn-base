@@ -1,0 +1,57 @@
+body {
+  background: #000;
+  color: #fff;
+  font-family: 'Arimo', sans-serif;
+  font-size: 12px;
+}
+
+a img {
+  border: none;
+}
+
+a {
+  color: #ccc;
+  text-decoration: none;
+}
+
+a:visited {
+}
+
+.title {
+  font-family: 'Federant', cursive;
+  font-size: 16px;
+}
+
+.center {
+  text-align: center;
+}
+
+h1 {
+    font-family: 'Federant', cursive;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 25px;
+    margin-bottom: 50px;
+    text-align: center;
+    clear: both;
+    height: 10px;
+}
+
+h2 {
+    font-family: 'Federant', cursive;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Federant', cursive;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.clear {
+    clear: both;
+    height: 0;
+    overflow: hidden;
+}

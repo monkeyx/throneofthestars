@@ -1,0 +1,14 @@
+<% title "Form A New Noble House" %>
+
+<div id="new-house" class="tab">
+<table class="no_style">
+	<tr>
+		<td style="width: 50%;">
+			<%= render :partial => 'form', :locals => {:submit_text => 'Complete Sign Up'} %>
+		</td>
+		<td style="width: 50%; vertical-align: top; padding-top: 60px;">
+			<%= render :partial => 'new_house_help' %>
+		</td>
+	</tr>
+</table>
+</div>

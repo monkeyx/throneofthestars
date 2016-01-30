@@ -1,0 +1,7 @@
+<% title "Unit #{@unit.name}" %>
+<% 
+render :partial => 'toolbar'
+tabbed_menu({:unit => 'Composition', :edit => 'Change Name'},[link_to("Army #{@unit.army.name}", @unit.army),link_to('Other Units',"#{army_path(@unit.army)}?tab=units")]) %>
+
+<%=render :partial => 'tabs'%>
+

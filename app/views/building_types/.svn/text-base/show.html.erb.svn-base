@@ -1,0 +1,51 @@
+<% title "Building : #{@building_type.category}" %>
+<%
+tabbed_menu({:data => @building_type.category},[link_to('Other Buildings', building_types_path)])
+%>
+<%=tab(:data, true) do -%>
+<div id="building-type" class="tab">
+  <table>
+  <tr>
+    <th colspan="2"><%=h @building_type.building_function %></th>
+  </tr>
+
+  <tr>
+    <th>Workers Needed per level:</th>
+    <td><%=h @building_type.workers_needed %> x <%=h @building_type.worker_type %></td>
+  </tr>
+
+  <% if @building_type.item_produced %>
+  <tr>
+    <th>Item Produced:</th>
+    <td><% if @building_type.item_produced_quantity > 0 %><%=@building_type.item_produced_quantity%> x <% end %>
+    <%=link_to_item  @building_type.item_produced %></td>
+  </tr>
+  <% end  %>
+
+  <% unless @building_type.trade_good_type.blank? %>
+  <tr>
+    <th>Trade Goods Produced:</th>
+    <td><%=h @building_type.trade_good_type %></td>
+  </tr>
+  <% end  %>
+
+  <% unless @building_type.recruitment_type.blank? %>
+  <tr>
+    <th>Workers Recruited:</th>
+    <td><%=h @building_type.recruitment_type %></td>
+  </tr>
+  <% end  %>
+
+  <% if @building_type.has_raw_materials? %>
+  <tr>
+    <th>Raw Materials:</th>
+    <td><ul>
+      <% @building_type.raw_materials.each do |ib| -%>
+      <li><%=link_to_item ib.item, ib.quantity%></li>
+      <% end -%>
+    </ul></td>
+  </tr>
+  <% end %>
+  </table>
+</div>
+<% end %>

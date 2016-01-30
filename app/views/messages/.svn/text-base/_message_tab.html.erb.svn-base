@@ -1,0 +1,43 @@
+<%=tab(:show, true, false) do -%>
+<div id="message" class="tab">
+  <table>
+    <tr>
+      <th>Sent:</th>
+      <td><%=@message.sent_date.pp %></td>
+    </tr>
+    <tr>
+    <% if @is_from %>
+      <th>To:</th>
+      <td><%=link_to_character(@message.character)%></td>
+    <% else %>
+      <th>From:</th>
+      <td><%=link_to_character(@message.from)%></td>
+    <% end %>
+    </tr>
+    <tr>
+      <th>Subject:</th>
+      <td><%=h @message.subject %></td>
+    </tr>
+    <% if @message.sovereigns && @message.sovereigns > 0 %>
+    <tr>
+      <th>Attachment:</th>
+      <td><%=money @message.sovereigns %></td>
+    </tr>
+    <% end %>
+  </table>
+  <div class="message-content"><%=raw @message.formatted_content %></div>
+
+  <div class="message-toolbar">
+    <% unless @is_from %>
+      <% unless @message.archived? %>
+      <%= link_to(image_tag('archive.png',:title => 'Archive message', :alt => 'Archive message', :width => 32, :height => 32), @message, :method => :delete) %>
+      <% end %>
+      <% if @message.from.baron? || @message.from.noble_house.baron_id != current_baron.id %>
+      <%= link_to(image_tag('reply.png',:title => 'Reply to message', :alt => 'Reply to message', :width => 32, :height => 32), "#{new_message_path}?reply_to=#{@message.guid}") %>
+      <%= link_to(image_tag('report_message.png',:title => 'Report Message', :alt => 'Report Message', :width => 32, :height => 32), "/Message/#{@message.guid}?report=yes", :confirm => 'Are you sure you wish to report this message as inappropriate / spam?') %>
+      <% end -%>
+    <% end %>
+    </div>
+  </div>  
+
+<% end -%>

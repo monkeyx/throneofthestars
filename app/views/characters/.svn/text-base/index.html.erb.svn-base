@@ -1,0 +1,49 @@
+<% title "Members of House #{current_noble_house.name}" %>
+
+<%=tab(:index, true, false) do-%>
+  <% if @characters.empty? %>
+  <p class="empty_results">
+    You have no characters at this time
+  </p>
+  <% else %>
+  <table cellspacing="4" cellpadding="2">
+    <tr>
+      <th>Name</th>
+      <th>Health</th>
+      <th>Action Points</th>
+      <th>Location</th>
+      <th>Pending Orders</th>
+      <th>Next Order</th>
+      <th></th>
+    </tr>
+    <% for character in @characters %>
+      <tr>
+        <td><%=link_to_character character %></td>
+        <td><%=health_description(character).capitalize %></td>
+        <td><% if character.adult? %><%=h character.action_points %><% end %></td>
+        <td><%=link_to_location character.location %><% if character.prisoner%> (prisoner)<%end%></td>
+        <td>
+          <%=link_to "#{character.orders.size}", "#{character_path(character)}?tab=orders" %>
+        </td>
+        <td>
+          <% if character.next_order %>
+          <%= character.next_order %> (<%= link_to "Cancel", character.next_order, :confirm => 'Are you sure?', :method => :delete %>)
+          <% end %>
+        </td>
+        <td>
+          <% unless character.major? || !character.adult? || current_noble_house.maxed_majors? %>
+            <%= link_to "Promote to Major", promote_path(character),
+              :confirm => "Are you sure you wish to promote #{character.display_name} (#{current_noble_house.major_characters_status} allowed major characters already)?" %>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <div class="pagination">
+    <%= will_paginate @noble_houses %>
+  </div>
+  <div id="orders-toolbar">
+  <%=render :partial => 'choose_order', :locals => {:characters => @characters.select{|c| c.can_be_given_orders?}}%>
+  </div>
+  <% end %>
+<% end -%>

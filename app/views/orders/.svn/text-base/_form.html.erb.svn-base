@@ -1,0 +1,41 @@
+<%= form_for @order do |f| %>
+  <p><strong>Note:</strong> Items marked <span class="required">*</span> are required fields</p>
+  <%= form_error_messages(@order) %>
+  <fieldset id="order">
+    <legend><span><%=@order.code%></span></legend>
+    <%= f.hidden_field :character_id %>
+    <%= f.hidden_field :code  %>
+    <% unless @order.order_parameters.empty? %>
+    <ol>
+    <%= f.fields_for :order_parameters do |builder| -%>
+      <%= builder.hidden_field :label %>
+      <%= builder.hidden_field :parameter_type %>
+      <%= builder.hidden_field :required %>
+      <li>
+        <label<%=raw (builder.object.required? ? " class ='required'" : '')%>><%=raw builder.object.label %></label>
+        <%= order_parameter_form_field(builder,builder.object) %>
+        <span id="<%=builder.object.label%>-help"><a href="" rel="lightbox"></a></span>
+      </li>
+    <% end -%>
+    </ol>
+    <% else %>
+    <p style="text-align: center">No further parameters are necessary this order.</p>
+    <% end %>
+  </fieldset>
+  <fieldset id="special">
+    <legend><span>Special Instructions</span></legend>
+    <ol>
+      <li>
+        <%= f.label 'Additional Instruction' %>
+        <%= f.select :special_instruction, options_for_select(Order::SPECIAL_INSTRUCTIONS, @order.special_instruction) %>
+      </li>
+      <li>
+        <%= f.label 'Wait for Signal / Give Signal' %>
+        <%= f.text_field :signal %>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset id="submitform">
+    <%= f.submit submit_text %>
+  </fieldset>
+<% end %>

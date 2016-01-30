@@ -1,0 +1,11 @@
+<table>
+  <% starship_configuration.starship_configuration_items.each do |sci| -%>
+  <tr>
+    <td><%=h sci.quantity %> x <%=link_to_item sci.item %></td>
+    <% if belongs_to_current_player?(starship_configuration) %>
+      <td><%= link_to "Edit", edit_starship_configuration_item_path(sci) %></td>
+      <td><%= link_to "Remove", sci, :confirm => 'Are you sure?', :method => :delete %></td>
+    <% end %>
+  </tr>
+  <% end -%>
+</table>

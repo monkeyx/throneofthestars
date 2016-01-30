@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/throneofthestars/!svn/ver/265/trunk/app/views/estates
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/97/trunk/app/views/estates/index.html.erb
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/throneofthestars/!svn/ver/220/trunk/app/views/estates/_tabs.html.erb
+END
+show.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/220/trunk/app/views/estates/show.js.erb
+END
+_population.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/throneofthestars/!svn/ver/2/trunk/app/views/estates/_population.html.erb
+END
+new.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/throneofthestars/!svn/ver/2/trunk/app/views/estates/new.html.erb
+END
+_toolbar.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/265/trunk/app/views/estates/_toolbar.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/304/trunk/app/views/estates/show.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/17/trunk/app/views/estates/_form.html.erb
+END

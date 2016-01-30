@@ -1,0 +1,39 @@
+<% if units.empty? %>
+  <p class="empty_results">This army has no units.</p>
+<% else %>
+  <table>
+    <tr>
+      <th>Unit</th>
+      <th>Leader</th>
+      <th>Composition</th>
+      <th>Movement Type</th>
+      <th>Transport Capacity</th>
+    </tr>
+  <% units.each do |unit| -%>
+    <tr>
+      <td><%=link_to_unit unit %></td>
+      <td>
+        <% if unit.knight %>
+        <%=link_to_character(unit.knight)%>
+        <% end %>
+      </td>
+      <td>
+        <ul>
+          <% unit.bundles.each do |ib| -%>
+          <li><%=ib.quantity%> x <%=link_to_item(ib.item) %>
+          <% end -%>
+        </ul>
+      </td>
+      <td>
+        <%=h unit.movement_types.join(", ") %>
+      </td>
+      <td>
+        <% if unit.transport_capacity > 0 %>
+        <%=unit.transport_required%> / <%=unit.transport_capacity %>
+        <% end %>
+      </td>
+    </tr>
+  <% end -%>
+  </table>
+<% end %>
+

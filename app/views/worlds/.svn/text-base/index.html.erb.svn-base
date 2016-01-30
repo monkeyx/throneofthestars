@@ -1,0 +1,5 @@
+<% title "The Solar System" %>
+
+<% tabbed_menu({:map => 'Solar System', :index => 'Worlds', :markets => 'Markets'}) %>
+
+<%=render :partial => 'index_tabs' %>

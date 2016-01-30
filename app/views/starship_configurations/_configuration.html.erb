@@ -1,0 +1,10 @@
+<p>
+  <strong>Configuration:</strong>
+  <ul>
+    <% starship_configuration.configuration.each do |key,value| -%>
+      <li>
+        <%=h value%> <%=h key %>
+      </li>
+    <% end -%>
+  </ul>
+</p>

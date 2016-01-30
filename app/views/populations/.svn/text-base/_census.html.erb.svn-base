@@ -1,0 +1,20 @@
+<% if census.empty? %>
+  <p class="empty_results">Unpopulated</p>
+<% else %>
+  <table cellspacing="4" cellpadding="2">
+  <tr>
+    <th></th>
+    <th>Total</th>
+    <th>Morale</th>
+    <th>Prosperity</th>
+  </tr>
+  <% census.each do |population| %>
+    <tr>
+      <td><%=h population.category %></td>
+      <td><%=h population.total_quantity %></td>
+      <td><%=percentage population.avg_morale * 100%></td>
+      <td><%=population_savings_description population.avg_wealth %></td>
+    </tr>
+  <% end %>
+  </table>
+<% end %>

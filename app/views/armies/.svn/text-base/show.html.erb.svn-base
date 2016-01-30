@@ -1,0 +1,6 @@
+<% title "House #{@army.noble_house.name} #{@army.name} Army" %>
+<%
+render :partial => 'toolbar'
+tabbed_menu({:overview => 'Overview', :news => "#{@army.name} Army News", :units => 'Units', :edit => 'Change Name'}) %>
+
+<%=render :partial => 'tabs'%>

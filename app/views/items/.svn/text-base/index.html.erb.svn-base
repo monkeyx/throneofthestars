@@ -1,0 +1,32 @@
+<% title "Databank : Items" %>
+
+<%=tab(:index, true) do-%>
+  <table width="100%">
+    <tr>
+      <th>Name</th>
+      <th>Mass</th>
+      <th>Category</th>
+      <th>Raw Materials</th>
+    </tr>
+    <% for item in @items %>
+      <tr>
+        <td><%=link_to_item item %><%=(item.restricted? ? '*' : '')%></td>
+        <td><%=h item.mass %></td>
+        <td><%=h item.category %></td>
+        <td>
+          <% if item.has_raw_materials? %>
+          <ul>
+            <% item.raw_materials.each do |ib| -%>
+            <li><%=link_to_item ib.item, ib.quantity%></li>
+            <% end -%>
+          </ul>
+          <% end %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+  <p style="color: #fff">* Requires world project to produce</p>
+  <div class="pagination">
+    <%= will_paginate @items %>
+  </div>
+<% end -%>

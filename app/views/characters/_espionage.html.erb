@@ -1,0 +1,110 @@
+<%
+spy_modifier = @character.sum_skill_modifiers(:research)
+sabotage_modifier = @character.sum_skill_modifiers(:sabotage)
+assassination_modifier = @character.sum_skill_modifiers(:assassination)
+%>
+<table>
+	<tr>
+		<th colspan="2">
+			Spying
+		</th>
+		<th>+<%=spy_modifier%></th>
+	</tr>
+	<tr>
+		<th>Information Type</th>
+		<th>Chance of Success</th>
+		<th>Chance of Discovery</th>
+	</tr>
+	<% Characters::Emissary::INFORMATION_TYPES.each do |information_type| %>
+	<tr>
+		<td><%=information_type%></td>
+		<td><%=@character.chance_spy(information_type).to_pretty%></td>
+		<td><%=@character.chance_spy_discovered(information_type).to_pretty%></td>
+	</tr>
+	<% end %>
+	<tr>
+		<th colspan="2">
+			Sabotage
+		</th>
+		<th>
+		+<%=sabotage_modifier  %>
+		</th>
+	</tr>
+	<tr>
+		<td>Ore &amp; Trade Good Collection Buildings<br/>
+			Ores / Trade Goods
+		</td>
+		<td>
+			<%=(Characters::Emissary::SABOTAGE_ORE_TRADE_GOOD + sabotage_modifier).to_pretty%>
+		</td>
+		<td>
+			<%=Characters::Emissary::SABOTAGE_DISCOVERED_ORE_TRADE_GOOD.to_pretty%>
+		</td>
+	</tr>
+	<tr>
+		<td>Recruitment &amp; Training Buildings<br/>
+			Modules
+		</td>
+		<td>
+			<%=(Characters::Emissary::SABOTAGE_RECRUITMENT_MODULES + sabotage_modifier).to_pretty%>
+		</td>
+		<td>
+			<%=Characters::Emissary::SABOTAGE_DISCOVERED_RECRUITMENT_MODULES.to_pretty%>
+		</td>
+	</tr>
+	<tr>
+		<td>Shuttle Ports / Trade Halls / Space Docks</br>
+			Naval Items
+		</td>
+		<td>
+			<%=(Characters::Emissary::SABOTAGE_TRADE_NAVAL + sabotage_modifier).to_pretty%>
+		</td>
+		<td>
+			<%=Characters::Emissary::SABOTAGE_DISCOVERED_TRADE_NAVAL.to_pretty%>
+		</td>
+	</tr>
+	<tr>
+		<td>Palace<br/>
+			Military Items
+		</td>
+		<td>
+			<%=(Characters::Emissary::SABOTAGE_PALACE_MILITARY + sabotage_modifier).to_pretty%>
+		</td>
+		<td>
+			<%=Characters::Emissary::SABOTAGE_DISCOVERED_PALACE_MILITARY.to_pretty%>
+		</td>
+	</tr>
+	<tr>
+		<td>Other Building / Item
+		</td>
+		<td>
+			<%=(Characters::Emissary::SABOTAGE_OTHER + sabotage_modifier).to_pretty%>
+		</td>
+		<td>
+			<%=Characters::Emissary::SABOTAGE_DISCOVERED_OTHER.to_pretty%>
+		</td>
+	</tr>
+	<tr>
+		<th colspan="2">
+			Assassination
+		</th>
+		<th>
+		+<%=assassination_modifier %>
+		</th>
+	</tr>
+	<tr>
+		<td>Noble</td>
+		<td><%=(Characters::Emissary::ASSASSINATION_NOBLE + assassination_modifier).to_pretty%></td>
+		<td><%=Characters::Emissary::ASSASSINATION_DISCOVERED_NOBLE.to_pretty%></td>
+	</tr>
+	<tr>
+		<td>Clergy</td>
+		<td><%=(Characters::Emissary::ASSASSINATION_CHURCH + assassination_modifier).to_pretty%></td>
+		<td><%=Characters::Emissary::ASSASSINATION_DISCOVERED_CHURCH.to_pretty%></td>
+	</tr>
+	<tr>
+		<td>Domain / Other</td>
+		<td><%=(Characters::Emissary::ASSASSINATION_OTHER + assassination_modifier).to_pretty%></td>
+		<td><%=Characters::Emissary::ASSASSINATION_DISCOVERED_CHURCH.to_pretty%></td>
+	</tr>
+</table>

@@ -1,0 +1,25 @@
+<% unless current_noble_house %>
+	<%=tab(:introduction, true) do -%>
+	<div id="introduction" class="tab">
+	<%=render :partial => 'introduction' %>
+	</div>
+	<% end -%>
+<% else %>
+	<%=tab(:welcome, true) do -%>
+	<div id="welcome" class="tab">
+	<%=render :partial => 'welcome' %>
+	</div>
+	<% end -%>
+<% end %>
+
+<%=tab(:news) do -%>
+<div id="news" class="tab">
+<%=render :partial => '/news/list', :locals => {:news => @news, :highlight_public_news => true} %>
+</div>
+<% end -%>
+
+<%=tab(:events) do -%>
+<div id="events" class="tab">
+<%=render :partial => '/events/list', :locals => {:events => Events.all_pending_or_now} %>
+</div>
+<% end -%>

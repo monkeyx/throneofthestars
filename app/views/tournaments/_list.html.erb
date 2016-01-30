@@ -1,0 +1,53 @@
+<% unless tournaments.empty? %>
+<table>
+	<tr>
+		<th>Tournament Date</th>
+		<th>Prize Fund</th>
+		<th>Entrants</th>
+		<th>Winners</th>
+	</tr>
+	<% tournaments.each do |tournament| -%>
+	<tr>
+		<td class="<%=tournament.css_class%>">
+			<%=tournament.event_date.to_pretty %>
+		</td>
+		<td class="<%=tournament.css_class%>"><%=money tournament.prize %></td>
+		<td class="<%=tournament.css_class%>">
+			<% unless tournament.tournament_entrants.empty? %>
+			<ul>
+				<% tournament.tournament_entrants.each do |entrant| -%>
+				<li><%=link_to_character(entrant.character)%> joined on <%=entrant.joined_date.to_pretty%>
+					<% if !tournament.winner && tournament.at_location?(entrant.character) %>
+					(present)
+					<% end %>
+				</li>
+				<% end -%>
+			</ul>
+				<% unless tournament.winner %>
+					<% if tournament.valid_entrants? %>
+						<span style="color: green;">(Enough foreign entrants to proceed)</span>
+					<% else %>
+						<span style="color: red;">(Not enough foreign entrants to proceed)</span>
+					<% end %>
+				<% end %>
+			<% else %>
+			No entrants yet.
+			<% end %>
+		</td>
+		<td class="<%=tournament.css_class%>">
+			<% if tournament.winner %>
+			<strong>Winner:</strong> <%=link_to_character(tournament.winner)%><br/>
+			<% end %>
+			<% if tournament.runner_up1 %>
+			<strong>1st Runner Up:</strong> <%=link_to_character(tournament.runner_up1)%><br/>
+			<% end %>
+			<% if tournament.runner_up2 %>
+			<strong>2nd Runner Up:</strong> <%=link_to_character(tournament.runner_up2)%><br/>
+			<% end %>
+		</td>
+	</tr>
+	<% end -%>
+</table>
+<% else %>
+<p class="empty_results">No tournaments scheduled</p>
+<% end %>

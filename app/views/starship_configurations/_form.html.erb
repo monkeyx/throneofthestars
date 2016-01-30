@@ -1,0 +1,21 @@
+<%= form_for @starship_configuration do |f| %>
+  <p><strong>Note:</strong> Items marked <span class="required">*</span> are required fields</p>
+  <%= form_error_messages(@starship_configuration) %>
+  <%= f.hidden_field :noble_house_id %>
+  <fieldset id="configuration">
+    <legend><span>Starship Configuration</span></legend>
+    <ol>
+      <li>
+        <%= f.label :name, :class => 'required' %>
+        <%= f.text_field :name %>
+      </li>
+      <li>
+        <%= f.label :starship_type %>
+        <%= f.select :starship_type_id, options_for_starship_types(@starship_configuration.starship_type_id) %>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset id="submitform">
+    <%= f.submit submit_text %>
+  </fieldset>
+<% end %>

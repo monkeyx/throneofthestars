@@ -1,0 +1,16 @@
+K 10
+svn:ignore
+V 137
+*.gitignore
+*.sublime-project
+*.sublime-workspace
+log
+pre_battle_dump.sql
+tmp
+deploy.txt
+.bundle
+*.sql
+pop_buys.txt
+character_update.txt
+
+END

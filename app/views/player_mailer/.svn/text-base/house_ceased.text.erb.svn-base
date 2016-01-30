@@ -1,0 +1,14 @@
+<%=@greeting%>
+
+We are sad to inform you that House <%=@noble_house.name%> is no more<% if @inherited_by%>, all its remaining assets inherited by <%=@inherited_by.display_name%><% end %>.
+
+Don't worry though - you can start a new house right away. To do so just login here:
+
+<%=@login_url%>
+
+We hope to see you back soon and better luck with your next House!
+
+Throne of the Stars GM
+
+To stop receiving all emails from Throne of the Stars, click here (no login required):
+<%=@unsubscribe_url%>

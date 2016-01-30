@@ -1,0 +1,6 @@
+<% tabbed_menu({},[link_to('Admin','/admin'),
+				   link_to('Players','/admin/players'),
+				   link_to('Unconfirmed Players','/admin/players?unconfirmed=yes'),
+				   link_to('Spawner','/admin/spawner'),
+				   link_to('Reported','/admin/reported'),
+				   link_to('Newsletter','/admin/newsletter')]) %>

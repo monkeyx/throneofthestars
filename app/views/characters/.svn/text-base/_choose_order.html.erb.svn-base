@@ -1,0 +1,23 @@
+<%= form_tag new_order_path, :method => :get, :id => 'order_form' do -%>
+  <% if defined?(character) %>
+  	<%=hidden_field_tag :character_id, character.id, :id => :character_id  %>
+  <% elsif defined?(characters) %>
+  	<%=select_tag :character_id, options_for_characters_list(params[:chracter_id],characters), :prompt => "--- Choose Character ---", :class => 'smaller_select', :id => :character_id, :onchange => 'submit_order();' %>
+  <% end %>
+  <% if defined?(position) && position %>
+    <%=hidden_field_tag :first_parameter, position.id %>
+  <% end %>
+  <% unless defined?(order_code) %>
+    <% unless defined?(character) %>
+  	  <%=cache('Root_Orders_Select') do -%>
+      	<%=select_tag :code, options_for_all_orders, :prompt => "--- Select an Order ---", :class => 'smaller_select', :id => 'code', :onchange => 'submit_order();' %>
+  	  <% end -%>
+    <% else %>
+      <%=select_tag :code, options_for_orders(character), :prompt => "--- Select an Order ---", :class => 'smaller_select', :id => 'code' %>
+      <%=submit_tag 'Issue', :class => 'small_submit' %>
+    <% end %>
+  <% else %>
+    <%=hidden_field_tag :code, order_code %>
+    <%=submit_tag order_code, :class => 'small_submit' %>
+  <% end %>
+<% end -%>

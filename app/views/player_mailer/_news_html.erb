@@ -1,0 +1,16 @@
+<%
+  desc = ''
+  if defined?(news) && news
+    desc = news.description
+    desc = desc + " (" + link_to("House #{news.noble_house.name}","#{@root_url}/House/#{news.noble_house.name}") + ")" if news.noble_house.id != @noble_house.id
+    if news.empire?
+      desc = "<strong>#{desc}</strong>".html_safe
+    elsif news.church?
+      desc = "<strong>#{desc}</strong>".html_safe
+    else
+      desc = desc.html_safe
+    end
+  end
+%>
+<%=desc%>
+

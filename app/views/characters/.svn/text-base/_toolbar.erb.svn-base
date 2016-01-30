@@ -1,0 +1,75 @@
+<%
+  if !toolbar_cached? && @character.can_be_given_orders?
+    quick_orders = []
+    if tab?(:overview) || no_tab?
+      if @character.trader?
+        quick_orders << 'Buy'
+        quick_orders << 'Sell' 
+      elsif @character.knight?
+        quick_orders << 'Lead Unit' unless @character.location_unit?
+      end
+      quick_orders << 'Teach Skill' if @character.expert? && !@character.location_foreign?
+      quick_orders << 'Train Skill'  if @character.employed? && @character.currently_training.nil?
+      quick_orders << 'Heal' if @character.doctor?
+      quick_orders << 'Join Clergy' if @character.can_join_clergy? && @character.location_estate? && @character.location.can_join_clergy?
+      quick_orders << 'Join Tournament' if @character.location_estate? && @character.location.next_tournament
+      if @character.adult?
+        quick_orders << 'Board Starship' if @character.location_estate?
+        quick_orders << 'Travel to Estate'
+      end
+      quick_orders << 'Leave Army' if @character.location_army? || @character.location_unit?
+      quick_orders << 'Disembark' if @character.location_starship? && @character.location.location_estate?
+    end
+    if tab?(:espionage)
+      quick_orders << 'Spy'
+      quick_orders << 'Sabotage'
+      quick_orders << 'Assassinate'
+    end
+    if tab?(:diplomacy)
+      quick_orders << 'Demand Justice'
+      quick_orders << 'Break Betrothal' if @character.betrothed
+      quick_orders << 'Propose Marriage' if @character.single_male?
+      quick_orders << 'Accept Proposal' if @character.single_female? && @character.proposals.size > 0
+      quick_orders << 'Accept Apprentice' if @character.apprenticeship_offers.size > 0
+      quick_orders << 'Petition' if @character.emissary_or_tribune?
+      if @character.emissary?
+        quick_orders << 'Declare War' if @character.noble_house.has_cassus_belli?
+        if @character.noble_house.is_at_war?
+          quick_orders << 'Offer Truce' 
+          quick_orders << 'Offer Peace'
+        end
+        quick_orders << 'Offer Alliance'
+        quick_orders << 'Offer Allegiance'
+        quick_orders << 'Offer Apprentice'
+      end
+      if @character.accusations_against.size > 0
+        quick_orders << 'Reject Accusation'
+        quick_orders << 'Trial By Combat'
+        quick_orders << 'Trial By Court' if Law.court_trials?
+        quick_orders << 'Trial By Church' if Law.church_trials?
+      end
+      if @character.baron?
+        if @character.noble_house.has_truce_offers?
+          quick_orders << 'Accept Truce'
+          quick_orders << 'Reject Truce'
+        end
+        if @character.noble_house.has_peace_offers?
+          quick_orders << 'Accept Peace'
+          quick_orders << 'Reject Peace'
+        end
+        if @character.noble_house.has_alliance_offers?
+          quick_orders << 'Accept Alliance'
+          quick_orders << 'Reject Alliance'
+        end
+        if @character.noble_house.has_oath_offers?
+          quick_orders << 'Accept Allegiance'
+          quick_orders << 'Reject Allegiance'
+        end
+        quick_orders << 'Break Oath' if @character.noble_house.has_oath?
+        quick_orders << 'Break Alliance' if @character.noble_house.has_allies?
+        quick_orders << 'Ransom Prisoner' if @character.noble_house.imprisoned_members.size > 0
+      end
+    end
+    order_toolbar(@character, quick_orders) unless quick_orders.empty?
+  end
+%>

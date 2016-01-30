@@ -1,0 +1,35 @@
+<% unless defined?(orbital_bombardment) && orbital_bombardment %>
+  <% unless item.weapon_speed.blank? %>
+    <td><em>Speed:</em> <%=h item.weapon_speed %></td>
+  <% end %>
+  <% if item.accuracy 
+    accuracy = item.accuracy
+    accuracy = accuracy + accuracy_modifier if defined?(accuracy_modifier)
+  %>
+    <td><em>Accuracy:</em> <%=h accuracy.to_pretty %></td>
+  <% end %>
+  <% if item.damage %>
+    <td><em>Damage:</em> <%=h item.damage %></td>
+  <% end %>
+  <% if item.shield_piercing > 0 %>
+    <td><em>Shield Piercing:</em> <%=h item.shield_piercing %></td>
+  <% elsif item.shield_piercing < 0 %>
+    <td><em>Weak against shields (Energy Save Modifier):</em> <%=h item.shield_piercing %></td>
+  <% end %>
+  <% if item.internal_damage != 0 %>
+    <td><em>+<%=h item.internal_damage%> on internal damage rolls</em> </td>
+  <% end %>
+  <% if item.lifeform_damage != 0 %>
+    <td><em>Causes check for injury / death on hit with +<%=h item.lifeform_damage%> on character injury rolls</em> </td>
+  <% end %>
+  <% if item.reduce_speed %>
+    <td><em>Reduces target ship's speed by one rank per hit</em> </td>
+  <% end %>
+<% else
+  if item.kinetic? %>
+  <td><em>Building Destroyed:</em> <%=h item.building_bombardment.to_pretty %></td>
+  <td><em>Items Destroyed:</em> <%=h item.item_bombardment %>%</td>
+<% 
+  end
+end %>
+

@@ -1,0 +1,317 @@
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/throneofthestars/!svn/ver/297/trunk/app/models
+END
+unit.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/throneofthestars/!svn/ver/44/trunk/app/models/unit.rb
+END
+spawner.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/throneofthestars/!svn/ver/318/trunk/app/models/spawner.rb
+END
+wedding.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/throneofthestars/!svn/ver/316/trunk/app/models/wedding.rb
+END
+title.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/286/trunk/app/models/title.rb
+END
+diplomatic_relation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/throneofthestars/!svn/ver/314/trunk/app/models/diplomatic_relation.rb
+END
+region.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/throneofthestars/!svn/ver/332/trunk/app/models/region.rb
+END
+trait.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/292/trunk/app/models/trait.rb
+END
+scan.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/throneofthestars/!svn/ver/219/trunk/app/models/scan.rb
+END
+resource.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/throneofthestars/!svn/ver/2/trunk/app/models/resource.rb
+END
+tournament_entrant.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/3/trunk/app/models/tournament_entrant.rb
+END
+world.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/271/trunk/app/models/world.rb
+END
+message_validator.rb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/329/trunk/app/models/message_validator.rb
+END
+ground_battle.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/342/trunk/app/models/ground_battle.rb
+END
+population.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/throneofthestars/!svn/ver/270/trunk/app/models/population.rb
+END
+model_sweeper.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/105/trunk/app/models/model_sweeper.rb
+END
+character.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/throneofthestars/!svn/ver/334/trunk/app/models/character.rb
+END
+item.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/throneofthestars/!svn/ver/219/trunk/app/models/item.rb
+END
+wedding_invite.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/31/trunk/app/models/wedding_invite.rb
+END
+crew.rb
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/throneofthestars/!svn/ver/51/trunk/app/models/crew.rb
+END
+market_item.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/throneofthestars/!svn/ver/333/trunk/app/models/market_item.rb
+END
+prisoner.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/throneofthestars/!svn/ver/211/trunk/app/models/prisoner.rb
+END
+starship_configuration_item.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/throneofthestars/!svn/ver/2/trunk/app/models/starship_configuration_item.rb
+END
+section.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/5/trunk/app/models/section.rb
+END
+army.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/throneofthestars/!svn/ver/334/trunk/app/models/army.rb
+END
+game.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/throneofthestars/!svn/ver/300/trunk/app/models/game.rb
+END
+world_project.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/throneofthestars/!svn/ver/3/trunk/app/models/world_project.rb
+END
+skill.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/280/trunk/app/models/skill.rb
+END
+law.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/50/trunk/app/models/law.rb
+END
+starship_configuration.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/throneofthestars/!svn/ver/209/trunk/app/models/starship_configuration.rb
+END
+message.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/throneofthestars/!svn/ver/166/trunk/app/models/message.rb
+END
+diplomatic_token.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/50/trunk/app/models/diplomatic_token.rb
+END
+estate.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/throneofthestars/!svn/ver/313/trunk/app/models/estate.rb
+END
+space_battle.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/throneofthestars/!svn/ver/256/trunk/app/models/space_battle.rb
+END
+item_bundle.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/throneofthestars/!svn/ver/197/trunk/app/models/item_bundle.rb
+END
+accusation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/throneofthestars/!svn/ver/50/trunk/app/models/accusation.rb
+END
+authorisation.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/319/trunk/app/models/authorisation.rb
+END
+production_queue.rb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/throneofthestars/!svn/ver/3/trunk/app/models/production_queue.rb
+END
+apprentice.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/throneofthestars/!svn/ver/251/trunk/app/models/apprentice.rb
+END
+player.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/throneofthestars/!svn/ver/335/trunk/app/models/player.rb
+END
+tournament.rb
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/throneofthestars/!svn/ver/284/trunk/app/models/tournament.rb
+END
+building.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/throneofthestars/!svn/ver/5/trunk/app/models/building.rb
+END
+starship.rb
+K 25
+svn:wc:ra_dav:version-url
+V 59
+/throneofthestars/!svn/ver/319/trunk/app/models/starship.rb
+END
+building_type.rb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/241/trunk/app/models/building_type.rb
+END
+starship_type.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/throneofthestars/!svn/ver/52/trunk/app/models/starship_type.rb
+END
+player_session.rb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/throneofthestars/!svn/ver/2/trunk/app/models/player_session.rb
+END
+ransom.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/50/trunk/app/models/ransom.rb
+END
+noble_house.rb
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/throneofthestars/!svn/ver/343/trunk/app/models/noble_house.rb
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 54
+/throneofthestars/!svn/ver/2/trunk/app/models/.gitkeep
+END
+marriage_proposal.rb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/31/trunk/app/models/marriage_proposal.rb
+END
+order_parameter.rb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/166/trunk/app/models/order_parameter.rb
+END
+order.rb
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/240/trunk/app/models/order.rb
+END
+news.rb
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/throneofthestars/!svn/ver/213/trunk/app/models/news.rb
+END

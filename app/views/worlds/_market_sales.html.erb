@@ -1,0 +1,20 @@
+<% if @own_market_items.empty? %>
+<p class="empty_results">
+  You are not selling anything on this world.
+</p>
+<% else %>
+<table cellspacing="4" cellpadding="2">
+  <tr>
+    <th>Item</th>
+    <th>Quantity</th>
+    <th>Price</th>
+  </tr>
+  <% @own_market_items.each do |mi| -%>
+  <tr>
+    <td><%=link_to_item mi.item %></td>
+    <td><%=h mi.quantity%></td>
+    <td><%=money mi.price%></td>
+  </tr>
+  <% end -%>
+</table>
+<% end %>

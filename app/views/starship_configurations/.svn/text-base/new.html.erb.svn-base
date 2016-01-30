@@ -1,0 +1,5 @@
+<% title "New Starship Configuration" %>
+
+<div id="new-form" class="tab">
+<%= render :partial => 'form', :locals => {:submit_text => "Create"} %>
+</div>

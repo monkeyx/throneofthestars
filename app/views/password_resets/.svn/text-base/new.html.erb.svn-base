@@ -1,0 +1,19 @@
+<% title 'Reset your Password' %>
+
+<div id="password-reset" class="tab">
+<%= form_tag '/password_reset' do %>
+  <p>Please provide the email address you used to sign up below and we will send instructions to change your password.</p>
+  <fieldset id="email">
+    <legend><span>Password Reset</span></legend>
+    <ol>
+      <li>
+        <label for="email" class="required">Your Email Address</label>
+        <%= text_field_tag :email %>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset id="submitform">
+    <%= submit_tag "Request Password Reset" %>
+  </fieldset>
+<% end %>
+</div>

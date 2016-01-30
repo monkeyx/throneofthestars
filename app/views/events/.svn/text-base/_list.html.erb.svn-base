@@ -1,0 +1,76 @@
+<% unless events.empty? %>
+<table>
+	<tr>
+		<th>Event Date</th>
+		<th>Details</th>
+		<th>Guests / Entrants Present</th>
+		<th></th>
+	</tr>
+	<% events.each do |event| -%>
+	<tr>
+		<td class="<%=event.css_class%>">
+			<%=event.event_date.to_pretty %>
+		</td>
+		<td class="<%=event.css_class%>">
+			<strong><%=event.class.name%> at Estate <%=event.estate.name%></strong> in <%=link_to_region(event.estate.region)%> on <%=link_to_world(event.estate.region.world)%>
+			<% if event.is_a?(Tournament) %>
+			<br/>Prize Fund: <%=money event.prize %>
+			<% elsif event.is_a?(Wedding) %>
+			<br/>Bride: <%=link_to_character(event.bride)%>
+			<br/>Groom: <%=link_to_character(event.groom)%>
+			<% end %>
+		</td>
+		<td class="<%=event.css_class%>">
+			<% if event.is_a?(Tournament) %>
+				<% unless event.entrants_present.empty? || event.winner %>
+					<ul>
+						<% event.entrants_present.each do |character| -%>
+						<li><%=link_to_character(character)%></li>
+						<% end -%>
+					</ul>
+					<% if event.valid_entrants? %>
+						<span style="color: green;">(Enough foreign entrants signed up to proceed)</span>
+					<% else %>
+						<span style="color: red;">(Not enough foreign entrants signed up to proceed)</span>
+					<% end %>
+				<% end %>
+			<% elsif event.is_a?(Wedding) %>
+				<% unless event.guests_present.empty? %>
+					<ul>
+					<% event.guests_present.each do |guest| -%>
+					<li><%=link_to_character guest %></li>
+					<% end -%>
+				<% end %>
+			</ul>
+			<% end %>
+		</td>
+		<td class="<%=event.css_class%>">
+			<% if event.is_a?(Tournament) %>
+				<% if event.winner %>
+				<strong>Winner:</strong> <%=link_to_character(event.winner)%><br/>
+				<% end %>
+				<% if event.runner_up1 %>
+				<strong>1st Runner Up:</strong> <%=link_to_character(event.runner_up1)%><br/>
+				<% end %>
+				<% if event.runner_up2 %>
+				<strong>2nd Runner Up:</strong> <%=link_to_character(event.runner_up2)%><br/>
+				<% end %>
+			<% elsif event.is_a?(Wedding) %>
+				Catering and Gifts:
+				<% if event.bundles.empty? %>
+				Nothing provisioned yet.
+				<% else %>
+				<ul>
+				<% event.bundles.each do |bundle| %>
+					<li><%=link_to_item(bundle.item,bundle.quantity)%></li>
+				<% end %>
+				</ul>
+				<% end %>
+			<% end %>
+		</td>
+	</tr>
+	<% end -%>
+</table>
+<% else %>
+<p class="empty_results">No events scheduled</p>
+<% end %>

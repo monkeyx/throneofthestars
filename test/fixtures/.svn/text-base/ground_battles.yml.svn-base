@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  attacker_type: MyString
+  attacker_id: 1
+  defender_type: MyString
+  defender_id: 1
+  location_type: MyString
+  location_id: 1
+  battle_date: MyString
+  report: MyText
+  battle_status: MyString
+
+two:
+  attacker_type: MyString
+  attacker_id: 1
+  defender_type: MyString
+  defender_id: 1
+  location_type: MyString
+  location_id: 1
+  battle_date: MyString
+  report: MyText
+  battle_status: MyString

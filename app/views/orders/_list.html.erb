@@ -1,0 +1,43 @@
+<% unless orders.empty? %>
+<table cellpadding="4" cellspacing="4" border="1">
+  <tr>
+    <th>Order</th>
+    <th>Action Points Cost</th>
+    <th>Special Instruction</th>
+    <th></th>
+    <th></th>
+  </tr>
+  <% for order in orders %>
+    <tr>
+      <td class="<%=order.css_class%>"><%=raw order %></td>
+      <td class="<%=order.css_class%>"><%=h order.action_point_cost%></td>
+      <td class="<%=order.css_class%>"><%=h order.special_instruction %></td>
+      <td class="<%=order.css_class%>">
+        <% unless order.signal.blank? %>
+          Signal: <%=h order.signal %><br/>
+        <% end %>
+        <% if (order.standing? || order.stop?) && order.run_at %>
+          Last run on the <%=h order.run_at.to_pretty %><br/>
+        <% end %>
+        <% unless order.error_msg.blank? %>
+          Error: <%=h order.error_msg %>
+          <br/>
+        <% end %>
+        <%=link_to("Cancel","/orders/#{order.id}/cancel", :confirm => 'Are you sure?')%>
+      </td>
+      <td class="<%=order.css_class%>">
+        <% unless order.start_of_queue? %>
+        <%=link_to(image_tag('up.png', :alt => 'Up', :title => 'Move up'),"/orders/#{order.id}/up")%>
+        <% end %>
+        <% unless order.end_of_queue? %>
+        <%=link_to(image_tag('down.png', :alt => 'Down', :title => 'Move down'),"/orders/#{order.id}/down")%>
+        <% end %>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<% else %>
+<p>
+  No orders pending.
+</p>
+<% end %>

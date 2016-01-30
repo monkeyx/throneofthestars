@@ -1,0 +1,31 @@
+<% unless scans.empty? %>
+<table celspacing="2">
+	<tr>
+		<th colspan="8"><%=Game.current_date.pp%></th>
+	</tr>
+	<tr>
+		<th>Location</th>
+		<th>House</th>
+		<th>Ship</th>
+		<th>Type</th>
+		<th>Configuration</th>
+		<th>Speed</th>
+		<th>Armour</th>
+		<th>Shields</th>
+	</tr>
+	<% scans.each do |scan| %>
+	<tr>
+		<td><%=link_to_world(scan.world)%></td>
+		<td><%=link_to_house(scan.target.noble_house)%></td>
+		<td><%=scan.target.name%></td>
+		<td><%=link_to_starship_type(scan.target.starship_type)%></td>
+		<td><%=scan.target.starship_configuration.name%></td>
+		<td><%=Starships::SPEED[scan.target.metrics[:ship_speed]]%></td>
+		<td><%=Starships::ARMOUR[scan.target.metrics[:armour_coverage]]%></td>
+		<td><%=Starships::SHIELDS[scan.target.metrics[:shields]]%></td>
+	</tr>
+	<% end %>
+</table>
+<% else %>
+<p class="empty_results">Nothing scanned.</p>
+<% end %>

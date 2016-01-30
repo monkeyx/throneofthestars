@@ -1,0 +1,15 @@
+<% title "Sign up to claim the Throne of the Stars" %>
+
+<div id="signup" class="tab">
+<table class="no_style">
+	<tr>
+		<td style="width: 50%; vertical-align: top; ">
+			<%= render :partial => 'form', :locals => {:submit_text => 'Sign Up', :fields_required => true} %>
+		</td>
+		<td style="width: 50%; vertical-align: top; padding-top: 60px;">
+			<%= render :partial => 'how_played' %>
+		</td>
+	</tr>
+</table>
+</div>
+

@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/throneofthestars/!svn/ver/296/trunk/app/controllers
+END
+worlds_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/throneofthestars/!svn/ver/333/trunk/app/controllers/worlds_controller.rb
+END
+church_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/throneofthestars/!svn/ver/220/trunk/app/controllers/church_controller.rb
+END
+characters_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/throneofthestars/!svn/ver/220/trunk/app/controllers/characters_controller.rb
+END
+players_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/throneofthestars/!svn/ver/51/trunk/app/controllers/players_controller.rb
+END
+armies_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/throneofthestars/!svn/ver/220/trunk/app/controllers/armies_controller.rb
+END
+starships_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/throneofthestars/!svn/ver/220/trunk/app/controllers/starships_controller.rb
+END
+starship_types_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/throneofthestars/!svn/ver/12/trunk/app/controllers/starship_types_controller.rb
+END
+empire_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/throneofthestars/!svn/ver/220/trunk/app/controllers/empire_controller.rb
+END
+items_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/throneofthestars/!svn/ver/172/trunk/app/controllers/items_controller.rb
+END
+building_types_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/throneofthestars/!svn/ver/172/trunk/app/controllers/building_types_controller.rb
+END
+player_sessions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/throneofthestars/!svn/ver/139/trunk/app/controllers/player_sessions_controller.rb
+END
+noble_houses_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/throneofthestars/!svn/ver/327/trunk/app/controllers/noble_houses_controller.rb
+END
+starship_configuration_items_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/throneofthestars/!svn/ver/29/trunk/app/controllers/starship_configuration_items_controller.rb
+END
+password_resets_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/throneofthestars/!svn/ver/18/trunk/app/controllers/password_resets_controller.rb
+END
+home_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/throneofthestars/!svn/ver/220/trunk/app/controllers/home_controller.rb
+END
+admin_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/throneofthestars/!svn/ver/300/trunk/app/controllers/admin_controller.rb
+END
+orders_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/throneofthestars/!svn/ver/267/trunk/app/controllers/orders_controller.rb
+END
+units_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/throneofthestars/!svn/ver/29/trunk/app/controllers/units_controller.rb
+END
+application_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/throneofthestars/!svn/ver/296/trunk/app/controllers/application_controller.rb
+END
+regions_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/throneofthestars/!svn/ver/220/trunk/app/controllers/regions_controller.rb
+END
+starship_configurations_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/throneofthestars/!svn/ver/220/trunk/app/controllers/starship_configurations_controller.rb
+END
+messages_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/throneofthestars/!svn/ver/239/trunk/app/controllers/messages_controller.rb
+END
+estates_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/throneofthestars/!svn/ver/220/trunk/app/controllers/estates_controller.rb
+END
+json_controller.rb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/throneofthestars/!svn/ver/31/trunk/app/controllers/json_controller.rb
+END

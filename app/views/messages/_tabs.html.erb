@@ -1,0 +1,61 @@
+<div id="messages" class="tab">
+<% if @messages.empty? %>
+  <p class="empty_results">No messages at the moment</p>
+<% else %>
+
+<%=tab(:inbox, true, false) do -%>
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>From</th>
+    <th>Sent Date</th>
+  </tr>
+  <% for message in @messages %>
+    <tr>
+      <td><%=link_to(message.subject,message_path(message), :remote => true)%></td>
+      <td><%=link_to_character(message.from)%></td>
+      <td><%=message.sent_date.pp %></td>
+      <th class="button"><%= link_to(image_tag('archive.png',:title => 'Archive message', :alt => 'Archive message', :width => 16, :height => 16), message, :method => :delete) %></th>
+    </tr>
+  <% end %>
+</table>
+<% end -%>
+
+<%=tab(:archived, false, false) do -%>
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>From</th>
+    <th>Sent Date</th>
+  </tr>
+  <% for message in @messages %>
+    <tr>
+      <td><%=link_to(message.subject,message_path(message), :remote => true)%></td>
+      <td><%=link_to_character(message.from)%></td>
+      <td><%=message.sent_date.pp %></td>
+    </tr>
+  <% end %>
+</table>
+<% end -%>
+
+<%=tab(:sent, false, false) do -%>
+<table>
+  <tr>
+    <th>Subject</th>
+    <th>To</th>
+    <th>Sent Date</th>
+  </tr>
+  <% for message in @messages %>
+    <tr>
+      <td><%=link_to(message.subject,message_path(message), :remote => true)%></td>
+      <td><%=link_to_character(message.character)%></td>
+      <td><%=message.sent_date.pp %></td>
+    </tr>
+  <% end %>
+</table>
+<% end -%>
+<% end %>
+</div>
+<div class="pagination">
+  <%= will_paginate @noble_houses %>
+</div>

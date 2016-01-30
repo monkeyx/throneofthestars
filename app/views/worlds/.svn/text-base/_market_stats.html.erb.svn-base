@@ -1,0 +1,24 @@
+<% if @market_items.empty? %>
+<p class="empty_results">
+  There is nothing for sale at this world.
+</p>
+<% else %>
+<table cellspacing="4" cellpadding="2">
+  <tr>
+    <th>Item</th>
+    <th>Total Quantity</th>
+    <th>Lowest Price</th>
+    <th>Highest Price</th>
+    <th>Average Price</th>
+  </tr>
+  <% @market_items.each do |mi| -%>
+  <tr>
+    <td><a name="<%=mi.item_id%>"></a><%=link_to_item mi.item %></td>
+    <td><%=h mi.total_quantity%></td>
+    <td><%=money mi.min_price%></td>
+    <td><%=money mi.max_price%></td>
+    <td><%=money mi.avg_price%></td>
+  </tr>
+  <% end -%>
+</table>
+<% end %>

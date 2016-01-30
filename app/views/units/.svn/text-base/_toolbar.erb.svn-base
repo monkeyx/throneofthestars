@@ -1,0 +1,12 @@
+<%
+  unless toolbar_cached?
+    quick_orders = []
+    if @unit.army.legate
+      if tab?(:composition) || no_tab?
+        quick_orders << 'Load Unit'
+        quick_orders << 'Unload Unit'
+      end
+    end
+    order_toolbar(@unit.army.legate, quick_orders, @unit) unless quick_orders.empty?
+  end
+%>

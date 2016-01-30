@@ -1,0 +1,7 @@
+<%=render :partial => 'header' %>
+<p>You have a received a new message from <%=link_to(@message.from.display_name,"#{@root_url}/Character/#{@message.from.guid}")%> titled "<%=@message.subject%>".</p>
+
+<p>To view the message <%=link_to("click here", @message_url)%></p>
+
+<p>Yours,</p>
+<%=render :partial => 'footer' %>

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/throneofthestars/!svn/ver/116/trunk/app/views/starship_types
+END
+_configuration.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/throneofthestars/!svn/ver/9/trunk/app/views/starship_types/_configuration.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/throneofthestars/!svn/ver/16/trunk/app/views/starship_types/index.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/throneofthestars/!svn/ver/116/trunk/app/views/starship_types/show.html.erb
+END

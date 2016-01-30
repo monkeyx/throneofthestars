@@ -1,0 +1,38 @@
+<% if items.empty? %>
+<p class="empty_results">
+  No items queued to be produced
+</p>
+<% else
+  n = 0
+%>
+<table>
+  <tr>
+    <th>Position</th>
+    <th>Items</th>
+    <th>Total Mass</th>
+    <th>Total Raw Materials</th>
+  </tr>
+  <% items.each do |qi| -%>
+  <tr>
+    <th>
+      <%=h n%>:
+    </th>
+    <td>
+      <%=link_to_item qi.item, qi.quantity, true %>
+    </td>
+    <td>
+      <%=(qi.quantity * qi.item.mass)%>
+    </td>
+    <td>
+      <ul>
+      <% qi.item.raw_materials.each do |rm| -%>
+      <li><%=link_to_item rm.item, (rm.quantity * qi.quantity), true%></li>
+      <% end -%>
+      </ul>
+    </td>
+  </tr>
+  <%
+    n += 1
+  end -%>
+</table>
+<% end %>

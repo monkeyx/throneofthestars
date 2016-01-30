@@ -1,0 +1,16 @@
+<%=@greeting%>
+
+You have a received a new message from <%=@message.from.display_name%> titled "<%=@message.subject%>".
+
+You can view the message here:
+<%=@message_url %>
+
+Yours,
+
+Throne of the Stars GM
+
+To stop receiving all emails from Throne of the Stars, click here (no login required):
+<%=@unsubscribe_url%>
+
+To just stop receiving email notifications about new player messages, you can change your profile settings here:
+<%=@settings_url%>

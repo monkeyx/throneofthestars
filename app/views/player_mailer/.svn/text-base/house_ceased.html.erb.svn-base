@@ -1,0 +1,7 @@
+<%=render :partial => 'header' %>
+<p>We are sad to inform you that <strong>House <%=@noble_house.name%></strong> is no more<% if @inherited_by%>, all its remaining assets inherited by <%=link_to(@inherited_by.display_name,"#{@root_url}/Character/@inherited_by.guid")%><% end %>.</p>
+
+<p>Don't worry though - you can start a new house right away. To do so just <%=link_to('login',@login_url)%>.</p>
+
+<p>We hope to see you back soon and better luck with your next House!</p>
+<%=render :partial => 'footer' %>

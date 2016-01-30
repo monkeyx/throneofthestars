@@ -1,0 +1,50 @@
+<%=tab(:overview, true) do -%>
+<div id="overview" class="tab">
+	<%=wiki_help_div('Worlds')%>
+	<p>
+	  <%=h @world.name %> is currently at <%=h @world.position_description %> in the <%=link_to('Solar System',worlds_path)%>. It rotates one quadrant every <%=h @world.rotation %> &empty;.
+	</p>
+	<p>
+	  It has <%=h @world.total_lands %> lands in total of which <%=h @world.total_unclaimed_lands %> are unclaimed.
+	</p>
+	<p>
+	<% if @world.duke %>
+	  It is currently ruled by <%=link_to_character  @world.duke %>.
+	<% end %>
+	<% if @world.archbishop %>
+	  Its spiritual leader is <%=link_to_character  @world.archbishop %>.
+	<% end %>
+	<% if @world.church_funds > 0 %>
+	  The world church has funds of <%=money @world.church_funds%> available.
+	<% end %>
+	<% if @world.last_tribute %>
+	  The Duke last collected tributes from all the earls on the <%=h @world.last_tribute.to_pretty %>.
+	<% end %>
+	<% if @world.last_imperial_tribute %>
+	  The Emperor last collected tribute from this world on the <%=h @world.last_imperial_tribute.to_pretty %>.
+	<% end  %>
+	</p>
+	<p>
+	  <%=raw world_region_description(@world)%>
+	</p>
+</div>
+<% end -%>
+<%=tab(:world_market) do -%>
+<div id="world-market" class="tab">
+	<%=wiki_help_div('Markets')%>
+	<%=render :partial => 'market_stats' %>
+</div>
+<% end %>
+<%=tab(:census) do -%>
+<div id="census" class="tab">
+	<%=wiki_help_div('Population')%>
+	<%=render :partial => '/populations/census', :locals => {:census => Population.world_census(@world)} %>
+</div>
+<% end -%>
+<% if current_noble_house %>
+	<%=tab(:listings) do -%>
+	<div id="listings" class="tab">
+		<%=render :partial => 'market_sales' %>
+	</div>
+	<% end -%>
+<% end %>

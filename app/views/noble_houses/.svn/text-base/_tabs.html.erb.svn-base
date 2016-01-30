@@ -1,0 +1,60 @@
+<%=tab(:overview, true) do -%>
+<div id="overview" class="tab">
+  <%=wiki_help_div('Noble_Houses', 'Noble Houses')%>
+  <div class="message-toolbar">
+  <% unless @noble_house.ancient? || !current_player || !current_baron || current_baron.id == @noble_house.baron_id %>
+  <%= link_to(image_tag('new_message.png',:title => 'Send a message', :alt => 'Send a message', :width => 32, :height => 32), "#{new_message_path}?baron=#{@noble_house.baron.guid}") %>
+  <% end %>
+  </div>
+
+  <% unless @noble_house.baron.nil? %>
+  <p>
+    <%=link_to_character @noble_house.baron, :name_and_family %> is the sovereign of this house. It was formed on the <%=h @noble_house.formed_date.to_pretty %>.
+  </p>
+  <% end %>
+  <% if @noble_house.home_estate %>
+    <p>Its home estate is <%=link_to_estate @noble_house.home_estate %> in <%=link_to_region(@noble_house.home_estate.region)%> on <%=link_to_world(@noble_house.home_estate.region.world)%>.</p>
+  <% end %>
+  <p>
+  <% if @noble_house.chancellor %>
+    <%=link_to_character @noble_house.chancellor, :name_and_family %> is the current Chancellor.<br/>
+  <% elsif belongs_to_current_player?(@noble_house) %>
+    <span class="warning">A Chancellor needs to be appointed to automatically collect taxes from all estates each year.</span>
+  <% end %>
+  </p>
+  <p>
+    <%=house_wealth_description(@noble_house)%>
+  </p>
+  <p>
+    Its honour with the houses is <%=h @noble_house.honour.to_i %> whilst its glory is <%=h @noble_house.glory.to_i %>. The Church states it has <%=h @noble_house.piety.to_i %> piety.
+  </p>
+  <%=render :partial => '/diplomatic_relations/list', :locals => {:noble_house => @noble_house} %>
+</div>
+<% end -%>
+
+<%=tab(:members) do -%>
+<div id="members" class="tab">
+  <%=wiki_help_div('Characters')%>
+  <%=render :partial => '/characters/list', :locals => {:characters => Character.of_house(@noble_house).living} %>
+</div>
+<% end -%>
+
+<%=tab(:deceased) do -%>
+<div id="members" class="tab">
+  <%=wiki_help_div('Characters')%>
+  <%=render :partial => '/characters/deceased', :locals => {:characters => Character.of_house(@noble_house).dead} %>
+</div>
+<% end -%>
+
+<%= tab(:authorisations) do -%>
+  <div id="authorisations" class="tab">
+    <%= render :partial => '/authorisations/list', :locals => {:authorisations => @noble_house.authorisations, :show_estate => true } %>
+  </div>
+<% end -%>
+
+
+<%=tab(:news) do -%>
+<div id="news" class="tab">
+  <%=render :partial => '/news/list', :locals => {:news => @noble_house.news_log(current_noble_house), :highlight_public_news => (current_noble_house && current_noble_house.id == @noble_house.id)} %>
+</div>
+<% end -%>

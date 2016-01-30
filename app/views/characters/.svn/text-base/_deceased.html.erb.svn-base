@@ -1,0 +1,36 @@
+<% if characters.empty? %>
+<p class="empty_results">No deceased members of this House</p>
+<% else %>
+<table cellspacing="4" cellpadding="2">
+  <tr>
+    <th>
+      Character
+    </th>
+    <th>
+      Gender
+    </th>
+    <th>
+      Lifespan
+    </th>
+    <th>
+      Remembered
+    </th>
+  </tr>
+<% characters.each do |character| -%>
+  <tr>
+    <td>
+      <%=link_to_character character %>
+    </td>
+    <td>
+      <%=h character.gender %>
+    </td>
+    <td>
+      <%=character.birth_date.pp%> until <%=character.death_date.pp%>
+    </td>
+    <td>
+      <%=character.traits.join(", ") %>
+    </td>
+  </tr>
+<% end -%>
+</table>
+<% end %>

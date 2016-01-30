@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/throneofthestars/!svn/ver/288/trunk/app/views/characters
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/throneofthestars/!svn/ver/230/trunk/app/views/characters/index.html.erb
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/throneofthestars/!svn/ver/235/trunk/app/views/characters/_tabs.html.erb
+END
+show.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/throneofthestars/!svn/ver/220/trunk/app/views/characters/show.js.erb
+END
+_espionage.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/throneofthestars/!svn/ver/48/trunk/app/views/characters/_espionage.html.erb
+END
+_choose_order.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/throneofthestars/!svn/ver/321/trunk/app/views/characters/_choose_order.html.erb
+END
+_list.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/throneofthestars/!svn/ver/57/trunk/app/views/characters/_list.html.erb
+END
+_deceased.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/throneofthestars/!svn/ver/288/trunk/app/views/characters/_deceased.html.erb
+END
+_toolbar.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/throneofthestars/!svn/ver/320/trunk/app/views/characters/_toolbar.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/throneofthestars/!svn/ver/220/trunk/app/views/characters/show.html.erb
+END
+_diplomacy.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/throneofthestars/!svn/ver/47/trunk/app/views/characters/_diplomacy.html.erb
+END
+_form.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/throneofthestars/!svn/ver/17/trunk/app/views/characters/_form.html.erb
+END

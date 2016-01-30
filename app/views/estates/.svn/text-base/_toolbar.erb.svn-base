@@ -1,0 +1,101 @@
+<%
+unless toolbar_cached?
+  lord_quick_orders = []
+  quick_orders = []
+  chancellor_orders = []
+  steward_quick_orders = []
+  tribune_quick_orders = []
+  steward_orderable = @estate.steward && belongs_to_current_player?(@estate.steward) && @estate.steward.can_be_given_orders?
+  tribune_orderable = @estate.tribune && belongs_to_current_player?(@estate.tribune) && @estate.tribune.can_be_given_orders?
+  if @estate.lord && @estate.lord.can_be_given_orders?
+    if tab?(:overview) || no_tab?
+      lord_quick_orders << 'Appoint Steward' unless @estate.steward
+      lord_quick_orders << 'Appoint Tribune'unless @estate.tribune
+      quick_orders << 'Claim Land'
+      quick_orders << 'Collect Taxes'
+      quick_orders << 'Gather Resources'
+      quick_orders << 'Form Army'
+      quick_orders << 'Pay Tithes' if @estate.tithe_allowed?
+    end
+    if tab?(:buildings)
+      if steward_orderable
+        steward_quick_orders << 'Construct Building'
+        steward_quick_orders << 'Demolish Building'
+      else
+        quick_orders << 'Construct Building'
+        quick_orders << 'Demolish Building'
+      end
+    end
+    if tab?(:population)
+      if tribune_orderable
+        tribune_quick_orders << 'Sell Workers'
+      else
+        quick_orders << 'Sell Workers'
+      end
+      if @estate.noble_house.chancellor
+        chancellor_orders << 'Set Tax Level'
+        chancellor_orders << 'Set Wage Level'
+      end
+    end
+    if tab?(:inventory)
+      if steward_orderable
+        steward_quick_orders << 'Buy'
+        steward_quick_orders << 'Sell' 
+        steward_quick_orders << 'Deliver'
+        steward_quick_orders << 'Pickup'
+      else
+        quick_orders << 'Buy'
+        quick_orders << 'Sell' 
+        quick_orders << 'Deliver'
+        quick_orders << 'Pickup'
+      end
+    end
+    if tab?(:production)
+      quick_orders << 'Produce'
+    end
+    if tab?(:authorisations)
+      if steward_orderable
+        steward_quick_orders << 'Pickup Authorisation'
+        steward_quick_orders << 'Delivery Authorisation'
+        steward_quick_orders << 'Revoke Authorisation'
+      else
+        quick_orders << 'Pickup Authorisation'
+        quick_orders << 'Delivery Authorisation'
+        quick_orders << 'Revoke Authorisation'
+      end
+    end
+    if tab?(:tournaments)
+      quick_orders << 'Hold Tournament'
+    end
+    if tab?(:weddings)
+      quick_orders << 'Host Wedding'
+      if steward_orderable
+        steward_quick_orders << 'Invite to Wedding'
+        steward_quick_orders << 'Add Wedding Items'
+      else
+        quick_orders << 'Invite to Wedding'
+        quick_orders << 'Add Wedding Items'
+      end
+    end
+    if tab?(:prisoners)
+      lord_quick_orders << 'Imprison'
+      unless @estate.prisoners.empty?
+        lord_quick_orders << "Execute Prisoner" 
+        lord_quick_orders << "Pardon Prisoner" 
+      end
+    end
+  end
+  if steward_orderable
+    if tab?(:production) && @estate.can_make_items?
+      steward_quick_orders << 'Add to Queue'
+      steward_quick_orders << 'Alter Queue'
+      steward_quick_orders << 'Clear Queue'
+    end
+  end
+  order_toolbar(@estate.lord, quick_orders) unless quick_orders.empty?
+  order_toolbar(@estate.lord, lord_quick_orders, @estate) unless lord_quick_orders.empty?
+  order_toolbar(@estate.steward, steward_quick_orders) unless steward_quick_orders.empty?
+  order_toolbar(@estate.tribune, tribune_quick_orders) unless tribune_quick_orders.empty?
+  order_toolbar(@estate.noble_house.chancellor,chancellor_orders, @estate) unless chancellor_orders.empty?
+end
+%>

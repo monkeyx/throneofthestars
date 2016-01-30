@@ -1,0 +1,15 @@
+<%= form_for @unit do |f| %>
+  <%= form_error_messages(@unit) %>
+  <fieldset id="name">
+    <legend><span>Change Name</span></legend>
+  <ol>
+    <li>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
+  </ol>
+  </fieldset>
+  <fieldset id="submitform">
+    <%= f.submit "Rename Unit" %>
+  </fieldset>
+<% end %>

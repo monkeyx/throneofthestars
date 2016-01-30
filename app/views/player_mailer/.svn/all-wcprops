@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/throneofthestars/!svn/ver/291/trunk/app/views/player_mailer
+END
+house_ceased.text.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/throneofthestars/!svn/ver/195/trunk/app/views/player_mailer/house_ceased.text.erb
+END
+password_reset_instructions.text.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/throneofthestars/!svn/ver/38/trunk/app/views/player_mailer/password_reset_instructions.text.erb
+END
+signup_complete.text.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/throneofthestars/!svn/ver/41/trunk/app/views/player_mailer/signup_complete.text.erb
+END
+house_news.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/throneofthestars/!svn/ver/41/trunk/app/views/player_mailer/house_news.html.erb
+END
+player_message.text.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/throneofthestars/!svn/ver/38/trunk/app/views/player_mailer/player_message.text.erb
+END
+confirm_email.text.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/throneofthestars/!svn/ver/38/trunk/app/views/player_mailer/confirm_email.text.erb
+END
+house_ceased.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/throneofthestars/!svn/ver/195/trunk/app/views/player_mailer/house_ceased.html.erb
+END
+_header.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/throneofthestars/!svn/ver/41/trunk/app/views/player_mailer/_header.html.erb
+END
+password_reset_instructions.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/throneofthestars/!svn/ver/41/trunk/app/views/player_mailer/password_reset_instructions.html.erb
+END
+newsletter.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/throneofthestars/!svn/ver/300/trunk/app/views/player_mailer/newsletter.html.erb
+END
+_news_html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/throneofthestars/!svn/ver/178/trunk/app/views/player_mailer/_news_html.erb
+END
+signup_complete.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 84
+/throneofthestars/!svn/ver/51/trunk/app/views/player_mailer/signup_complete.html.erb
+END
+_footer.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/throneofthestars/!svn/ver/41/trunk/app/views/player_mailer/_footer.html.erb
+END
+player_message.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/throneofthestars/!svn/ver/41/trunk/app/views/player_mailer/player_message.html.erb
+END
+confirm_email.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/throneofthestars/!svn/ver/41/trunk/app/views/player_mailer/confirm_email.html.erb
+END

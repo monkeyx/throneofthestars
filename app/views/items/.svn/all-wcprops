@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 52
+/throneofthestars/!svn/ver/175/trunk/app/views/items
+END
+_weapon_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/throneofthestars/!svn/ver/124/trunk/app/views/items/_weapon_stats.html.erb
+END
+_hull_slots.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/throneofthestars/!svn/ver/54/trunk/app/views/items/_hull_slots.html.erb
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/56/trunk/app/views/items/index.html.erb
+END
+_bundles.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/throneofthestars/!svn/ver/175/trunk/app/views/items/_bundles.html.erb
+END
+_armour_effectiveness.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/throneofthestars/!svn/ver/47/trunk/app/views/items/_armour_effectiveness.html.erb
+END
+_shield_effectiveness.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/throneofthestars/!svn/ver/47/trunk/app/views/items/_shield_effectiveness.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/throneofthestars/!svn/ver/51/trunk/app/views/items/show.html.erb
+END

@@ -1,0 +1,36 @@
+<% if authorisations.empty? %>
+<p class="empty_results">
+  No authorisations in place
+</p>
+<% else
+  n = 1
+%>
+  <table>
+    <tr>
+      <% if show_estate %>
+      <th>From</th>
+      <% else %>
+      <th>To</th>
+      <% end %>
+      <th>Right</th>
+    </tr>
+    <% authorisations.each do |auth| -%>
+    <tr>
+      <% if show_estate %>
+      <td>Estate <%=auth.estate.name%> in <%=link_to_region(auth.estate.region)%></td>
+      <% else %>
+      <td><%=link_to_house(auth.noble_house)%></td>
+      <% end %>
+      <td>
+        <% if auth.delivery? %>
+        Delivery
+        <% else %>
+        Pickup <%=link_to_item auth.item, auth.quantity, true %>
+        <% end %>
+      </td>
+    </tr>
+    <%
+      n += 1
+    end -%>
+  </table>
+<% end %>

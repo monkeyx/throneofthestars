@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/throneofthestars/!svn/ver/296/trunk/app/views
+END
+_top_nav.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/172/trunk/app/views/_top_nav.html.erb
+END
+_databank_nav.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/2/trunk/app/views/_databank_nav.html.erb
+END
+updating.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/172/trunk/app/views/updating.html.erb
+END
+_footer.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/throneofthestars/!svn/ver/122/trunk/app/views/_footer.html.erb
+END
+_house_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/17/trunk/app/views/_house_stats.html.erb
+END
+_user_nav.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/throneofthestars/!svn/ver/225/trunk/app/views/_user_nav.html.erb
+END
+_dateline.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/25/trunk/app/views/_dateline.html.erb
+END

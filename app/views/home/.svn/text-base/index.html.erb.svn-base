@@ -1,0 +1,10 @@
+<% title "Throne of the Stars" %>
+<% 
+if current_noble_house
+	tabbed_menu({:welcome => 'Welcome', :news => 'Latest News', :events => 'Upcoming Social Events'},[link_to("Announcements", announcements_path), link_to_own_house,link_to("Characters", characters_path),link_to("Estates", estates_path),link_to("Armies", armies_path),link_to("Starships", starships_path),link_to("Messages", messages_path)])
+else
+	tabbed_menu({:introduction => 'Introduction', :news => 'Latest News', :events => 'Upcoming Social Events'},[link_to("Announcements", announcements_path), link_to("The Empire", empire_path),link_to("The Church", church_path),link_to("Noble Houses", noble_houses_path),link_to("Solar System", worlds_path),link_to("Databank", items_path)])
+end
+%>
+
+<%=render :partial => 'tabs'%>

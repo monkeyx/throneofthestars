@@ -1,0 +1,62 @@
+<%=tab(:map, true) do -%>
+  <%=render :partial => 'map' %>
+<% end -%>
+
+<%=tab(:index) do-%>
+<div id="index" class="tab">
+  <table>
+    <tr>
+      <th>Name</th>
+      <th>Orbital Ring</th>
+      <th>Quadrant</th>
+      <th>Regions</th>
+    </tr>
+    <% for world in @worlds %>
+      <tr>
+        <td><%=link_to_world world %></td>
+        <td><%=h world.distance %></td>
+        <td><%=h world.quadrant_name %> <%=h world.rotation_description %></td>
+        <td>
+          <%=raw (world.regions.map{|region| link_to_region region}.join(", ")) %>
+        </td>
+      </tr>
+    <% end %>
+  </table>
+</div>
+<% end -%>
+
+<%=tab(:markets) do -%>
+<div id="markets" class="tab">
+  <table cellspacing="4" cellpadding="2">
+    <tr>
+      <th colspan="2">Item</th>
+      <% @worlds.each do |world| %>
+        <th><%=link_to(world.name, "/Planet/#{world.name}?tab=world_market")%></th>
+      <% end %>
+    </tr>
+    <% @worlds_markets.keys.each do |item| -%>
+    <tr>
+      <td rowspan="2"><%=link_to_item item %></td>
+      <td>Total:</td>
+      <% @worlds.each do |world| 
+          mi = @worlds_markets[item][world]
+          if mi %>
+          <td><%=link_to(mi.total_quantity,"/Planet/#{world.name}?tab=world_market")%></td>
+       <% else %>
+          <td rowspan="2">N/A</td>
+        <% end %>
+      <% end %>
+    </tr>
+    <tr>
+      <td>Avg. Price:</td>
+      <% @worlds.each do |world| 
+          mi = @worlds_markets[item][world]
+          if mi %>
+          <td><%=money(mi.avg_price)%></td>
+        <% end %>
+      <% end %>
+    </tr>
+    <% end -%>
+  </table>
+</div>  
+<% end -%>

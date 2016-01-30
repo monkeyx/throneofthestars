@@ -1,0 +1,70 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <title>Throne of the Stars : <%= (content_for(:title) || "Untitled") %></title>
+    <link href='http://fonts.googleapis.com/css?family=Federant' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Arimo:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Righteous' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,700' rel='stylesheet' type='text/css'>
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="/markitup/skins/markitup/style.css" />
+    <link rel="stylesheet" type="text/css" href="/markitup/sets/bbcode/style.css" />
+    <link rel="stylesheet" href="/easybox/easybox.min.css" type="text/css" media="screen" />
+    <%= stylesheet_link_tag 'application' %>
+    <%= javascript_include_tag 'http://code.jquery.com/jquery-1.7.1.min.js' %>
+    <%= javascript_include_tag 'application' %>
+    <script type="text/javascript" src="/markitup/jquery.markitup.js"></script>
+    <script type="text/javascript" src="/markitup/sets/bbcode/set.js"></script>
+    <script type="text/javascript" src="/easybox/easybox.min.js"></script>
+    <%= content_for(:head) %>
+    <script type="text/javascript">
+      $(document).ready(function()  {
+          $('#bbcode').markItUp(myBbcodeSettings);
+
+          $('#emoticons a').click(function() {
+            emoticon = $(this).attr("title");
+            $.markItUp( { replaceWith:emoticon } );
+          });
+      });
+    </script>
+    <% unless Rails.env == 'development' %>
+    <%=render :partial => '/layouts/ga_tracking'%>
+    <% end %>
+  </head>
+  <body>
+    <div id="container">
+      <% if defined?(@databank) %>
+        <%=render :partial => '/databank_nav'%>
+      <% else %>
+        <%=render :partial => '/top_nav'%>
+      <% end %>
+      <%=render :partial => '/user_nav'%>
+      <br/>
+      <%- flash.each do |name, msg| -%>
+        <%= content_tag :div, msg, :id => "flash_#{name}", :class => 'flash' %>
+      <%- end -%>
+      <div id="spinner" class="spinner" style="display:none;">
+        <%=image_tag('ajax-loader.gif', :id => 'img-spinner', :alt => 'Loading')%>
+      </div>
+      <%- if show_title? -%>
+        <h1><%= content_for(:title) %> <%=version_tag%></h1>
+      <%- end -%>
+      <%= content_for(:tab_menu) %>
+      <div id="tab-container">
+        <%= yield %>
+      </div>
+      <%- if show_order_toolbar? -%>
+      <div id="orders-toolbar">
+        <% cache (toolbar_cache_key) do -%>
+        <%= content_for(:order_toolbar) %>
+        <% end -%>
+      </div>
+      <% end -%>
+      <div id="footer">
+        <%= render :partial => '/footer' %>
+      </div>
+    </div>
+
+  </body>
+</html>

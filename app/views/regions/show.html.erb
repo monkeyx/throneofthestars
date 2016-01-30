@@ -1,0 +1,4 @@
+<% title "#{@region.world.name} Region : #{@region.name}" %>
+<% tabbed_menu({:overview => 'Overview', :census => 'Census'},[link_to_world(@region.world)]) %>
+
+<%=render :partial => 'tabs' %>

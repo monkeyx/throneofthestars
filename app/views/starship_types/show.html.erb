@@ -1,0 +1,32 @@
+<% title "#{@starship_type.name}" %>
+<%
+tabbed_menu({:overview => @starship_type.name},[link_to('Other Starship Types',starship_types_path)])
+%>
+<%=tab(:overview, true) do -%>
+<div id="starship-types" class="tab">
+	<%=wiki_help_div('Starship_Types#Ship_Types', 'Starship Types')%>
+	<table>
+	<tr>
+	  <th>Hull Type:</th>
+	  <td><%=link_to_item @starship_type.hull_type %></td>
+	</tr>
+	<tr>
+	  <th>Hull Size:</th>
+	  <td><%=h @starship_type.hull_size %></td>
+	</tr>
+	<%=render :partial => 'configuration', :locals => {:starship_type => @starship_type} %>
+	<% unless @starship_type.project_required.blank? %>
+	<tr>
+	  <th>Project Required:</th>
+	  <td><%=h @starship_type.project_required %></td>
+	</tr>
+	<% end %>
+	<% unless @starship_type.jammer_modifier == 0%>
+	<tr>
+	  <th>Jammer Effectiveness Penalty:</th>
+	  <td><%=h @starship_type.jammer_modifier %></td>
+	</tr>
+	<% end %>
+	</table>
+</div>
+<% end -%>

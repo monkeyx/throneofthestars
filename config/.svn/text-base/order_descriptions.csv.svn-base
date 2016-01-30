@@ -1,0 +1,108 @@
+Buy||Buy an item from the world market. If the character is at an estate, the shuttle ports will be used. If onboard a ship, the starship must have sufficient space for the type of item.||Markets
+Sell||Sell an item on the world market. The item is removed and put into escrow under the house's sales listings. Payment will be made once someone buys the item.||Markets
+Cancel Sale||Cancel an item listed on the world market. The item will be returned to the character's estate or starship.||Markets
+Teach Skill||Teach a skill at which this character is an expert to another character who must be at the same estate and a major member of the house. The other character immediately becomes a Neophyte at the skill.||Skills#Acquiring_Skills
+Train Skill||Begin training of a skill. Must be in the right type of role to train a skill: <ul><li><strong>Naval skills</strong>: Must be Captain or Lieutenant.</li><li><strong>Military skills</strong>: Must be Legate or Knight.</li><li><strong>Civil skills</strong>: Must be Lord, Steward, Tribune or Chancellor</li><li><strong>Ecclesiastical skills</strong>: Must be Emissary or Deacon</li></ul>Training takes time depending on the skill level trying to achieve and only major characters may learn more than one skill. <strong>Minor members of your house</strong> can only know one skill. To train in more than one skill you need to promote them to be a major character.||Skills#Training_Skills
+Appoint Steward||Appoint a character to be Steward of an estate. Cannot be a Lord. Any other domain, military or naval titles are lost.||Estate_Management#Steward
+Appoint Tribune||Appoint a character to be Tribune of an estate. Cannot be a Lord. Any other domain, military or naval titles are lost.||Estate_Management#Tribune
+Appoint Chancellor||Appoint a character to be Chancellor of the house. Cannot be the Baron. Any other domain, military or naval titles are lost.||Estate_Management#Chancellor
+Appoint Emissary||Appoint a character to be an Emissary. Must be at a foreign estate. <br/><strong>Note</strong>: Moving to a foreign estate normally makes a character an emissary automatically.||Emissaries
+Lead Army||Take command of an army at the current estate and become its Legate. The army mustn't already have a legate or the order will fail.||Army_Leaders
+Lead Unit||Take command of a unit of an army at the current estate. Must be a knight and the unit mustn't be led by a knight already.||Army_Leaders
+Leave Army||Leave the army the character is leading (or travelling with as a unit commanding knight) and move to the current estate. Army must docked at an estate and not in orbit or onboard a ship.||Army_Leaders
+Form Army||The Lord musters a new army under the leadership of a chosen Legate.||Armies
+Heal||Heal another character who is ill, injured or wounded. Chance to heal is dependent on the skill of the character and type of trait. <strong>Warning</strong>: There is a 1 in 10 chance this may result in the other character dyinbg.||Skills#Healing
+Quit Appointment||The character quits their current domain role (Steward, Tribune or Chancellor).||Titles#Domain_Titles
+Travel to Estate||The character will travel to an estate on their current world. May travel from another estate, onboard a ship in orbit or with an army anywhere. They will leave the starship or army they are with if applicable.||Characters#Location
+Construct Building||The Lord or Steward will order the construction of new building levels using the building modules in the estate's inventory. <br/><strong>Note:</strong> The order will only succeed if you have sufficient building modules at the estate. Use the databank link that appears after selecting the building type to see what each building needs per level to be built/upgraded.||Buildings
+Demolish Building||The Lord or Steward will order the destruction of building levels. 25% of the building modules used will be returned to the estate's inventory.||Buildings
+Deliver||Deliver items to another estate or spaceship docked at the current estate or in orbit of the same world. Uses shuttle capacity except for docked ships. If install is chosen, the item is installed into the target ship.<br/><strong>Note:</strong> Choose either starship OR an estate.||
+Pickup||Pickup items from another estate or spaceship docked at the current estate or in orbit of the same world. Uses shuttle capacity except for docked ships. If uninstall is chosen, the item is uninstalled from into the target ship's sections.||
+Build Starship||Begin a starship construction programme.||Building_Starships
+Set Tax Level||Set the tax to be levied against freemen and artisans at the beginning of each year. Requires a Chancellor to be appointed to the Noble House. <strong>Warning</strong>: Freemen who cannot pay the tax requested are enslaved.||Taxes
+Set Wage Level||Set the wages to be paid to workers at own of your estates.||Population#Wages
+Sell Workers||Sell workers on the world market.||Markets
+Claim Land||Claim new land from the region's unclaimed land at the current listed for the region.||Estates#Lands
+Collect Taxes||Collect taxes immediately from freemen and artisans. <strong>Warning</strong>: Freemen who cannot pay the tax requested are enslaved.||Taxes
+Gather Resources||Gather resources immediately using the available buildings at the estate.||Estates#Resource_Gathering
+Produce||Produce item immediately without using workshop capacity just the Lord's action points. Requires raw materials to be present.||Estates#Workshop_Production
+Imprison||Imprison a character at this estate. <strong>Warning</strong>: This will negatively impact your honour.||Prisoners#Imprisonment
+Clear Queue||Clear the production queue of all items.||Estates#Workshop_Production
+Add to Queue||Add an item to the production queue to be automatically produced by workships each &empty;. Automated production requires a Steward be appointed to the estate.||Estates#Workshop_Production
+Alter Queue||Alter the quantity of an item to be produced listed on the production queue.||Estates#Workshop_Production
+Create Unit||Create a new unit for this army with the specified items.||Units
+Load Unit||Add items to an army unit.||Units
+Unload Unit||Unload items from an army unit to the current estate.||Units
+Army Move to Region||Move the army to another region on this world.||Army_Movement
+Army Move to Estate||Move the army to another estate on this world.||Army_Movement
+Army Move to Orbit||Move the army to the orbit of this world. Requires orbital movement.||Army_Movement
+Give Away Lordship||Give away the title of Lord of an estate to another character of your house. A Baron cannot give away the last Lordship they have.||Titles
+Claim Title||The Baron will attempt to claim to be either an Earl of a Region or Duke of a World. To be Earl, must have 2/3 of all Lords of the Region as vassals. To be Duke, must have 2/3 of all Earls of a World as vassals.||Titles
+Ransom Prisoner||Offer a ransom for the release of a prisoner.||Prisoners#Ransom
+Command Starship||Take command of a starship your character is currently onboard as long as it has no captain.||Starship_Crew
+Board Starship||Board a starship at the current estate or in orbit of the world where the character is located. If the first character to board the ship, it becomes the Captain. Otherwise, becomes a Lieutenant.||Starship_Crew
+Disembark||Leave a starship and move to the currently estate where the ship is docked. You may want to use Travel to Estate instead to move to an estate from orbit.||Starship_Crew
+Take Off||The starship under this character's command will take off from the current docked estate into orbit. Requires either an orbital dock at the estate or sufficient thrusters.||Starship_Movement
+Dock||The starship under this character's command will dock at the estate specified provided either the estate has an orbital dock or the ship has sufficient thrusters.||Starship_Movement
+Move to World||The starship under this character's command will move to the specified world provided it has an inpulse drive. <br/><strong>Note</strong>: Some distances cannot be travelled in a single move if the action points cost is greater than the maximum your captain can have (10 AP). Therefore, you may need to move to an intermediary world first.||Starship_Movement
+Load Cargo||The starship under this character's command will load cargo into its holds.||Starships#Cargo
+Unload Cargo||The starship under this character's command will unload cargo from its holds to the estate specified. If no specific item is chose, everything but troops will be unloaded.||Starships#Cargo
+Load Workers||The starship under this character's command will take workers from the estate and put them into quarters on the ship for transport. Must be docked at one of your own estates.||Starships#Cargo
+Unload Workers||The starship under this character's command will unload workers from the ship's quarters and add them to the estate's general population. Must be docked at one of your own estates.||Starships#Cargo
+Scan Orbit||The starship under this character's command will attempt to scan the current orbit for other ships.||Sensors
+Salvage||The starship under this character's command will salvage everything it can from the debris field already scanned.||
+Install Section||The captain will order the installation of a new ship section. Must be docked at one of your own estates.||Starships#Sections_Categories
+Uninstall Section||The captain will order the removal of an installed ship section. Must be docked at one of your own estates which will receive the uninstalled item.||Starships#Sections_Categories
+Refit||The captain will order all missing sections from the starship's configuration be installed. Must be docked at one of your own estates.||Starship_Configuration
+Attack Ship||Attack a ship scanned in the same orbit. May only attack ships of houses you are currently at war with.||Space_Combat
+Attack House Ship||Attack a random scanned ship of the specified house that meets the optional crtieria specified. May only attack ships of houses you are currently at war with.||Space_Combat
+Scuttle||Scuttle the starship and turn it into a debris field. Must be in orbit.||
+Pickup Authorisation||Authorise another house to pickup specified items from this estate.||Estates#Authorisations
+Delivery Authorisation||Authorise another house to delivery any items to this estate.||Estates#Authorisations
+Revoke Authorisation||Remove an authorisation to another house either for a specific item or for delivery if no item is specified.||Estates#Authorisations
+Embark Army||Embark an army onboard the starship. Must have sufficient space for the army.||Starships#Embarking_Armies
+Disembark Army||Disembark an army at the current location.||Starships#Embarking_Armies
+Join Clergy||The character will join the clergy and become an acolyte. They must be at an estate with a chapel and not already part of the Church.||The_Church
+Pay Tithes||Pay tithes to the church. Earns piety and may be used by church for alms, education or faith projects.||The_Church
+Set Church Budget||Set the regional budget for the church.||The_Church
+Hold Tournament||The Lord will organise a tournament to be held at their estate. The amount of glory gained will be dependent upon the prize offered.||Tournaments
+Join Tournament||The character will join a tournament at their current estate if one is being held in the future. The character must be present at the estate on the chronum the tournament is held to take part.||Tournaments
+Propose Marriage||The character will make a marriage proposal to a single female of marrying age belonging to another house. The offer must be accepted by the potential bride (automatically done for ancient houses). A dowry may be offered to the other house. Once a proposal is accepted, the couple become betrothed until married (done immediately if the bride is of an ancient house).||Marriage
+Accept Proposal||Accept an existing proposal of marriage to this character. Once accepted, a wedding must be organised to marry the two betrothed characters.||Marriage
+Break Betrothal||Break off the engagement with your character's betrothed. <strong>Warning</strong>: Your house will lose honour and piety equal to 1/10th of the betrothed's house.||Marriage
+Host Wedding||Host a wedding at your estate for a bride of your own house. You may then invite guests and add wedding items to increase the honour the wedding brings your house.||Weddings
+Invite to Wedding||Invite a guest to the wedding scheduled to be held at this estate. If a guest attends, they will bring honour to your house and themselves provided sufficient trade goods are supplied.<br/><strong>Note</strong>: If you do not specify an individual character, you will invite all adults of the target house.||Weddings
+Add Wedding Items||Add a trade good to the wedding to be held at this estate. At least 1 grain and 1 mead is necessary per guest. Additional goods improve honour earned.||Weddings
+Demand Justice||Demand justice from another character. May lead to a trial or rejection.||Justice
+Reject Accusation||Reject an accusation of injustice made by another specified character. Gives their house a cassus belli.||Justice
+Trial By Combat||Deal with a demand for justice through a trial by combat.||Justice
+Trial By Court||Deal with a demand for justice through a trial by the Emperor's court.||Justice
+Trial By Church||Deal with a demand for justice through a trial by the Pontiff's court.||Justice
+Issue Judgement||Rule in favour of one character in a trial.||Justice
+Declare War||Declare war against the house of the current estate of the emissary. Must have a cassus belli.||War_and_Peace
+Offer Truce||Offer a truce to the house of the current estate of the emissary. Must be at war.||War_and_Peace
+Offer Peace||Offer a peace to the house of the current estate of the emissary. Must be at war.||War_and_Peace
+Offer Alliance||Offer an alliance to the house of the current estate of the emissary.||Diplomacy#Alliances
+Offer Allegiance||Offer an oath of allegiance to the house of the current estate of the emissary.||Diplomacy#Oaths_of_Allegiance
+Accept Truce||Accept a truce offer made by the specified house.||War_and_Peace
+Reject Truce||Reject a truce offer made by the specified house.||War_and_Peace
+Accept Peace||Accept a peace offer made by the specified house.||War_and_Peace
+Reject Peace||Reject a peace offer made by the specified house.||War_and_Peace
+Accept Alliance||Accept an alliance offer made by the specified house.||Diplomacy#Alliances
+Reject Alliance||Reject an alliance offer made by the specified house.||Diplomacy#Alliances
+Accept Allegiance||Accept an oath of allegiance offer made by the specified house.||Diplomacy#Oaths_of_Allegiance
+Reject Allegiance||Reject an oath of allegiance offer made by the specified house.||Diplomacy#Oaths_of_Allegiance
+Break Oath||Break an oath of allegiance made to a liege or vassal.||Diplomacy#Oaths_of_Allegiance
+Break Alliance||Break an alliance with the specified house.||Diplomacy#Alliances
+Offer Apprentice||Offer a novice (14-16 year old) character as an apprentice to the character specified. Type of apprenticeship is determined by the role of target character.||Children#Novices
+Accept Apprentice||Accept a novice as an apprentice. Must have received an offer.||Children#Novices
+Petition||Petition another character to divide them from their liege and reduce their loyalty. Must not be a Lord.||Emissaries
+Spy||Spy on the current estate.||Espionage
+Sabotage||Sabotage a building or items at the current estate.||Espionage
+Assassinate||Assassinate a character at the current estate.||Espionage
+Pardon Prisoner||Pardon a prisoner and automatically accept all ransoms offered.||Prisoners
+Execute Prisoner||Execute a prisoner. <strong>Warning</strong>: Will hurt your honour.||Prisoners
+Repair Hulls||Repair a damaged starship at the current estate.||Starship_Repair
+Capture Ship||Send marines to capture the target ship. Own ship must be faster than the target.||Boarding_Ships
+Attack Armies||Attack all armies at current location belonging to the specified house.||Ground_Combat
+Assault Estate||Assault the estate you are currently located in order to capture. You will have to defeat any armies of the estate's house garrisoned at the estate first.||Ground_Combat

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/220/trunk/app/views/church
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/220/trunk/app/views/church/index.html.erb
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/220/trunk/app/views/church/_tabs.html.erb
+END
+index.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/220/trunk/app/views/church/index.js.erb
+END

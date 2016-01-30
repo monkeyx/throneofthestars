@@ -1,0 +1,11 @@
+      <p><strong>Throne of the Stars GM</strong></p>
+      </div>
+      <div id="footer">
+      	<%=link_to("Click here", @unsubscribe_url)%> to stop receiving all emails from Throne of the Stars (no login required)
+      	<% if defined?(@settings_url) %>
+      	<br/>
+      	To change what email notifications you receive please <%=link_to("click here", @settings_url)%>
+      	<% end %>
+      </div>
+  </body>
+</html>

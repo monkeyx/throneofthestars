@@ -1,0 +1,14 @@
+<% unless player.gm?
+	options = {}
+	unless player.active?
+		options['Unlock'] = 'unlock!' 
+	else
+		options['Lock'] = 'lock!'
+	end
+%>
+	<%=form_tag "/admin/players" do -%>
+		<%=hidden_field_tag :id, player.id %>
+		<%=select_tag :mod, options_for_select(options), :class => 'small_select' %>
+		<%=submit_tag 'Action', :class => 'small_submit' %>
+	<% end -%>
+<% end %>

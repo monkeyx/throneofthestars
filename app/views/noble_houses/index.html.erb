@@ -1,0 +1,35 @@
+<% title "Noble Houses of the Empire" %>
+
+<%=tab(:index, true, false) do-%>
+  <table cellspacing="4" cellpadding="4">
+    <tr>
+      <th><%=sortable_table_head('House','name')%></th>
+      <th>Baron</th>
+      <th>Members</th>
+      <th><%=sortable_table_head('Honour','honour')%></th>
+      <th><%=sortable_table_head('Glory','glory')%></th>
+      <th><%=sortable_table_head('Piety','piety')%></th>
+      <th>Formed Date</th>
+    </tr>
+    <% for noble_house in @noble_houses 
+      if current_noble_house && noble_house.id == current_noble_house.id
+        css_class = 'selected_row'
+      else
+        css_class = ''
+      end
+    %>
+      <tr>
+        <td class="<%=css_class%>"><%=link_to_house noble_house %></td>
+        <td class="<%=css_class%>"><%=link_to_character noble_house.baron, :short_display_name %></td>
+        <td class="<%=css_class%>"><%=h Character.count_living(noble_house) %></td>
+        <td class="<%=css_class%>"><%=h noble_house.honour.to_i %></td>
+        <td class="<%=css_class%>"><%=h noble_house.glory.to_i %></td>
+        <td class="<%=css_class%>"><%=h noble_house.piety.to_i %></td>
+        <td class="<%=css_class%>"><%=h noble_house.formed_date.to_pretty %></td>
+      </tr>
+    <% end %>
+  </table>
+  <div class="pagination">
+    <%= will_paginate @noble_houses %>
+  </div>
+<% end -%>

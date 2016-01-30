@@ -1,0 +1,29 @@
+<%= form_for starship_configuration_item do |f| %>
+  <p><strong>Note:</strong> Items marked <span class="required">*</span> are required fields</p>
+  <%= form_error_messages(starship_configuration_item) %>
+  <%= f.hidden_field :starship_configuration_id %>
+  <fieldset id="section">
+    <legend><span><%=submit_text%></span></legend>
+    <ol>
+      <li>
+        <%= f.label :item, :class => 'required' %>
+        <% if starship_configuration_item.new_record? %>
+        <%= f.select :item_id, options_for_items(starship_configuration_item.item_id, Item::SHIP_SECTIONS) %>
+        <% else %>
+        <%=f.hidden_field :item_id %>
+        <%=link_to_item(starship_configuration_item.item)%>
+        <% end %>
+      </li>
+      <li>
+        <%= f.label :quantity, :class => 'required' %>
+        <%= f.number_field :quantity %>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset id="submitform">
+    <%= f.submit submit_text %>
+    <% unless starship_configuration_item.new_record? %>
+    <span style="float: right;"><strong><%= link_to "Remove Section", @starship_configuration_item, :confirm => 'Are you sure?', :method => :delete, :class => '' %></span>
+    <% end %>
+  </fieldset>
+<% end %>

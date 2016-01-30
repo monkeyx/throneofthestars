@@ -1,0 +1,27 @@
+<% if @home %>
+	<% guest_count = 0 %>
+	<% if Player.logged_in.count > 0 %>
+	<ul>
+		<li><%=pluralize(Player.logged_in.count,"Player")%>  Online:</li>
+		<% Player.logged_in.each do |player| %>
+			<% unless player.noble_house.nil? || player.noble_house.baron.nil? %>
+			<li>
+				<%=link_to_character(player.noble_house.baron) %>
+			</li>
+			<% else 
+				guest_count += 1
+			end %>
+		<% end %>
+		<% if guest_count > 0 %>
+			<li><%=pluralize(guest_count,"guest")%></li>
+		<% end %>
+	</ul>
+	<% end %>
+<% end %>
+<p class="center">
+<small><em>Character orders are processed every half an hour. A new chronum update occurs at 07:00 - it is currently <%=Time.now.getutc.strftime('%H:%M')%>.</em></small>
+<br/>
+&copy; Seyed P. Razavi 2012 - <%=link_to 'Terms & Privacy Policy', '/terms.html', :rel => 'lightbox' %>
+<br/>
+<small>Powered by <%=link_to 'Brightbox', 'http://www.brightbox.co.uk/a/orrbd', :target => 'hosting', :style => 'color: #fff' %></small>
+</p>

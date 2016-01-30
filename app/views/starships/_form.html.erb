@@ -1,0 +1,15 @@
+<%= form_for @starship do |f| %>
+  <%= form_error_messages(@starship) %>
+  <fieldset id="name">
+    <legend><span>Change Name</span></legend>
+  <ol>
+    <li>
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </li>
+  </ol>
+  </fieldset>
+  <fieldset id="submitform">
+    <%= f.submit "Rename Starship" %>
+  </fieldset>
+<% end %>

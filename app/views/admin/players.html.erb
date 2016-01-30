@@ -1,0 +1,31 @@
+<% 
+title 'Players Admin' 
+render :partial => 'tab_menu'
+%>
+
+<div id="players" class="tab">
+	<table>
+	<tr>
+		<th>Name</th>
+		<th>Username</th>
+		<th>Email</th>
+		<th>Status</th>
+		<th>Current Login</th>
+		<th>Previous Login</th>
+		<th>Action</th>
+	</tr>
+	<% @players.each do |player| -%>
+	<tr>
+		<td><%=player.name%></td>
+		<td><%=player.username%></td>
+		<td><%=link_to(player.email, "mailto:#{player.email}")%></td>
+		<td><%=player.status.join("<br/>").html_safe%></td>
+		<td><%=player.current_login_ip%><br/><%=player.current_login_at%></td>
+		<td><%=player.last_login_ip%><br/><%=player.last_login_at%></td>
+		<td>
+			<%=render :partial => 'player_action_form', :locals => {:player => player}%>
+		</td>
+	</tr>
+	<% end -%>
+	</table>
+</div>

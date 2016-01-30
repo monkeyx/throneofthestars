@@ -1,0 +1,33 @@
+<% title "Estates of House #{current_noble_house.name}" %>
+
+<%=tab(:index, true, false) do-%>
+  <% if @estates.empty? %>
+  <div class="tab">
+  <p class="empty_results">
+    Your House has no Estates
+  </p>
+  </div>
+  <% else %>
+  <table>
+    <tr>
+      <th>Estate</th>
+      <th>Region</th>
+      <th>World</th>
+      <th>Lord</th>
+      <th>Lands</th>
+    </tr>
+    <% for estate in @estates %>
+      <tr>
+        <td><%=link_to_estate estate %></td>
+        <td><%=link_to_region estate.region %></td>
+        <td><%=link_to_world estate.region.world %></td>
+        <td><%=link_to_character estate.lord %></td>
+        <td><%=h estate.lands %></td>
+      </tr>
+    <% end %>
+  </table>
+  <div class="pagination">
+    <%= will_paginate @estates %>
+  </div>
+  <% end %>
+<% end -%>

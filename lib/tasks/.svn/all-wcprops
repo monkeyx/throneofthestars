@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/throneofthestars/!svn/ver/280/trunk/lib/tasks
+END
+setup_house.rake
+K 25
+svn:wc:ra_dav:version-url
+V 62
+/throneofthestars/!svn/ver/17/trunk/lib/tasks/setup_house.rake
+END
+.gitkeep
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/2/trunk/lib/tasks/.gitkeep
+END
+send_newsletter.rake
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/300/trunk/lib/tasks/send_newsletter.rake
+END
+thronestars.rake
+K 25
+svn:wc:ra_dav:version-url
+V 63
+/throneofthestars/!svn/ver/332/trunk/lib/tasks/thronestars.rake
+END
+bbgem.rake
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/58/trunk/lib/tasks/bbgem.rake
+END

@@ -1,0 +1,24 @@
+<% title @character.display_name %>
+<% 
+if belongs_to_current_player?(@character)
+  location_tab_link = ''
+  unless @character.location_foreign?
+    location_tab_link = link_to_starship(@character.location) if @character.location_starship?
+    location_tab_link = link_to_estate(@character.location) if @character.location_estate?
+    location_tab_link = link_to_army(@character.location) if @character.location_army?
+    location_tab_link = link_to_army(@character.location.unit) if @character.location_unit?
+  end
+  tabs = {:overview => 'Overview', :news => "#{@character.display_name} News"}
+  tabs[:diplomacy] = "Diplomacy"
+  tabs[:espionage] = 'Espionage' if @character.emissary?
+  tabs[:orders] = 'Orders' if @character.can_be_given_orders?
+  tabs[:edit] = 'Change Name'
+  tabbed_menu(tabs, [link_to_house(@character.noble_house),location_tab_link])
+
+  render :partial => 'toolbar' unless toolbar_cached?
+else
+  tabbed_menu({:overview => 'Overview', :news => "#{@character.display_name} News"}, [link_to_house(@character.noble_house)])
+end
+%>
+
+<%=render :partial => 'tabs' %>

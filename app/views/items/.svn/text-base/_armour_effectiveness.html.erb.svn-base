@@ -1,0 +1,29 @@
+<tr>
+  <th>Armour Saves:</th>
+  <th>
+<table>
+  <tr>
+    <th>
+      Light (20% to 99% Coverage)
+    </th>
+    <th>
+      Normal (100% to 199% Coverage)
+    </th>
+    <th>
+      Heavy (200% or better Coverage)
+    </th>
+  </tr>
+  <tr>
+    <td>
+      <%=(armour.ship_armour_light ? armour.ship_armour_light.to_pretty : 'N/A')%>
+    </td>
+    <td>
+      <%=(armour.ship_armour_normal ? armour.ship_armour_normal.to_pretty : 'N/A')%>
+    </td>
+    <td>
+      <%=(armour.ship_armour_heavy ? armour.ship_armour_heavy.to_pretty : 'N/A')%>
+    </td>
+  </tr>
+</table>
+  </th>
+</tr>

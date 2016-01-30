@@ -1,0 +1,1 @@
+bundle exec rake thronestars:updater %1

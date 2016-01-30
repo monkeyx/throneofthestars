@@ -1,0 +1,1314 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"sub",
+				"subtract_population"
+			],
+			[
+				"slave",
+				"slaves_freed"
+			],
+			[
+				"worker_c",
+				"worker_capacity"
+			],
+			[
+				"cu",
+				"current_date"
+			],
+			[
+				"up",
+				"update_time"
+			],
+			[
+				"Game",
+				"GameUpdater"
+			],
+			[
+				"require",
+				"require_player"
+			],
+			[
+				"injur",
+				"injury_count"
+			],
+			[
+				"tra",
+				"transaction"
+			],
+			[
+				"tourn",
+				"tournament_entrants"
+			],
+			[
+				"CIVI",
+				"CIVIL_ETIQUETTE"
+			],
+			[
+				"MIL",
+				"MILITARY_MELEE"
+			],
+			[
+				"SPECI",
+				"SPECIAL_ILLNESS"
+			],
+			[
+				"SPEC",
+				"SPECIAL_WOUNDED"
+			],
+			[
+				"SPE",
+				"SPECIAL_INJURED"
+			],
+			[
+				"tour",
+				"tournament_entrants"
+			],
+			[
+				"QUAD",
+				"QUAD_DISTANCE"
+			],
+			[
+				"qty",
+				"qty_bought"
+			],
+			[
+				"nob",
+				"noble_house_id"
+			],
+			[
+				"noble",
+				"noble_house_id"
+			],
+			[
+				"add",
+				"add_headline"
+			],
+			[
+				"curre",
+				"currently_training"
+			],
+			[
+				"curr",
+				"currently_training"
+			],
+			[
+				"runn",
+				"runner_up2"
+			],
+			[
+				"rn",
+				"runner_up1"
+			],
+			[
+				"roun",
+				"round_report"
+			],
+			[
+				"honey",
+				"honeymoon"
+			],
+			[
+				"NO",
+				"NOBLE"
+			],
+			[
+				"wor",
+				"worlds_attendance"
+			],
+			[
+				"birth_",
+				"birth_world"
+			],
+			[
+				"brid",
+				"bride_family_resident"
+			],
+			[
+				"grom",
+				"groom_family_resident"
+			],
+			[
+				"of",
+				"of_house"
+			],
+			[
+				"name",
+				"name_and_family"
+			],
+			[
+				"arte",
+				"artefact_debris"
+			],
+			[
+				"estate",
+				"estate_name"
+			],
+			[
+				"border-",
+				"border-width"
+			],
+			[
+				"locat",
+				"location_army"
+			],
+			[
+				"margin",
+				"margin-bottom"
+			],
+			[
+				"border-col",
+				"border-color"
+			],
+			[
+				"an",
+				"anomaly"
+			],
+			[
+				"ca",
+				"category"
+			],
+			[
+				"ord",
+				"order_processor"
+			],
+			[
+				"reply",
+				"reply_to"
+			],
+			[
+				"gues",
+				"guest_list"
+			],
+			[
+				"par",
+				"parameter_value_obj"
+			],
+			[
+				"AR",
+				"ARTEFACT"
+			],
+			[
+				"next",
+				"next_rank_name"
+			],
+			[
+				"trainin",
+				"training_points"
+			],
+			[
+				"pie",
+				"piety_loss"
+			],
+			[
+				"hon",
+				"honour_loss"
+			],
+			[
+				"active",
+				"active_or_ancient"
+			],
+			[
+				"destro",
+				"destroy_all"
+			],
+			[
+				"dip",
+				"diplomatic_relations"
+			],
+			[
+				"pers",
+				"personal_combat_type"
+			],
+			[
+				"loca",
+				"location_unit"
+			],
+			[
+				"email",
+				"email_newsletter"
+			],
+			[
+				"add_",
+				"add_line"
+			],
+			[
+				"scan",
+				"scan_orbit"
+			],
+			[
+				"mov",
+				"move_to_home_estate"
+			],
+			[
+				"add_l",
+				"add_line"
+			],
+			[
+				"army",
+				"army_with_legate"
+			],
+			[
+				"hit",
+				"hit_points"
+			],
+			[
+				"back",
+				"background"
+			],
+			[
+				"in",
+				"inline"
+			],
+			[
+				"title",
+				"title_name"
+			],
+			[
+				"tit",
+				"title_name"
+			],
+			[
+				"remov",
+				"remove_military_or_naval_titles"
+			],
+			[
+				"po",
+				"potential_spouse"
+			],
+			[
+				"p",
+				"parameter_value_obj"
+			],
+			[
+				"displ",
+				"display_name"
+			],
+			[
+				"do",
+				"dowry"
+			],
+			[
+				"loc",
+				"location_estate"
+			],
+			[
+				"new",
+				"new_news_flag"
+			],
+			[
+				"unl",
+				"unload_cargo"
+			],
+			[
+				"battle",
+				"battle_status"
+			],
+			[
+				"TRU",
+				"TRUCE_EXPIRED"
+			],
+			[
+				"norm",
+				"normal_yield"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"me",
+				"message_from"
+			],
+			[
+				"padding",
+				"padding-top"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"max",
+				"max_repair"
+			],
+			[
+				"max_",
+				"max_materials"
+			],
+			[
+				"has_",
+				"has_nano_repair"
+			],
+			[
+				"hul",
+				"hull_points"
+			],
+			[
+				"repa",
+				"repair_skill"
+			],
+			[
+				"locati",
+				"location_starship"
+			],
+			[
+				"dr",
+				"drones_launched"
+			],
+			[
+				"sovre",
+				"sovereigns"
+			],
+			[
+				"red",
+				"redirect_if_unauthorized"
+			],
+			[
+				"opt",
+				"options_for_items"
+			],
+			[
+				"current",
+				"current_estate"
+			],
+			[
+				"hull",
+				"hull_damage"
+			],
+			[
+				"hu",
+				"hull_integrity"
+			],
+			[
+				"star",
+				"starship_type"
+			],
+			[
+				"sca",
+				"scan_orbit"
+			],
+			[
+				"min",
+				"min_hull_size"
+			],
+			[
+				"inter",
+				"internal_damage"
+			],
+			[
+				"add_li",
+				"add_list_item"
+			],
+			[
+				"locatio",
+				"location_type"
+			],
+			[
+				"nam",
+				"name_and_family"
+			],
+			[
+				"sho",
+				"short_title"
+			],
+			[
+				"att",
+				"attacker_glory"
+			],
+			[
+				"bat",
+				"battle_status"
+			],
+			[
+				"chara",
+				"character"
+			],
+			[
+				"qu",
+				"quantity"
+			],
+			[
+				"qua",
+				"quantity_destroy"
+			],
+			[
+				"end",
+				"end_list"
+			],
+			[
+				"int",
+				"internal_damage"
+			],
+			[
+				"ra",
+				"rare_elements"
+			],
+			[
+				"updat",
+				"update_attributes"
+			],
+			[
+				"weap",
+				"weapon_modifier"
+			],
+			[
+				"wea",
+				"weapon_modifier"
+			],
+			[
+				"ch",
+				"check_for_death_and_injuries"
+			],
+			[
+				"weapon",
+				"weapon_modifier"
+			],
+			[
+				"ammo",
+				"ammo_desc"
+			],
+			[
+				"to_",
+				"to_i"
+			],
+			[
+				"hull_",
+				"hull_integrity"
+			],
+			[
+				"dron",
+				"drone_bay"
+			],
+			[
+				"mis",
+				"missile"
+			],
+			[
+				"miss",
+				"missile_launcher"
+			],
+			[
+				"tor",
+				"torpedo_type"
+			],
+			[
+				"laun",
+				"launched_drones"
+			],
+			[
+				"to",
+				"to_launch"
+			],
+			[
+				"st",
+				"starship"
+			],
+			[
+				"battl",
+				"battle_status"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "public/plan.txt",
+			"settings":
+			{
+				"buffer_size": 2498,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/views/starships/_tabs.html.erb",
+			"settings":
+			{
+				"buffer_size": 4116,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/helpers/starships_helper.rb",
+			"settings":
+			{
+				"buffer_size": 3254,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/starship.rb",
+			"settings":
+			{
+				"buffer_size": 25437,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/authorisation.rb",
+			"settings":
+			{
+				"buffer_size": 2406,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/order_processing/petition_order.rb",
+			"settings":
+			{
+				"buffer_size": 1587,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "app/models/order_processing/base_order_processor.rb",
+			"settings":
+			{
+				"buffer_size": 13888,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/character.rb",
+			"settings":
+			{
+				"buffer_size": 31557,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/characters/emissary.rb",
+			"settings":
+			{
+				"buffer_size": 16354,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/characters/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 1081,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/characters/_toolbar.erb",
+			"settings":
+			{
+				"buffer_size": 3378,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/D/Projects/throneofthestars/app/models/order_processing/emissary_order.rb",
+		"/D/Projects/throneofthestars/app/controllers/admin_controller.rb",
+		"/D/Projects/throneofthestars/app/models/spawner.rb",
+		"/D/Projects/throneofthestars/app/models/characters/health.rb",
+		"/D/Projects/throneofthestars/app/models/region.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/add_wedding_items_order.rb",
+		"/D/Projects/throneofthestars/app/models/wedding.rb",
+		"/D/Projects/throneofthestars/lib/game_updater.rb",
+		"/D/Projects/throneofthestars/app/models/diplomatic_relation.rb",
+		"/D/Projects/throneofthestars/app/models/noble_house.rb",
+		"/D/Projects/throneofthestars/app/models/building.rb",
+		"/D/Projects/throneofthestars/app/models/estate.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/construct_building_order.rb",
+		"/D/Projects/throneofthestars/app/models/character.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/pay_tithes_order.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/cancel_sale_item_order.rb",
+		"/D/Projects/throneofthestars/app/models/market_item.rb",
+		"/D/Projects/throneofthestars/app/models/characters/movement.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/lead_unit_order.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/base_order_processor.rb",
+		"/D/Projects/throneofthestars/app/models/characters/marriage.rb",
+		"/D/Projects/throneofthestars/app/helpers/estates_helper.rb",
+		"/D/Projects/throneofthestars/config/news_codes.csv",
+		"/D/Projects/throneofthestars/app/models/order_processing/demolish_building_order.rb",
+		"/D/Projects/throneofthestars/app/views/estates/show.html.erb",
+		"/D/Projects/throneofthestars/app/views/events/_list.html.erb",
+		"/D/Projects/throneofthestars/app/models/order_processing/buy_item_order.rb",
+		"/D/Projects/throneofthestars/app/views/player_mailer/newsletter.html.erb",
+		"/D/Projects/throneofthestars/config/routes.rb",
+		"/D/Projects/throneofthestars/app/views/admin/newsletter.html.erb",
+		"/D/Projects/throneofthestars/app/mailers/player_mailer.rb",
+		"/D/Projects/throneofthestars/app/models/player.rb",
+		"/D/Projects/throneofthestars/app/views/admin/spawner.html.erb",
+		"/D/Projects/throneofthestars/app/views/admin/_tab_menu.erb",
+		"/D/Projects/throneofthestars/app/helpers/admin_helper.rb",
+		"/D/Projects/throneofthestars/app/views/admin/index.html.erb",
+		"/D/Projects/throneofthestars/db/migrate/011_add_newsletter_to_game.rb",
+		"/D/Projects/throneofthestars/app/models/game.rb",
+		"/D/Projects/throneofthestars/app/controllers/application_controller.rb",
+		"/D/Projects/throneofthestars/lib/tasks/thronestars.rake",
+		"/D/Projects/throneofthestars/lib/tasks/send_newsletter.rake",
+		"/D/Projects/throneofthestars/lib/tasks/setup_house.rake",
+		"/D/Projects/throneofthestars/app/views/admin/reported.html.erb",
+		"/D/Projects/throneofthestars/app/helpers/layout_helper.rb",
+		"/D/Projects/throneofthestars/app/views/orders/_form.html.erb",
+		"/D/Projects/throneofthestars/app/helpers/noble_houses_helper.rb",
+		"/D/Projects/throneofthestars/app/models/message.rb",
+		"/D/Projects/throneofthestars/app/views/admin/_player_action_form.html.erb",
+		"/D/Projects/throneofthestars/app/views/admin/players.html.erb",
+		"/D/Projects/throneofthestars/app/models/population.rb",
+		"/D/Projects/throneofthestars/app/assets/stylesheets/admin.css.scss",
+		"/D/Projects/throneofthestars/app/views/starship_configurations/_configuration.html.erb",
+		"/D/Projects/throneofthestars/app/views/starship_types/_configuration.html.erb",
+		"/D/Projects/throneofthestars/app/views/starship_configurations/_tabs.html.erb",
+		"/D/Projects/throneofthestars/app/views/starships/_tabs.html.erb",
+		"/D/Projects/throneofthestars/app/models/order_processing/pickup_order.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/deliver_order.rb",
+		"/D/Projects/throneofthestars/app/models/accusation.rb",
+		"/D/Projects/throneofthestars/db/migrate/010_fix_typo_in_merciful_trait.rb",
+		"/D/Projects/throneofthestars/app/models/trait.rb",
+		"/D/Projects/throneofthestars/app/views/noble_houses/_tabs.html.erb",
+		"/D/Projects/throneofthestars/app/views/noble_houses/show.html.erb",
+		"/D/Projects/throneofthestars/app/views/characters/_deceased.html.erb",
+		"/D/Projects/throneofthestars/app/helpers/characters_helper.rb",
+		"/D/Projects/throneofthestars/app/models/title.rb",
+		"/D/Projects/throneofthestars/app/views/starships/_navigation_report.html.erb",
+		"/D/Projects/throneofthestars/app/models/starship.rb",
+		"/D/Projects/throneofthestars/app/views/starships/show.html.erb",
+		"/D/Projects/throneofthestars/app/views/starships/_toolbar.erb",
+		"/D/Projects/throneofthestars/app/models/order_processing/produce_item_order.rb",
+		"/D/Projects/throneofthestars/app/models/tournament.rb",
+		"/D/Projects/throneofthestars/lib/events.rb",
+		"/D/Projects/throneofthestars/config/order_descriptions.csv",
+		"/D/Projects/throneofthestars/app/models/characters/combat.rb",
+		"/D/Projects/throneofthestars/app/models/skill.rb",
+		"/D/Projects/throneofthestars/app/views/units/_tabs.html.erb",
+		"/D/Projects/throneofthestars/app/views/units/show.html.erb",
+		"/D/Projects/throneofthestars/app/views/units/_toolbar.erb",
+		"/D/Projects/throneofthestars/app/views/units/show.js.erb",
+		"/D/Projects/throneofthestars/app/models/world.rb",
+		"/D/Projects/throneofthestars/app/assets/stylesheets/application.css",
+		"/D/Projects/throneofthestars/app/controllers/orders_controller.rb",
+		"/D/Projects/throneofthestars/app/views/orders/_list.html.erb",
+		"/D/Projects/throneofthestars/app/controllers/worlds_controller.rb",
+		"/D/Projects/throneofthestars/app/helpers/orders_helper.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/move_to_world_order.rb",
+		"/D/Projects/throneofthestars/lib/starships.rb",
+		"/D/Projects/throneofthestars/app/views/estates/_toolbar.erb",
+		"/D/Projects/throneofthestars/app/models/order_processing/invite_to_wedding_order.rb",
+		"/D/Projects/throneofthestars/app/models/ground_battle.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/assault_estate_order.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/attack_armies_order.rb",
+		"/D/Projects/throneofthestars/app/models/space_battle.rb",
+		"/D/Projects/throneofthestars/app/models/characters/development.rb",
+		"/D/Projects/throneofthestars/app/models/apprentice.rb",
+		"/D/Projects/throneofthestars/config/wedding_faux_pas.csv",
+		"/D/Projects/throneofthestars/app/models/order_processing/claim_title_order.rb",
+		"/D/Projects/throneofthestars/config/wedding_mischief.csv",
+		"/D/Projects/throneofthestars/config/wedding_gifts.csv",
+		"/D/Projects/throneofthestars/app/models/characters/emissary.rb",
+		"/D/Projects/throneofthestars/app/models/building_type.rb",
+		"/D/Projects/throneofthestars/db/seeds.rb",
+		"/D/Projects/throneofthestars/db/migrate/008_add_special_items.rb",
+		"/D/Projects/throneofthestars/db/migrate/009_seed_ancient_artefacts.rb",
+		"/D/Projects/throneofthestars/app/views/worlds/_map.html.erb",
+		"/D/Projects/throneofthestars/db/migrate/007_add_special_buildings.rb",
+		"/D/Projects/throneofthestars/db/migrate/006_add_artefacts.rb",
+		"/D/Projects/throneofthestars/app/helpers/building_types_helper.rb",
+		"/D/Projects/throneofthestars/app/assets/javascripts/application.js",
+		"/D/Projects/throneofthestars/app/helpers/items_helper.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/command_ship_order.rb",
+		"/D/Projects/throneofthestars/app/views/layouts/application.html.erb",
+		"/D/Projects/throneofthestars/app/views/characters/_tabs.html.erb",
+		"/D/Projects/throneofthestars/app/views/players/new.html.erb",
+		"/D/Projects/throneofthestars/app/views/players/_how_played.html.erb",
+		"/D/Projects/throneofthestars/app/views/characters/_choose_order.html.erb",
+		"/D/Projects/throneofthestars/app/controllers/messages_controller.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/move_to_estate_order.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/move_to_orbit_order.rb",
+		"/D/Projects/throneofthestars/app/models/order_processing/move_to_region_order.rb",
+		"/D/Projects/throneofthestars/app/views/orders/new.html.erb",
+		"/D/Projects/throneofthestars/app/models/order.rb",
+		"/D/Projects/throneofthestars/app/models/tournament_entrant.rb",
+		"/D/Projects/throneofthestars/app/models/wedding_invite.rb",
+		"/D/Projects/throneofthestars/app/views/characters/index.html.erb",
+		"/D/Projects/throneofthestars/app/models/order_processing/appoint_chancellor_order.rb",
+		"/D/Projects/throneofthestars/app/views/_user_nav.html.erb",
+		"/D/Projects/throneofthestars/app/models/order_processing/set_wage_level_order.rb"
+	],
+	"find":
+	{
+		"height": 44.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"petition",
+			"add_item",
+			"next_infrastructure_cost",
+			"distribute_church_funds",
+			"church_funds!",
+			"of_marriage_age",
+			"at_war?",
+			"||=",
+			"has_space?",
+			"build",
+			"can_tithe",
+			"can_join",
+			"activate_rel",
+			"expired?",
+			"cancel_item",
+			"tithe",
+			"add_action_points",
+			"die!",
+			"remove_military_or_naval_titles",
+			"remove_domain_titles",
+			"at_location",
+			"can_train_skill?",
+			"train!",
+			"skill_rank",
+			"dead?",
+			"knight?",
+			"title",
+			"knight?",
+			"MarketItem",
+			"MarketItem.of_items",
+			"MarketItem.of",
+			"MarketItem.category",
+			"MarketItem.at",
+			"buy!",
+			"impulse_modifier",
+			"calculate_movement_cost",
+			"cancel!",
+			"Wedding.of",
+			"traini",
+			"skill",
+			"his",
+			"attended",
+			"captain",
+			"workshop",
+			"Note",
+			"tourna",
+			"action",
+			"shuttle",
+			"wage",
+			"wages",
+			"Set Church",
+			"integrity",
+			"training_time_required",
+			"update_time",
+			"MAJOR",
+			"die!",
+			"liege",
+			"at_war",
+			"currently_training",
+			"skill_training",
+			"integri",
+			"ship",
+			"prisoner",
+			"left",
+			"create_relation",
+			"&mdash;",
+			"add_titl",
+			"deacon",
+			"CHURCH",
+			"Message.new",
+			"tournament",
+			"wedding",
+			"remove_military_or_naval_titles",
+			"Board Starship ",
+			"legate",
+			"code",
+			"propose",
+			"injuries_chance",
+			"install",
+			"instal!!",
+			"instal",
+			"install",
+			"report_bottom",
+			"taxe",
+			"collect_tax",
+			"VICE_ARBITARY",
+			"has_title?",
+			"automated_resource_gathering",
+			"results",
+			"cookies",
+			"load",
+			"duke",
+			"welcome",
+			"portrait",
+			"banner",
+			"ImageFile",
+			"execjs",
+			"accept",
+			".tab",
+			"black_tab",
+			" @",
+			"repair",
+			"skill_rank",
+			"military?",
+			"employed",
+			"messages",
+			"sensor_profile_modifier",
+			"breakdown!",
+			"action_point_cost",
+			"scanned",
+			"at_war?",
+			"transfer!",
+			"set_position",
+			"add_title",
+			"def diplay_name",
+			"onboard",
+			"def die!",
+			"die!",
+			"report_bot",
+			"captain",
+			"battle_stat",
+			"@internal_damage",
+			"report_internal_damage",
+			"internal_dama",
+			"hull_integrity",
+			"explode!",
+			"total_defender_damage",
+			"integrity_breakdown_chance"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"battleship",
+			"thronestars.com",
+			"Throne of the Stars",
+			"starship_configuration_item",
+			"",
+			"partial",
+			"</th>",
+			"<th>",
+			"tr",
+			"</td>",
+			"em",
+			"item",
+			"starship_metrics"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 3,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "public/plan.txt",
+					"settings":
+					{
+						"buffer_size": 2498,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								667,
+								667
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/starships/_tabs.html.erb",
+					"settings":
+					{
+						"buffer_size": 4116,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3174,
+								3191
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1782.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "app/helpers/starships_helper.rb",
+					"settings":
+					{
+						"buffer_size": 3254,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2211,
+								2227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 603.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "app/models/starship.rb",
+					"settings":
+					{
+						"buffer_size": 25437,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10369,
+								10369
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 8237.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/models/authorisation.rb",
+					"settings":
+					{
+						"buffer_size": 2406,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1822,
+								1822
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1056.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/models/order_processing/petition_order.rb",
+					"settings":
+					{
+						"buffer_size": 1587,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1428,
+								1436
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/models/order_processing/base_order_processor.rb",
+					"settings":
+					{
+						"buffer_size": 13888,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								10930,
+								10930
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1805.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "app/models/character.rb",
+					"settings":
+					{
+						"buffer_size": 31557,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								14826,
+								14806
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 11933.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "app/models/characters/emissary.rb",
+					"settings":
+					{
+						"buffer_size": 16354,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3220,
+								3220
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1637.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "app/views/characters/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 1081,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								776,
+								776
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "app/views/characters/_toolbar.erb",
+					"settings":
+					{
+						"buffer_size": 3378,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1745,
+								1745
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 396.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 124.0
+	},
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 346.0,
+	"status_bar_visible": true
+}

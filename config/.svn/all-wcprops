@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/throneofthestars/!svn/ver/296/trunk/config
+END
+male_names.txt
+K 25
+svn:wc:ra_dav:version-url
+V 56
+/throneofthestars/!svn/ver/2/trunk/config/male_names.txt
+END
+wedding_mischief.csv
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/249/trunk/config/wedding_mischief.csv
+END
+routes.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/300/trunk/config/routes.rb
+END
+news_codes.csv
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/throneofthestars/!svn/ver/301/trunk/config/news_codes.csv
+END
+house_names.txt
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/throneofthestars/!svn/ver/2/trunk/config/house_names.txt
+END
+female_names.txt
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/throneofthestars/!svn/ver/2/trunk/config/female_names.txt
+END
+amazon_s3.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/throneofthestars/!svn/ver/2/trunk/config/amazon_s3.yml
+END
+order_descriptions.csv
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/250/trunk/config/order_descriptions.csv
+END
+deploy.rb
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/154/trunk/config/deploy.rb
+END
+wedding_faux_pas.csv
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/throneofthestars/!svn/ver/251/trunk/config/wedding_faux_pas.csv
+END
+database.yml
+K 25
+svn:wc:ra_dav:version-url
+V 55
+/throneofthestars/!svn/ver/88/trunk/config/database.yml
+END
+boot.rb
+K 25
+svn:wc:ra_dav:version-url
+V 49
+/throneofthestars/!svn/ver/2/trunk/config/boot.rb
+END
+application.rb
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/throneofthestars/!svn/ver/12/trunk/config/application.rb
+END
+environment.rb
+K 25
+svn:wc:ra_dav:version-url
+V 58
+/throneofthestars/!svn/ver/131/trunk/config/environment.rb
+END
+wedding_gifts.csv
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/throneofthestars/!svn/ver/249/trunk/config/wedding_gifts.csv
+END

@@ -1,0 +1,76 @@
+<% 
+title 'Spawner' 
+render :partial => 'tab_menu'
+%>
+
+<div id="spawner" class="tab">
+	<%=form_tag '/admin/spawner' do -%>
+	<fieldset id="house">
+		<legend>Noble House</legend>
+		<ol>
+			<li>
+				<label>Noble House:</label>
+		 		<%=select_tag :noble_house, options_for_houses(params[:noble_house] || NobleHouse.gm.id,false,false)%>
+		 	</li>
+		</ol>
+	</fieldset>
+	<fieldset id="character">
+		<legend>Character</legend>
+		<ol>
+			<li>
+				<label>Civil Servant:</label>
+				<%=radio_button_tag :mod, 'civil_servant'%>
+			</li>
+			<li>
+				<label>Acolyte:</label>
+				<%=radio_button_tag :mod, 'acolyte'%>
+			</li>
+			<li>
+				<label>Captain:</label>
+				<%=radio_button_tag :mod, 'captain'%>
+			</li>
+			<li>
+				<label>Legate:</label>
+				<%=radio_button_tag :mod, 'legate'%>
+			</li>
+		</ol>
+	</fieldset>
+	<fieldset id="prize">
+		<legend>Prize Ship</legend>
+		<ol>
+			<li>
+				<label>Award Prize:</label>
+				<%=radio_button_tag :mod, 'prize_ship'%>
+			</li>
+			<li>
+				<label>Configuration:</label>
+				<%=select_tag :configuration, options_for_select(StarshipConfiguration.all.map{|sc| sc.name}), :prompt => 'Choose Configuration' %>
+			</li>
+			<li>
+				<label>Estate Name:</label>
+				<%=text_field_tag :estate_name %>
+			</li>
+			<li>
+				<label>Artefact Name:</label>
+				<%=text_field_tag :artefact_name %>
+			</li>
+			<li>
+				<label>News Code:</label>
+				<%=select_tag :news_code, options_for_select(Spawner::PRIZE_NEWS_CODES), :prompt => 'Choose News Code' %>
+			</li>
+		</ol>
+	</fieldset>
+	<fieldset id="artefacts">
+		<legend>Seed Artefacts</legend>
+		<ol>
+			<li>
+				<label>Seed Artefacts:</label>
+				<%=radio_button_tag :mod, 'seed_artefacts'%>
+			</li>
+		</ol>
+	</fieldset>
+	<fieldset id="submitform">
+    	<%= submit_tag 'Spawn' %>
+  	</fieldset>
+	<% end -%>
+</div>

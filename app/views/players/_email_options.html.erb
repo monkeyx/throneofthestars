@@ -1,0 +1,17 @@
+<fieldset id="email">
+	<legend><span>Email Options</span></legend>
+	<ol>
+		<li>
+			<%= f.label 'Receive House News' %>
+			<%= f.check_box :email_house_news %>
+		</li>
+		<li>
+			<%= f.label 'Receive Newsletter' %>
+			<%= f.check_box :email_newsletter %>
+		</li>
+		<li>
+			<%= f.label 'Receive Player Messages' %>
+			<%= f.check_box :email_messages %>
+		</li>
+	</ol>
+</fieldset>

@@ -1,0 +1,53 @@
+<% unless weddings.empty? %>
+<table>
+	<tr>
+		<th>Wedding Date</th>
+		<th>Bride</th>
+		<th>Groom</th>
+		<th>Catering and Gifts</th>
+		<th>Guests</th>
+	</tr>
+	<% weddings.each do |wedding| -%>
+	<tr>
+		<td class="<%=wedding.css_class%>">
+			<%=wedding.event_date.to_pretty %>
+		</td>
+		<td class="<%=wedding.css_class%>">
+			<%=link_to_character(wedding.bride)%>
+		</td>
+		<td class="<%=wedding.css_class%>">
+			<%=link_to_character(wedding.groom)%>
+		</td>
+		<td class="<%=wedding.css_class%>">
+			<ul>
+				<% wedding.bundles.each do |bundle| %>
+				<li><%=link_to_item(bundle.item,bundle.quantity)%></li>
+				<% end %>
+			</ul>
+		</td>
+		<td class="<%=wedding.css_class%>">
+			<% unless wedding.guest_list.empty? %>
+			<strong>
+				<%=wedding.guest_list.size %> guests invited:
+			</strong>
+			<ul>
+				<% wedding.guest_list.each do |guest| %>
+				<li><%=link_to_character guest %>
+					<% if (wedding.pending? || wedding.now?) %>
+						<% if wedding.at_location?(guest) %>
+						(present)
+						<% else %>
+						(not present)
+						<% end %>
+					<% end %>
+				</li>
+				<% end %>
+			</ul>
+			<% end %>
+		</td>
+	</tr>
+	<% end -%>
+</table>
+<% else %>
+<p class="empty_results">No wedding planned</p>
+<% end %>

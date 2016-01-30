@@ -1,0 +1,14 @@
+<% title "House #{@noble_house.name}" %>
+<% 
+if belongs_to_current_player?(@noble_house)
+  render :partial => 'toolbar'
+  character_orders_tabs = []
+  character_orders_tabs << link_to("Baron Orders","#{character_path(@noble_house.baron)}?tab=orders")
+  character_orders_tabs << link_to("Chancellor Orders","#{character_path(@noble_house.chancellor)}?tab=orders") if @noble_house.chancellor
+  tabbed_menu({:overview => 'Overview', :news => "House #{@noble_house.name} News", :members => 'Members', :deceased => 'Lest We Forget', :authorisations => 'Authorisations'},[link_to("Estates", estates_path),link_to("Armies", armies_path),link_to("Starships", starships_path)] + character_orders_tabs)
+else
+  tabbed_menu({:overview => 'Overview', :news => "House #{@noble_house.name} News", :members => 'Members', :deceased => 'Lest We Forget'})
+end
+%>
+
+<%=render :partial => 'tabs' %>

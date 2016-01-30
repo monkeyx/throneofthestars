@@ -1,0 +1,12 @@
+<table>
+	<tr>
+		<th>World</th>
+		<th>Action Points</th>
+	</tr>
+	<% World.all.each do |world| -%>
+	<tr>
+		<td><%=link_to_world(world)%></td>
+		<td><%=@starship.calculate_movement_cost(world)%></td>
+	</tr>
+	<% end -%>
+</table>

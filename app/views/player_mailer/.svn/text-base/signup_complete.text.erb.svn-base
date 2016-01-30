@@ -1,0 +1,16 @@
+<%=@greeting%>
+
+Welcome to the Throne of the Stars web game.
+
+Your login is: <%=@username%>
+
+House <%=@noble_house.name%> is now ready for you to command.
+
+You can start playing right away at <%=@login_url%>
+
+Enjoy!
+
+Throne of the Stars GM
+
+To stop receiving all emails from Throne of the Stars, click here (no login required):
+<%=@unsubscribe_url%>

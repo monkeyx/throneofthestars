@@ -1,0 +1,26 @@
+<% title "Log back into Throne of the Stars" %>
+
+<div id="login" class="tab">
+<%= form_for @player_session do |f| %>
+  <p><strong>Note:</strong> Items marked <span class="required">*</span> are required fields</p>
+  <p><strong>Forgot your password?</strong> <%=link_to('Click here to reset your password', password_reset_path)%>.
+  <%= form_error_messages(@player_session) %>
+  <fieldset id="login">
+    <legend><span>Your Details</span></legend>
+    <ol>
+      <li>
+        <%= f.label :username, :class => 'required' %>
+        <%= f.text_field :username %>
+      </li>
+      <li>
+        <%= f.label :password, :class => 'required' %>
+        <%= f.password_field :password %>
+      </li>
+    </ol>
+  </fieldset>
+  <fieldset id="submitform">
+    <%= f.submit "Login" %>
+  </fieldset>
+<% end %>
+</div>
+

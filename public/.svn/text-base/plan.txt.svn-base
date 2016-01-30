@@ -1,0 +1,96 @@
+=== Alpha Release ===
+
+Starships:
+* Bombard Estate (Captain)
+
+Improvements:
+* Macros: Save orders to macro / Load orders from macro
+* Clear news items older than a month (or three months?)
+* New event types: Festival, Wake, Grand Ball
+* Events: Cancel wedding / tournament?
+* Screenshots of game play
+* Wedding announcements - with host order
+* Navigation tab suggestion: http://thronestars.proboards.com/index.cgi?board=featuresuggestions&action=display&thread=65&page=1
+* Improve Move To World to make it easier for players to travel between worlds
+* Ability to accept marriage offers for novices
+* Filter news types by categories
+* Battle / Assault Tanks: Improve values so they are better than light tanks by right factor
+* Retire / Leave House: If a character is long-term unemployed have them leave their house unless related to the current Baron
+
+Festival:
+- requires Church
+- only one festival per year per estate
+- Characters present at estate earn: 
+  + 10 piety per rank of Diplomacy
+  + 10 piety per rank of Theology
+  + 10 piety per rank of Etiquette
+- Estates earn:
+  + 1 piety per foreign guest in attendance
+  + 1 piety per Artisan population
+  + 1 piety for every Food and Drink given to poor (max. of slave population)
+- Special awards:
+  - Honoured Minstrel: one random character with Diplomacy skill, earn 50 honour per rank of diplomacy
+  - Worthy Sermon: one random character with Theology skill, earn 50 piety per rank of theology
+  - Best Cake in the Land: one random character with Etiquette skill, earns 25 honour and 25 piety per rank of Etiquette
+  - Fool of the Festival: one random character, gains a Vice trait
+
+Bugs:
+* Wedding honour
+* Character Diplomacy tab - don't show weddings that have already been
+* Fix so Heal order works on characters at starships / armies of same estate
+* Captured Estate Tribune / Steward - move to home estate not imprisoned. Keep job, don't leave estate.
+
+=== Beta Release ===
+
+Church:
+* Issue Edict (Pontiff)
+* Revoke Edict (Pontiff)
+
+Empire:
+* Collect Tributes (Earl, Duke, Emperor)
+* Build Project (Duke, Archbishop)
+* Issue Law (Emperor)
+* Revoke Law (Emperor)
+
+Noble House
+- Banners / Crests
+
+Worlds:
+* Projects
+
+The Church:
+* Edicts
+
+The Empire:
+* Laws
+* Emperor
+
+Misc:
+* Add Notes to Characters / Estates / Starship / Army
+Notes
+- noble_house
+- attachment_type
+- attachment_id
+- note
+- priority
+Home Page Dashboard
+- Your Notes
+- List (all noblehouse) / Complete (Destroy) / New
+Starship / Army / Character / Estate
+- Notes about 
+- List (position only) / Complete (Destroy) / New (attachment = position)
+
+News
+- item icons based on type of news: personal combat, space battle, ground battle, died, married, born, birthday
+
+=== Live ===
+
+
+=== Design ideas ===
+
+* Enslavement
+* Adoption of characters
+* Abandon House
+* Offworld Workers (Local Circumstances and benefits?)
+* Exotic trade goods (off-world items)
+* Black market trade goods (drugs, alien artefacts, religious relics)

@@ -1,0 +1,4 @@
+<% title "The Church of the One True God" %>
+<% tabbed_menu({:overview => 'Overview', :news => 'Church News', :events => 'Upcoming Social Events', :diocese => 'Archdiocese', :edicts => 'Edicts'},[link_to("Announcements", announcements_path), link_to("The Empire", empire_path),link_to("Noble Houses", noble_houses_path),link_to("Solar System", worlds_path),link_to("Databank", items_path)]) %>
+
+<%=render :partial => 'tabs'%>

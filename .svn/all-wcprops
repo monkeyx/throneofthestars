@@ -1,0 +1,81 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 27
+/throneofthestars/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 36
+/throneofthestars/!svn/ver/298/trunk
+END
+Gemfile.lock
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/throneofthestars/!svn/ver/89/trunk/Gemfile.lock
+END
+unlock.bat
+K 25
+svn:wc:ra_dav:version-url
+V 47
+/throneofthestars/!svn/ver/336/trunk/unlock.bat
+END
+Rakefile
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/throneofthestars/!svn/ver/2/trunk/Rakefile
+END
+README.rdoc
+K 25
+svn:wc:ra_dav:version-url
+V 46
+/throneofthestars/!svn/ver/2/trunk/README.rdoc
+END
+Capfile
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/throneofthestars/!svn/ver/58/trunk/Capfile
+END
+seed.bat
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/throneofthestars/!svn/ver/2/trunk/seed.bat
+END
+reset.bat
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/throneofthestars/!svn/ver/2/trunk/reset.bat
+END
+Gemfile
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/throneofthestars/!svn/ver/128/trunk/Gemfile
+END
+updater.bat
+K 25
+svn:wc:ra_dav:version-url
+V 48
+/throneofthestars/!svn/ver/336/trunk/updater.bat
+END
+config.ru
+K 25
+svn:wc:ra_dav:version-url
+V 44
+/throneofthestars/!svn/ver/2/trunk/config.ru
+END
+dispatcher.bat
+K 25
+svn:wc:ra_dav:version-url
+V 51
+/throneofthestars/!svn/ver/336/trunk/dispatcher.bat
+END
+sim.bat
+K 25
+svn:wc:ra_dav:version-url
+V 43
+/throneofthestars/!svn/ver/52/trunk/sim.bat
+END

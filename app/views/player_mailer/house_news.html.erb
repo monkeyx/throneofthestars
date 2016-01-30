@@ -1,0 +1,24 @@
+<%=render :partial => 'header' %>
+<p>Please find below the latest news from <%=link_to("House #{@noble_house.name}","#{@root_url}/House/#{@noble_house.name}")%>.</p>
+
+<div>
+<ul style="display:none;">
+<% dateline = nil %>
+<% @news.each do |item| %>
+<%
+if item.news_date != dateline
+dateline = item.news_date
+%>
+</ul>
+<span>Chronum <%=h dateline.pp%>:</span>
+<ul>
+<%
+end
+%>
+<li><%=render :partial => 'news_html', :locals => {:news => item}%></li>
+<% end %>
+</ul>
+</div>
+
+<p>Sincerely,</p>
+<%=render :partial => 'footer' %>

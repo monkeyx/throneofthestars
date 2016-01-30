@@ -1,0 +1,1 @@
+bundle exec rake thronestars:dispatcher %1

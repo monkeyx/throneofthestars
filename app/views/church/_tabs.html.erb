@@ -1,0 +1,43 @@
+<%=tab(:overview, true) do -%>
+<div id="overview" class="tab">
+<%=wiki_help_div('The_Church', 'The Church')%>
+<% if @pontiff %>
+  <p class="one_result">His Holiness <%=link_to_character @pontiff, :name_and_family%> is the current Pontiff.</p>
+<% else %>
+  <p class="empty_results">There is currently no Pontiff elected.</p>
+<% end %>
+</div>
+<% end -%>
+
+<%=tab(:diocese) do -%>
+<div id="diocese" class="tab">
+<% if @archbishops.empty? %>
+	<p class="empty_results">There are no Archbishops elected yet</p>
+<% else %>
+	<%=render :partial => '/characters/list', :locals => {:characters => @archbishops}%>
+    <p>There are <%=@archbishops.size %> out of <%=@worlds.size %> possible Archbishops elected.</p>
+<% end %>
+</div>
+<% end -%>
+
+<%=tab(:edicts) do -%>
+<div id="edicts" class="tab">
+<% if @edicts.empty? %>
+  <p class="empty_results">The Church has not issued any edicts</p>
+<% else %>
+  <%=render :partial => '/laws/list', :locals => {:laws => @edicts} %>
+<% end %>
+</div>
+<% end -%>
+
+<%=tab(:news) do -%>
+<div id="church" class="tab">
+  <%=render :partial => '/news/list', :locals => {:news => @news} %>
+</div>
+<% end -%>
+
+<%=tab(:events) do -%>
+<div id="events" class="tab">
+<%=render :partial => '/events/list', :locals => {:events => Wedding.pending_or_now.sort{|a,b| a.event_date <=> b.event_date}} %>
+</div>
+<% end -%>

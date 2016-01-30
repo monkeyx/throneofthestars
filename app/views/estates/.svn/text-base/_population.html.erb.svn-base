@@ -1,0 +1,50 @@
+<table cellspacing="4" cellpadding="2">
+<tr>
+  <th></th>
+  <th>Slaves</th>
+  <th>Freemen</th>
+  <th>Artisans</th>
+</tr>
+<tr>
+  <th>Current:</th>
+  <td><%=h estate.worker_count(Item::SLAVE_WORKER) %></td>
+  <td><%=h estate.worker_count(Item::FREEMEN_WORKER) %></td>
+   <td><%=h estate.worker_count(Item::ARTISAN_WORKER) %></td>
+</tr>
+<tr>
+  <th>Needed:</th>
+  <td><%=h estate.workers_required(Item::SLAVE_WORKER)%></td>
+  <td><%=h estate.workers_required(Item::FREEMEN_WORKER)%></td>
+  <td><%=h estate.workers_required(Item::ARTISAN_WORKER)%></td>
+</tr>
+<tr>
+  <th>Wages Level:</th>
+  <td><%=money estate.slave_wages %></td>
+  <td><%=money estate.freemen_wages %></td>
+  <td><%=money estate.artisan_wages %></td>
+</tr>
+<tr>
+  <th>Total Wages:</th>
+  <td><%=money(estate.total_slave_wages)%></td>
+  <td><%=money(estate.total_freemen_wages)%></td>
+  <td><%=money(estate.total_artisan_wages)%></td>
+</tr>
+<tr>
+  <th>Capacity:</th>
+  <td><%=percentage estate.worker_capacity(Item::SLAVE_WORKER) * 100 %></td>
+  <td><%=percentage estate.worker_capacity(Item::FREEMEN_WORKER) * 100 %></td>
+  <td><%=percentage estate.worker_capacity(Item::ARTISAN_WORKER) * 100 %></td>
+</tr>
+<tr>
+  <th>Morale:</th>
+  <td><%=percentage estate.worker_morale(Item::SLAVE_WORKER) * 100 %></td>
+  <td><%=percentage estate.worker_morale(Item::FREEMEN_WORKER) * 100 %></td>
+  <td><%=percentage estate.worker_morale(Item::ARTISAN_WORKER) * 100 %></td>
+</tr>
+<tr>
+  <th>Prosperity:</th>
+  <td><%=population_savings_description estate.worker_savings_per_person(Item::SLAVE_WORKER) %></td>
+  <td><%=population_savings_description estate.worker_savings_per_person(Item::FREEMEN_WORKER) %></td>
+  <td><%=population_savings_description estate.worker_savings_per_person(Item::ARTISAN_WORKER) %></td>
+</tr>
+</table>

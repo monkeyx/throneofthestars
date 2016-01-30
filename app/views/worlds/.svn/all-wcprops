@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 53
+/throneofthestars/!svn/ver/247/trunk/app/views/worlds
+END
+index.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/333/trunk/app/views/worlds/index.html.erb
+END
+_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/throneofthestars/!svn/ver/220/trunk/app/views/worlds/_tabs.html.erb
+END
+show.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/throneofthestars/!svn/ver/220/trunk/app/views/worlds/show.js.erb
+END
+_market_sales.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/throneofthestars/!svn/ver/116/trunk/app/views/worlds/_market_sales.html.erb
+END
+_map.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/247/trunk/app/views/worlds/_map.html.erb
+END
+_index_tabs.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/throneofthestars/!svn/ver/333/trunk/app/views/worlds/_index_tabs.html.erb
+END
+index.js.erb
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/throneofthestars/!svn/ver/220/trunk/app/views/worlds/index.js.erb
+END
+_market_stats.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/throneofthestars/!svn/ver/333/trunk/app/views/worlds/_market_stats.html.erb
+END
+show.html.erb
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/throneofthestars/!svn/ver/220/trunk/app/views/worlds/show.html.erb
+END

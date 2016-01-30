@@ -1,0 +1,197 @@
+<table>
+<% if starship_metrics[:hull_type] %>
+	<tr>
+		<th>Hull Type:</th>
+		<td><%=starship_metrics[:hull_type]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:hull_size] %>
+	<tr>
+		<th>Hull Size:</th>
+		<td><%=starship_metrics[:hull_size]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:hull_points] %>
+	<tr>
+		<th>Hull Points:</th>
+		<td><%=starship_metrics[:hull_points]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:max_hull_points] %>
+	<tr>
+		<th>Maximum Hull Points:</th>
+		<td><%=starship_metrics[:max_hull_points]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:sensor_profile_modifier] %>
+	<tr>
+		<th>Sensor Profile:</th>
+		<td><%if starship_metrics[:sensor_profile_modifier] > 0%>+<% end %><%=starship_metrics[:sensor_profile_modifier]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:ship_speed] %>
+	<tr>
+		<th>Speed:</th>
+		<td><%=Starships::SPEED[starship_metrics[:ship_speed]]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:armour_coverage] %>
+	<tr>
+		<th>Armour:</th>
+		<td><%=Starships::ARMOUR[starship_metrics[:armour_coverage]]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:armour_type] %>
+	<tr>
+		<th>Armour Type:</th>
+		<td><%=starship_metrics[:armour_type]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:armour_save] %>
+	<tr>
+		<th>Armour Save:</th>
+		<td><%=starship_metrics[:armour_save].to_pretty%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:shields] %>
+	<tr>
+		<th>Shields:</th>
+		<td><%=Starships::SHIELDS[starship_metrics[:shields]]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:energy_save] %>
+	<tr>
+		<th>Energy Save:</th>
+		<td><%=starship_metrics[:energy_save].to_pretty%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:sensor_power] %>
+	<tr>
+		<th>Sensor Power:</th>
+		<td><%=starship_metrics[:sensor_power].to_pretty%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:stealth_plating] %>
+	<tr>
+		<th>Stealth Plating:</th>
+		<td><%=Starships::STEALTH_PLATING[starship_metrics[:stealth_plating]]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:jammer_chance] %>
+	<tr>
+		<th>Jamming Chance:</th>
+		<td><%=starship_metrics[:jammer_chance].to_pretty%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:accuracy_modifier] %>
+	<tr>
+		<th>Accuracy Modifier:</th>
+		<td>+<%=starship_metrics[:accuracy_modifier]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:impulse_speed] %>
+	<tr>
+		<th>Impulse Speed:</th>
+		<td>
+			<%=starship_metrics[:impulse_speed]%>
+			<% if starship_metrics[:impulse_modifier] && starship_metrics[:impulse_modifier] != 0 %>
+			&nbsp;<%=starship_metrics[:impulse_modifier].round(2)%>
+			<% end %>			
+		</td>
+	</tr>
+<% end %>
+<% if starship_metrics[:thrust_speed] %>
+	<tr>
+		<th>Thrust Speed:</th>
+		<td><%=starship_metrics[:thrust_speed]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:ammo_capacity] %>
+	<tr>
+		<th>Ammo Space:</th>
+		<td><%=starship_metrics[:ammo_capacity]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:worker_capacity] %>
+	<tr>
+		<th>Workers Space:</th>
+		<td><%=starship_metrics[:worker_capacity]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:troop_capacity] %>
+	<tr>
+		<th>Troops Space:</th>
+		<td><%=starship_metrics[:troop_capacity]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:ore_capacity] %>
+	<tr>
+		<th>Ore Space:</th>
+		<td><%=starship_metrics[:ore_capacity]%></td>
+	</tr>
+<% end %>
+<% if starship_metrics[:cargo_capacity] %>
+	<tr>
+		<th>Cargo Space:</th>
+		<td><%=starship_metrics[:cargo_capacity]%></td>
+	</tr>
+<% end %>
+<tr>
+	<th valign="top">Special Functions</th>
+	<td>
+	<% if starship_metrics[:bridge] %>
+	Can carry passengers<br/>
+	<% end %>
+	<% if starship_metrics[:cloak] %>
+	May perform cloaked movement<br/>
+	<% end %>
+	<% if starship_metrics[:escape_pod] %>
+	May save cargo and passengers if ship is destroyed<br/>
+	<% end %>
+	<% if starship_metrics[:nano_repair] %>
+	May repair at 25% costs and in orbit<br/>
+	<% end %>
+	<% if starship_metrics[:orbital_trade] %>
+	May trade from orbit<br/>
+	<% end %>
+</tr>
+<% unless starship_metrics[:space_weapons].nil? || starship_metrics[:space_weapons].empty? %>
+<tr>
+	<th>Space Weapons</th>
+	<td>
+		<table cellspacing="2">
+		<%
+			starship_metrics[:space_weapons].each do |section|
+		%>
+		<tr>
+			<td><%=section.quantity%> x <%=link_to_item(section.item)%></td>
+			<%=render :partial => '/items/weapon_stats', :locals => {:item => section.item, :accuracy_modifier => starship_metrics[:accuracy_modifier], :orbital_bombardment => false} %>
+		</tr>
+		<% 
+			end
+		%>
+		</table>
+	</td>
+</tr>
+<% end %>
+<% unless starship_metrics[:bombardment_weapons].nil? || starship_metrics[:bombardment_weapons].empty? %>
+<tr>
+	<th>Orbital Bombardment Weapons</th>
+	<td>
+		<table cellspacing="2">
+		<%
+			starship_metrics[:bombardment_weapons].each do |section|
+		%>
+		<tr>
+			<td><%=section.quantity%> x <%=link_to_item(section.item)%></td>
+			<%=render :partial => '/items/weapon_stats', :locals => {:item => section.item, :accuracy_modifier => starship_metrics[:accuracy_modifier], :orbital_bombardment => true} %>
+		</tr>
+		<% 
+			end
+		%>
+		</table>
+	</td>
+</tr>
+<% end %>
+
+</table>
